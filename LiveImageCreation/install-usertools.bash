@@ -29,10 +29,8 @@ sudo yum install -y \
   vim-X11 \
   powertop \
   kernel-tools
+sudo system-switch-displaymanager lightdm
 
 # R and friends
 sudo yum install -y \
-  R2spec \
-  R \
-  ggobi \
   rkward
