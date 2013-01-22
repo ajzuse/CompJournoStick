@@ -48,6 +48,7 @@ powertop
 kernel-tools
 rstudio
 R-devel
+ggobi-devel
 
 # de-branding
 -fedora-logos
