@@ -28,6 +28,7 @@ sudo yum install -y \
   vim-X11 \
   powertop \
   kernel-tools \
+  pitivi \
   gtk-recordmydesktop
 sudo system-switch-displaymanager lightdm
 
