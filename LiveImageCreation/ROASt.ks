@@ -51,6 +51,10 @@ R-devel
 ggobi-devel
 gtk2-devel
 freeglut-devel
+libXt-devel
+libXmu-devel
+fftw-devel
+libsndfile-devel
 
 # de-branding
 -fedora-logos
