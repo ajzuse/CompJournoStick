@@ -1,7 +1,7 @@
 # ROASt.ks
 #
 # Description:
-# - R on a Stick Fedora Remix with the light-weight LXDE Desktop Environment
+# - R on a Stick Fedora Remix with the MATE Desktop Environment
 #
 # Maintainer(s):
 # - M. Edward (Ed) Borasky <znmeb@znmeb.net>
@@ -13,34 +13,14 @@ part / --size 6144 --fstype ext4
 repo --name=local --baseurl=file:///opt/RStudio
 
 %packages
-### LXDE desktop
-@lxde-desktop
-@lxde-apps
-@lxde-media
-@lxde-office
+### MATE desktop
+@mate-desktop
 @multimedia
+@office
 @firefox
 @development-tools
 
-# pam-fprint causes a segfault in LXDM when enabled
--fprintd-pam
-
-# LXDE has lxpolkit. Make sure no other authentication agents end up in the spin.
--polkit-gnome
--polkit-kde
-
-# make sure xfce4-notifyd is not pulled in
-notification-daemon
--xfce4-notifyd
-
-# make sure xfwm4 is not pulled in for firstboot
-# https://bugzilla.redhat.com/show_bug.cgi?id=643416
-metacity
-
-# we need UPower for suspend and hibernate
-upower
-
-# znmeb added packages
+# End-user packages
 aria2
 curl
 wget
@@ -49,17 +29,52 @@ vim-enhanced
 vim-X11
 powertop
 kernel-tools
-rstudio
-R-devel
-ggobi-devel
-gtk2-devel
-freeglut-devel
-libXt-devel
-libXmu-devel
-fftw-devel
-libsndfile-devel
 audacity
+ggobi
+R
+
+# Graphviz
+graphviz-R
+graphviz-devel
+graphviz-devil
+graphviz-doc
+graphviz-gd
+dot2tex
+graphviz
+
+# Headers
+atlas-devel
+expat-devel
+fftw-devel
+fontconfig-devel
+freeglut-devel
+freetype-devel
+gd-devel
+ggobi-devel
+gmp-devel
+gsl-devel
+gtk2-devel
+gts-devel
 libcurl-devel
+libicu-devel
+libjpeg-turbo-devel
+libpng-devel
+libsndfile-devel
+libtiff-devel
+libtool-ltdl-devel
+libXaw-devel
+libxml2-devel
+libXmu-devel
+libXt-devel
+mpfr-devel
+openjpeg-devel
+R-devel
+readline-devel
+tcl-devel
+tk-devel
+
+# R Studio IDE
+rstudio
 
 # de-branding
 -fedora-logos
@@ -74,12 +89,12 @@ fedora-remix-logos
 %end
 
 %post
-# LXDE and LXDM configuration
+# MATE and lightdm configuration
 
 # create /etc/sysconfig/desktop (needed for installation)
 cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startlxde
-DISPLAYMANAGER=/usr/sbin/lxdm
+DISPLAYMANAGER=/usr/sbin/lightdm
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
