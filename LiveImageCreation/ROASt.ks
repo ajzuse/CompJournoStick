@@ -48,11 +48,7 @@ vim-enhanced
 vim-X11
 powertop
 kernel-tools
-pitivi
-gtk-recordmydesktop
 rstudio
-rkward
-ggobi
 # end znmeb added packages
 
 %end
