@@ -21,6 +21,7 @@ sudo yum group install -y \
 
 # Miscellaneous packages
 sudo yum install -y \
+  xterm \
   vim-enhanced \
   vim-X11 \
   powertop \

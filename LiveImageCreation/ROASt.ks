@@ -41,6 +41,7 @@ metacity
 upower
 
 # znmeb added packages
+xterm
 vim-enhanced
 vim-X11
 powertop
