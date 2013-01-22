@@ -28,6 +28,7 @@ sudo yum install -y \
   kernel-tools \
   R-devel \
   ggobi-devel \
-  gtk2-devel
+  gtk2-devel \
+  freeglut-devel
 
 echo 'Install RStudio manually'

@@ -50,6 +50,7 @@ rstudio
 R-devel
 ggobi-devel
 gtk2-devel
+freeglut-devel
 
 # de-branding
 -fedora-logos
