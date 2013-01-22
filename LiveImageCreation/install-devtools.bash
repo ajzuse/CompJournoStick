@@ -12,7 +12,6 @@
 # Package groups
 sudo yum groups install -y \
   virtualization \
-  development-tools \
   fedora-packager
 
 # Packages

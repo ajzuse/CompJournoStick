@@ -20,6 +20,7 @@ repo --name=local --baseurl=file:///opt/RStudio
 @lxde-office
 @multimedia
 @firefox
+@development-tools
 
 # pam-fprint causes a segfault in LXDM when enabled
 -fprintd-pam

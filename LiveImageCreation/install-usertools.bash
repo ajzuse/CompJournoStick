@@ -16,7 +16,8 @@ sudo yum group install -y \
   lxde-media \
   lxde-office \
   multimedia \
-  firefox
+  firefox \
+  development-tools
 
 # Miscellaneous packages
 sudo yum install -y \
