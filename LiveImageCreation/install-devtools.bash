@@ -17,9 +17,6 @@ sudo yum groups install -y \
 
 # Packages
 sudo yum install -y \
-  google-perftools-devel \
-  glibc-devel.x86_64 \
-  glibc-devel.i686 \
   yum-utils \
   vim-enhanced \
   vim-X11 \
