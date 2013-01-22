@@ -15,9 +15,6 @@ sudo yum group install -y \
   lxde-apps \
   lxde-media \
   lxde-office \
-  mate-desktop \
-  multimedia \
-  office \
   firefox \
   development-tools
 
