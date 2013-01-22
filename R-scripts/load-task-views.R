@@ -8,38 +8,23 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
+# Graphics task view needs Rgraphviz
+source("http://bioconductor.org/biocLite.R", echo=TRUE)
+biocLite('Rgraphviz')
+warnings()
+
 install.packages(
   c(
-    'RSclient',
-    'Rserve',
-    'RUnit',
-    'inline',
-    'rbenchmark',
-    'Rcmdr',
-    'rattle',
-    'devtools',
-    'testthat',
-    'roxygen2',
-    'twitteR',
-    'seewave',
-    'tuneR',
-    'audio',
-    'e1071',
-    'sem',
-    'relimp',
-    'multcomp',
-    'lmtest',
-    'leaps',
-    'effects',
-    'abind',
-    'RJSONIO',
-    'quantmod',
-    'shiny',
-    'markdown',
-    'RcmdrPlugin.TextMining',
-    'tm',
-    'tm.plugin.dc',
-    'tm.plugin.mail'
+    'ctv',
+  ),
+  repos='http://cran.fhcrc.org'
+)
+warnings()
+library(ctv)
+update.views(
+  c(
+    'ReproducibleResearch',
+    'Graphics'
   ),
   repos='http://cran.fhcrc.org'
 )
