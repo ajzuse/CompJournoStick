@@ -11,25 +11,18 @@
 
 # Package groups
 sudo yum group install -y \
-  lxde-apps \
   lxde-desktop \
+  lxde-apps \
   lxde-media \
   lxde-office \
+  multimedia \
   firefox
 
 # Miscellaneous packages
 sudo yum install -y \
-  lightdm \
-  fbpanel \
-  obmenu \
-  obapps \
-  system-switch-displaymanager-gnome \
   vim-enhanced \
   vim-X11 \
   powertop \
   kernel-tools \
-sudo system-switch-displaymanager lightdm
 
-# R IDE
-sudo yum install -y \
-  rstudio
+echo 'Install RStudio manually'
