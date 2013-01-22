@@ -47,6 +47,7 @@ vim-X11
 powertop
 kernel-tools
 rstudio
+R-devel
 
 # de-branding
 -fedora-logos

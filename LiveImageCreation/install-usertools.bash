@@ -26,5 +26,6 @@ sudo yum install -y \
   vim-X11 \
   powertop \
   kernel-tools \
+  R-devel
 
 echo 'Install RStudio manually'
