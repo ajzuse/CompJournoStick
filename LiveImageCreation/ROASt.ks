@@ -8,6 +8,10 @@
 
 %include fedora-live-base.ks
 
+part / --size 6144 --fstype ext4
+
+repo --name=local --baseurl=file:///opt/RStudio
+
 %packages
 ### LXDE desktop
 @lxde-desktop
@@ -44,6 +48,7 @@ vim-enhanced
 vim-X11
 powertop
 kernel-tools
+rstudio
 rkward
 ggobi
 # end znmeb added packages
