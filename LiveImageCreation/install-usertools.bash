@@ -27,7 +27,8 @@ sudo yum install -y \
   vim-enhanced \
   vim-X11 \
   powertop \
-  kernel-tools
+  kernel-tools \
+  gtk-recordmydesktop
 sudo system-switch-displaymanager lightdm
 
 # R GUI

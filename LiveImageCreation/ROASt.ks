@@ -48,6 +48,7 @@ vim-enhanced
 vim-X11
 powertop
 kernel-tools
+gtk-recordmydesktop
 rstudio
 rkward
 ggobi
