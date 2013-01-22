@@ -1,23 +1,46 @@
 # ROASt.ks
 #
 # Description:
-# - R on a Stick Fedora Remix with the MATE Desktop Environment
+# - R on a Stick Fedora Remix with the LXDE Desktop Environment
 #
 # Maintainer(s):
 # - M. Edward (Ed) Borasky <znmeb@znmeb.net>
+#
+# Note: Minimizations removed, since we're targeting USB sticks
 
 %include fedora-live-base.ks
-
 part / --size 6144 --fstype ext4
-
 repo --name=local --baseurl=file:///opt/RStudio
 
 %packages
-### MATE desktop
-@mate-desktop
-@multimedia
-@office
+### LXDE desktop
+@lxde-desktop
+@lxde-apps
+@lxde-media
+@lxde-office
 @firefox
+
+# pam-fprint causes a segfault in LXDM when enabled
+-fprintd-pam
+
+# LXDE has lxpolkit. Make sure no other authentication agents end up in the spin.
+-polkit-gnome
+-polkit-kde
+
+# make sure xfce4-notifyd is not pulled in
+notification-daemon
+-xfce4-notifyd
+
+# make sure xfwm4 is not pulled in for firstboot
+# https://bugzilla.redhat.com/show_bug.cgi?id=643416
+metacity
+
+# we need UPower for suspend and hibernate
+upower
+
+# begin znmeb added packages
+
+# Needed to build R packages
 @development-tools
 
 # End-user packages
@@ -73,7 +96,7 @@ readline-devel
 tcl-devel
 tk-devel
 
-# R Studio IDE
+# RStudio
 rstudio
 
 # de-branding
@@ -89,12 +112,12 @@ fedora-remix-logos
 %end
 
 %post
-# MATE and lightdm configuration
+# LXDE and LXDM configuration
 
 # create /etc/sysconfig/desktop (needed for installation)
 cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startlxde
-DISPLAYMANAGER=/usr/sbin/lightdm
+DISPLAYMANAGER=/usr/sbin/lxdm
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
