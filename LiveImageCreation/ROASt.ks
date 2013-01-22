@@ -49,6 +49,7 @@ kernel-tools
 rstudio
 R-devel
 ggobi-devel
+gtk2-devel
 
 # de-branding
 -fedora-logos

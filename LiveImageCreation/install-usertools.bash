@@ -27,6 +27,7 @@ sudo yum install -y \
   powertop \
   kernel-tools \
   R-devel \
-  ggobi-devel
+  ggobi-devel \
+  gtk2-devel
 
 echo 'Install RStudio manually'
