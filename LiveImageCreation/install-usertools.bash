@@ -15,11 +15,13 @@ sudo yum group install -y \
   lxde-apps \
   lxde-media \
   lxde-office \
+  mate-desktop \
   multimedia \
+  office \
   firefox \
   development-tools
 
-# Miscellaneous packages
+# End-user packages
 sudo yum install -y \
   aria2 \
   curl \
@@ -29,15 +31,50 @@ sudo yum install -y \
   vim-X11 \
   powertop \
   kernel-tools \
-  R-devel \
-  ggobi-devel \
-  gtk2-devel \
-  freeglut-devel \
-  libXt-devel \
-  libXmu-devel \
-  fftw-devel \
-  libsndfile-devel \
   audacity \
-  libcurl-devel
+  ggobi \
+  R
+
+# Graphviz
+sudo yum install -y \
+  graphviz-R \
+  graphviz-devel \
+  graphviz-devil \
+  graphviz-doc \
+  graphviz-gd \
+  dot2tex \
+  graphviz
+
+# Headers
+sudo yum install -y \
+  atlas-devel \
+  expat-devel \
+  fftw-devel \
+  fontconfig-devel \
+  freeglut-devel \
+  freetype-devel \
+  gd-devel \
+  ggobi-devel \
+  gmp-devel \
+  gsl-devel \
+  gtk2-devel \
+  gts-devel \
+  libcurl-devel \
+  libicu-devel \
+  libjpeg-turbo-devel \
+  libpng-devel \
+  libsndfile-devel \
+  libtiff-devel \
+  libtool-ltdl-devel \
+  libXaw-devel \
+  libxml2-devel \
+  libXmu-devel \
+  libXt-devel \
+  mpfr-devel \
+  openjpeg-devel \
+  R-devel \
+  readline-devel \
+  tcl-devel \
+  tk-devel
 
 echo 'Install RStudio manually'
