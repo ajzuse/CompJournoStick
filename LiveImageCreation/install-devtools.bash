@@ -17,8 +17,6 @@ sudo yum groups install -y \
 # Packages
 sudo yum install -y \
   yum-utils \
-  vim-enhanced \
-  vim-X11 \
   curl \
   wget \
   aria2 \
