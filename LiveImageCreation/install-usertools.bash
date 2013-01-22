@@ -15,8 +15,7 @@ sudo yum group install -y \
   lxde-desktop \
   lxde-media \
   lxde-office \
-  firefox \
-  development-tools
+  firefox
 
 # Miscellaneous packages
 sudo yum install -y \
@@ -31,6 +30,7 @@ sudo yum install -y \
   kernel-tools
 sudo system-switch-displaymanager lightdm
 
-# R and friends
+# R GUI
 sudo yum install -y \
-  rkward
+  rkward \
+  ggobi

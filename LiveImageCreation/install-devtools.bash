@@ -12,6 +12,7 @@
 # Package groups
 sudo yum groups install -y \
   virtualization \
+  development-tools \
   fedora-packager
 
 # Packages
@@ -30,4 +31,5 @@ sudo yum install -y \
   liveusb-creator \
   isomd5sum \
   createrepo \
-  yumex
+  yumex \
+  R2spec

@@ -34,10 +34,24 @@ metacity
 # we need UPower for suspend and hibernate
 upower
 
+# znmeb added packages
+lightdm
+fbpanel
+obmenu
+obapps
+system-switch-displaymanager-gnome
+vim-enhanced
+vim-X11
+powertop
+kernel-tools
+rkward
+ggobi
+# end znmeb added packages
+
 %end
 
 %post
-# LXDE and LXDM configuration
+# LXDE and lightdm configuration
 
 # create /etc/sysconfig/desktop (needed for installation)
 cat > /etc/sysconfig/desktop <<EOF
@@ -79,4 +93,3 @@ restorecon -R /home/liveuser
 EOF
 
 %end
-
