@@ -18,6 +18,7 @@ repo --name=local --baseurl=file:///opt/RStudio
 @lxde-apps
 @lxde-media
 @lxde-office
+@multimedia
 @firefox
 
 # pam-fprint causes a segfault in LXDM when enabled
@@ -39,27 +40,31 @@ metacity
 upower
 
 # znmeb added packages
-lightdm
-fbpanel
-obmenu
-obapps
-system-switch-displaymanager-gnome
 vim-enhanced
 vim-X11
 powertop
 kernel-tools
 rstudio
+
+# de-branding
+-fedora-logos
+-fedora-release
+-fedora-release-notes
+generic-logos
+generic-release
+generic-release-notes
+fedora-remix-logos
 # end znmeb added packages
 
 %end
 
 %post
-# LXDE and lightdm configuration
+# LXDE and LXDM configuration
 
 # create /etc/sysconfig/desktop (needed for installation)
 cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startlxde
-DISPLAYMANAGER=/usr/sbin/lightdm
+DISPLAYMANAGER=/usr/sbin/lxdm
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
