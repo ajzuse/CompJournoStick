@@ -21,6 +21,9 @@ sudo yum group install -y \
 
 # Miscellaneous packages
 sudo yum install -y \
+  aria2 \
+  curl \
+  wget \
   xterm \
   vim-enhanced \
   vim-X11 \

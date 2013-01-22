@@ -41,6 +41,9 @@ metacity
 upower
 
 # znmeb added packages
+aria2
+curl
+wget
 xterm
 vim-enhanced
 vim-X11

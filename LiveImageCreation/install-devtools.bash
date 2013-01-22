@@ -17,9 +17,6 @@ sudo yum groups install -y \
 # Packages
 sudo yum install -y \
   yum-utils \
-  curl \
-  wget \
-  aria2 \
   livecd-tools \
   spin-kickstarts \
   liveusb-creator \
