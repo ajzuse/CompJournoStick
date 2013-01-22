@@ -33,6 +33,7 @@ sudo yum install -y \
   libXt-devel \
   libXmu-devel \
   fftw-devel \
-  libsndfile-devel
+  libsndfile-devel \
+  audacity
 
 echo 'Install RStudio manually'

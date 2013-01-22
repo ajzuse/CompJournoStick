@@ -55,6 +55,7 @@ libXt-devel
 libXmu-devel
 fftw-devel
 libsndfile-devel
+audacity
 
 # de-branding
 -fedora-logos
