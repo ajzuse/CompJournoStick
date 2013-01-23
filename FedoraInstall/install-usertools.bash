@@ -69,6 +69,7 @@ sudo yum install -y \
   libXt-devel \
   mpfr-devel \
   openjpeg-devel \
+  openssl-devel \
   R-devel \
   readline-devel \
   tcl-devel \
