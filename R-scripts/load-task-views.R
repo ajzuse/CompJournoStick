@@ -15,7 +15,7 @@ warnings()
 
 install.packages(
   c(
-    'ctv',
+    'ctv'
   ),
   repos='http://cran.fhcrc.org'
 )
