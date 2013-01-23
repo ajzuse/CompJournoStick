@@ -121,6 +121,11 @@ fedora-remix-logos
 # end znmeb added packages
 %end
 
+# copy stuff to the image
+%post --no-chroot
+cp -a /opt/R-scripts /mnt/sysimage/opt/
+%end
+
 %post
 cat >> /etc/rc.d/init.d/livesys << EOF
 # disable screensaver locking
