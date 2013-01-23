@@ -13,7 +13,7 @@
 %include fedora-live-base.ks
 
 # begin znmeb additions
-part / --size 6144 --fstype ext4
+part / --size 16348 --fstype ext4
 repo --name=local --baseurl=file:///opt/RStudio
 # end znmeb additions
 
