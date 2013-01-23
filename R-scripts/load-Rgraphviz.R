@@ -8,23 +8,7 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-install.packages(
-  c(
-    'ctv'
-  ),
-  repos='http://cran.fhcrc.org'
-)
-warnings()
-library(ctv)
-update.views(
-  c(
-    'Finance',
-    'Econometrics',
-    'TimeSeries',
-    'NaturalLanguageProcessing',
-    'ReproducibleResearch',
-    'Graphics'
-  ),
-  repos='http://cran.fhcrc.org'
-)
+# Graphics task view needs Rgraphviz
+source("http://bioconductor.org/biocLite.R", echo=TRUE)
+biocLite('Rgraphviz')
 warnings()
