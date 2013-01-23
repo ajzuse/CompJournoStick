@@ -16,7 +16,7 @@ cp *.ks /opt/ROASt/ # our over-rides
 
 pushd /opt/ROASt
 setenforce 0
-/usr/bin/time setarch i686 livecd-creator \
+/usr/bin/time setarch x86_64 livecd-creator \
   --config=ROASt.ks \
   --fslabel=ROASt --cache=/var/cache/live
 checkisomd5 --verbose ROASt.iso
