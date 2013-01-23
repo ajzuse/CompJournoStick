@@ -60,6 +60,7 @@ kernel-tools
 audacity
 ggobi
 R
+antiword
 rkward
 
 # Graphviz

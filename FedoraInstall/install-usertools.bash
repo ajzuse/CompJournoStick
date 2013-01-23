@@ -31,6 +31,7 @@ sudo yum install -y \
   audacity \
   ggobi \
   R \
+  antiword \
   rkward
 
 # Graphviz
