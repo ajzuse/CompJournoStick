@@ -74,4 +74,4 @@ sudo yum install -y \
   tcl-devel \
   tk-devel
 
-echo 'Install RStudio manually'
+./install-rstudio.bash
