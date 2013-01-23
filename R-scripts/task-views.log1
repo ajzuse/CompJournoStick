@@ -1,0 +1,1988 @@
+
+R version 2.15.2 (2012-10-26) -- "Trick or Treat"
+Copyright (C) 2012 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: i686-redhat-linux-gnu (32-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> #
+> # Copyright (C) 2012 by M. Edward (Ed) Borasky
+> #
+> # This program is licensed to you under the terms of version 3 of the
+> # GNU Affero General Public License. This program is distributed WITHOUT
+> # ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING THOSE OF NON-INFRINGEMENT,
+> # MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. Please refer to the
+> # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
+> #
+> 
+> # Graphics task view needs Rgraphviz
+> source("http://bioconductor.org/biocLite.R", echo=TRUE)
+
+> local({
++     vers <- getRversion()
++     biocVers <- tryCatch(tools:::.BioC_version_associated_with_R_version, 
++         error = function(...) num .... [TRUNCATED] 
+Installing package(s) into ‘/usr/lib/R/library’
+(as ‘lib’ is unspecified)
+trying URL 'http://www.bioconductor.org/packages/2.11/bioc/src/contrib/BiocInstaller_1.8.3.tar.gz'
+Content type 'application/x-gzip' length 11846 bytes (11 Kb)
+opened URL
+==================================================
+downloaded 11 Kb
+
+* installing *source* package ‘BiocInstaller’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+  converting help for package ‘BiocInstaller’
+    finding HTML links ... done
+    BiocUpgrade                             html  
+    biocLite                                html  
+    biocinstallRepos                        html  
+    packageGroups                           html  
+    useDevel                                html  
+** building package indices
+** testing if installed package can be loaded
+Bioconductor version 2.11 (BiocInstaller 1.8.3), ?biocLite for help
+
+* DONE (BiocInstaller)
+Making packages.html  ... done
+
+The downloaded source packages are in
+	‘/tmp/Rtmpiu1bNT/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making packages.html  ... done
+Bioconductor version 2.11 (BiocInstaller 1.8.3), ?biocLite for help
+> biocLite('Rgraphviz')
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.11 (BiocInstaller 1.8.3), R version 2.15.
+Installing package(s) 'Rgraphviz'
+also installing the dependencies ‘BiocGenerics’, ‘graph’
+
+trying URL 'http://bioconductor.org/packages/2.11/bioc/src/contrib/BiocGenerics_0.4.0.tar.gz'
+Content type 'application/x-gzip' length 23499 bytes (22 Kb)
+opened URL
+==================================================
+downloaded 22 Kb
+
+trying URL 'http://bioconductor.org/packages/2.11/bioc/src/contrib/graph_1.36.1.tar.gz'
+Content type 'application/x-gzip' length 941783 bytes (919 Kb)
+opened URL
+==================================================
+downloaded 919 Kb
+
+trying URL 'http://bioconductor.org/packages/2.11/bioc/src/contrib/Rgraphviz_2.2.1.tar.gz'
+Content type 'application/x-gzip' length 7492311 bytes (7.1 Mb)
+opened URL
+==================================================
+downloaded 7.1 Mb
+
+* installing *source* package ‘BiocGenerics’ ...
+** R
+** inst
+** preparing package for lazy loading
+Creating a new generic function for ‘cbind’ in package ‘BiocGenerics’
+Creating a new generic function for ‘rbind’ in package ‘BiocGenerics’
+Creating a new generic function for ‘duplicated’ in package ‘BiocGenerics’
+Creating a new generic function for ‘anyDuplicated’ in package ‘BiocGenerics’
+Creating a new generic function for ‘eval’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmax’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmin’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmax.int’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmin.int’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Reduce’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Filter’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Find’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Map’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Position’ in package ‘BiocGenerics’
+Creating a new generic function for ‘get’ in package ‘BiocGenerics’
+Creating a new generic function for ‘mget’ in package ‘BiocGenerics’
+Creating a new generic function for ‘lapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘sapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘mapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘order’ in package ‘BiocGenerics’
+Creating a new generic function for ‘paste’ in package ‘BiocGenerics’
+Creating a new generic function for ‘rep.int’ in package ‘BiocGenerics’
+Creating a new generic function for ‘rownames’ in package ‘BiocGenerics’
+Creating a new generic function for ‘colnames’ in package ‘BiocGenerics’
+Creating a new generic function for ‘union’ in package ‘BiocGenerics’
+Creating a new generic function for ‘intersect’ in package ‘BiocGenerics’
+Creating a new generic function for ‘setdiff’ in package ‘BiocGenerics’
+Creating a new generic function for ‘table’ in package ‘BiocGenerics’
+Creating a new generic function for ‘tapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘unique’ in package ‘BiocGenerics’
+Creating a new generic function for ‘xtabs’ in package ‘BiocGenerics’
+** help
+*** installing help indices
+  converting help for package ‘BiocGenerics’
+    finding HTML links ... done
+    BiocGenerics-package                    html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:25: missing file link ‘rbind’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:28: missing file link ‘anyDuplicated’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:33: missing file link ‘pmax’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:34: missing file link ‘pmin’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:35: missing file link ‘pmax.int’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:36: missing file link ‘pmin.int’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:39: missing file link ‘Reduce’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:40: missing file link ‘Filter’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:41: missing file link ‘Find’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:42: missing file link ‘Map’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:43: missing file link ‘Position’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:46: missing file link ‘mget’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:49: missing file link ‘sapply’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:54: missing file link ‘ncol’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:55: missing file link ‘NROW’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:56: missing file link ‘NCOL’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:62: missing file link ‘rep.int’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:64: missing file link ‘rownames’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:65: missing file link ‘colnames’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:68: missing file link ‘union’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:69: missing file link ‘intersect’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:70: missing file link ‘setdiff’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:101: missing file link ‘annotation<-’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:106: missing file link ‘strand<-’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/BiocGenerics-package.Rd:144: missing file link ‘selectMethod’
+    Extremes                                html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/Extremes.Rd:18: missing file link ‘pmax’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/Extremes.Rd:38: missing file link ‘pmax’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/Extremes.Rd:44: missing file link ‘pmax’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/Extremes.Rd:52: missing file link ‘pmax’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/Extremes.Rd:58: missing file link ‘selectMethod’
+    annotation                              html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/annotation.Rd:33: missing file link ‘selectMethod’
+    boxplot                                 html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/boxplot.Rd:43: missing file link ‘selectMethod’
+    cbind                                   html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/cbind.Rd:52: missing file link ‘selectMethod’
+    combine                                 html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/combine.Rd:95: missing file link ‘selectMethod’
+    connection-class                        html  
+    density                                 html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/density.Rd:44: missing file link ‘selectMethod’
+    duplicated                              html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/duplicated.Rd:68: missing file link ‘selectMethod’
+    eval                                    html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/eval.Rd:57: missing file link ‘selectMethod’
+    funprog                                 html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/funprog.Rd:26: missing file link ‘Reduce’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/funprog.Rd:43: missing file link ‘Reduce’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/funprog.Rd:55: missing file link ‘Reduce’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/funprog.Rd:63: missing file link ‘Reduce’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/funprog.Rd:69: missing file link ‘selectMethod’
+    get                                     html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/get.Rd:67: missing file link ‘selectMethod’
+    image                                   html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/image.Rd:45: missing file link ‘selectMethod’
+    lapply                                  html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/lapply.Rd:60: missing file link ‘selectMethod’
+    mapply                                  html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/mapply.Rd:9: missing file link ‘sapply’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/mapply.Rd:52: missing file link ‘selectMethod’
+    nrow                                    html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/nrow.Rd:48: missing file link ‘selectMethod’
+    order                                   html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/order.Rd:66: missing file link ‘selectMethod’
+    paste                                   html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/paste.Rd:48: missing file link ‘selectMethod’
+    rep                                     html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/rep.Rd:12: missing file link ‘rep.int’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/rep.Rd:35: missing file link ‘rep.int’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/rep.Rd:43: missing file link ‘rep.int’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/rep.Rd:49: missing file link ‘selectMethod’
+    residuals                               html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/residuals.Rd:40: missing file link ‘selectMethod’
+    row_colnames                            html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/row_colnames.Rd:14: missing file link ‘rownames’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/row_colnames.Rd:30: missing file link ‘rownames’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/row_colnames.Rd:38: missing file link ‘rownames’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/row_colnames.Rd:46: missing file link ‘rownames’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/row_colnames.Rd:52: missing file link ‘selectMethod’
+    sets                                    html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/sets.Rd:16: missing file link ‘union’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/sets.Rd:55: missing file link ‘union’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/sets.Rd:63: missing file link ‘union’
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/sets.Rd:69: missing file link ‘selectMethod’
+    strand                                  html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/strand.Rd:42: missing file link ‘selectMethod’
+    table                                   html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/table.Rd:45: missing file link ‘selectMethod’
+    tapply                                  html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/tapply.Rd:49: missing file link ‘selectMethod’
+    unique                                  html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/unique.Rd:55: missing file link ‘selectMethod’
+    updateObject                            html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/updateObject.Rd:120: missing file link ‘selectMethod’
+    weights                                 html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/weights.Rd:46: missing file link ‘selectMethod’
+    xtabs                                   html  
+Rd warning: /tmp/RtmpnUfG7G/R.INSTALL6e11eed7dca/BiocGenerics/man/xtabs.Rd:49: missing file link ‘selectMethod’
+** building package indices
+** testing if installed package can be loaded
+
+* DONE (BiocGenerics)
+Making packages.html  ... done
+* installing *source* package ‘graph’ ...
+** libs
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include    -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c graph.c -o graph.o
+gcc -m32 -std=gnu99 -shared -Wl,-z,relro -o graph.so graph.o -L/usr/lib/R/lib -lR
+mv graph.so BioC_graph.so
+installing to /usr/lib/R/library/graph/libs
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+  converting help for package ‘graph’
+    finding HTML links ... done
+    DFS                                     html  
+    IMCA                                    html  
+    MAPKsig                                 html  
+    MultiGraph-class                        html  
+    acc-methods                             html  
+    addEdge                                 html  
+    addNode                                 html  
+    adj-methods                             html  
+    apoptosisGraph                          html  
+    attrData-class                          html  
+    attrDataItem-methods                    html  
+    attrDefaults-methods                    html  
+    aveNumEdges                             html  
+    biocRepos                               html  
+    boundary                                html  
+    calcProb                                html  
+    calcSumProb                             html  
+    clearNode                               html  
+    clusterGraph-class                      html  
+    clusteringCoefficient-methods           html  
+    combineNodes                            html  
+    defunct                                 html  
+    distGraph-class                         html  
+    duplicatedEdges                         html  
+    edgeData-methods                        html  
+    edgeDataDefaults-methods                html  
+    edgeMatrix                              html  
+    edgeSets                                html  
+    edgeWeights                             html  
+    fromGXL-methods                         html  
+    graph-class                             html  
+    graph2SparseM                           html  
+    graphAM-class                           html  
+    graphBAM-class                          html  
+    graphExamples                           html  
+    graphNEL-class                          html  
+    inEdges                                 html  
+    internal                                html  
+    isAdjacent-methods                      html  
+    isDirected-methods                      html  
+    leaves                                  html  
+    listEdges                               html  
+    matrix2Graph                            html  
+    mostEdges                               html  
+    multigraph                              html  
+    nodeData-methods                        html  
+    nodeDataDefaults-methods                html  
+    numNoEdges                              html  
+    pancrCaIni                              html  
+    randomEGraph                            html  
+    randomGraph                             html  
+    randomNodeGraph                         html  
+    removeEdge                              html  
+    removeNode                              html  
+    renderInfo-class                        html  
+    reverseEdgeDirections                   html  
+    settings                                html  
+    simpleEdge-class                        html  
+    standardLabeling                        html  
+    subGraph                                html  
+    toDotR-methods                          html  
+    ugraph                                  html  
+    validGraph                              html  
+    write.tlp                               html  
+** building package indices
+** installing vignettes
+   ‘GraphClass.Rnw’ 
+   ‘MultiGraphClass.Rnw’ 
+   ‘clusterGraph.Rnw’ 
+   ‘graph.Rnw’ 
+   ‘graphAttributes.Rnw’ 
+** testing if installed package can be loaded
+
+* DONE (graph)
+Making packages.html  ... done
+* installing *source* package ‘Rgraphviz’ ...
+configure: Using bundled Graphviz.
+configure: Searching for the compilers specified by R.
+checking for gcc... gcc -m32 -std=gnu99
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc -m32 -std=gnu99 accepts -g... yes
+checking for gcc -m32 -std=gnu99 option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -m32 -std=gnu99 -E
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -m32 accepts -g... yes
+configure: Preparing to compile Graphviz.
+configure: Configuring bundled Graphviz.
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking for a BSD-compatible install... /bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for style of include used by make... GNU
+checking for gcc... gcc -m32 -std=gnu99
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc -m32 -std=gnu99 accepts -g... yes
+checking for gcc -m32 -std=gnu99 option to accept ISO C89... none needed
+checking dependency style of gcc -m32 -std=gnu99... gcc3
+checking for library containing strerror... none required
+checking for flex... flex
+checking lex output file root... lex.yy
+checking lex library... none needed
+checking whether yytext is a pointer... no
+checking for bison... bison -y
+checking for gawk... (cached) gawk
+checking whether ln -s works... yes
+checking for sed... /usr/bin/sed
+checking for grep... grep
+checking for sort... sort
+checking for groff... groff
+checking for ps2pdf... ps2pdf
+checking for pstopdf... (cached) ps2pdf
+checking for pkg-config... /bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for tclsh8.6... no
+checking for tclsh8.5... /bin/tclsh8.5
+checking whether gcc -m32 -std=gnu99 and cc understand -c and -o together... yes
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -m32 accepts -g... yes
+checking dependency style of g++ -m32... gcc3
+checking for gcc... gcc
+checking whether we are using the GNU Objective C compiler... no
+checking whether gcc accepts -g... no
+checking dependency style of gcc... gcc3
+checking for inline... inline
+checking for windres... no
+checking for an ANSI C-conforming const... yes
+checking how to run the C preprocessor... gcc -m32 -std=gnu99 -E
+checking for grep that handles long lines and -e... grep
+checking for egrep... grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for mode_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking for uid_t in sys/types.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stddef.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking search.h usability... yes
+checking search.h presence... yes
+checking for search.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking values.h usability... yes
+checking values.h presence... yes
+checking for values.h... yes
+checking float.h usability... yes
+checking float.h presence... yes
+checking for float.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking for unistd.h... (cached) yes
+checking fenv.h usability... yes
+checking fenv.h presence... yes
+checking for fenv.h... yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking setjmp.h usability... yes
+checking setjmp.h presence... yes
+checking for setjmp.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/times.h usability... yes
+checking sys/times.h presence... yes
+checking for sys/times.h... yes
+checking for sys/types.h... (cached) yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking fpu_control.h usability... yes
+checking fpu_control.h presence... yes
+checking for fpu_control.h... yes
+checking sys/fpu.h usability... no
+checking sys/fpu.h presence... no
+checking for sys/fpu.h... no
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking for sys/stat.h... (cached) yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/inotify.h usability... yes
+checking sys/inotify.h presence... yes
+checking for sys/inotify.h... yes
+checking langinfo.h usability... yes
+checking langinfo.h presence... yes
+checking for langinfo.h... yes
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking crt_externs.h usability... no
+checking crt_externs.h presence... no
+checking for crt_externs.h... no
+checking whether time.h and sys/time.h may both be included... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for socklen_t... yes
+checking for bool... yes
+checking for struct dioattr... no
+checking for main in -lm... yes
+checking for feenableexcept... yes
+checking for fesetenv... yes
+checking libgen.h usability... yes
+checking libgen.h presence... yes
+checking for libgen.h... yes
+checking for basename in -lgen... no
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for lrand48... yes
+checking for drand48... yes
+checking for srand48... yes
+checking for setmode... no
+checking for setenv... yes
+checking for getenv... yes
+checking for __freadable... yes
+checking for _sysconf... no
+checking for getrusage... yes
+checking for strerror... yes
+checking for cbrt... no
+checking for lsqrt... no
+checking for vsnprintf... yes
+checking for strtoul... yes
+checking for strtoll... yes
+checking for strtoull... yes
+checking for uname... yes
+checking for memset... yes
+checking for nl_langinfo... yes
+checking for pow... no
+checking for sqrt... no
+checking for strchr... yes
+checking for strdup... yes
+checking for strerror... (cached) yes
+checking for strstr... yes
+checking for _NSGetEnviron... no
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking for strcasestr... yes
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for fgrep... grep -F
+checking for ld used by gcc -m32 -std=gnu99... /bin/ld
+checking if the linker (/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /bin/nm -B
+checking the name lister (/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /bin/nm -B output from gcc -m32 -std=gnu99 object... ok
+checking for dlfcn.h... yes
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether g++ -m32 accepts -g... (cached) yes
+checking dependency style of g++ -m32... (cached) gcc3
+checking how to run the C++ preprocessor... g++ -m32 -E
+checking for objdir... .libs
+checking if gcc -m32 -std=gnu99 supports -fno-rtti -fno-exceptions... no
+checking for gcc -m32 -std=gnu99 option to produce PIC... -fPIC -DPIC
+checking if gcc -m32 -std=gnu99 PIC flag -fPIC -DPIC works... yes
+checking if gcc -m32 -std=gnu99 static flag -static works... no
+checking if gcc -m32 -std=gnu99 supports -c -o file.o... yes
+checking if gcc -m32 -std=gnu99 supports -c -o file.o... (cached) yes
+checking whether the gcc -m32 -std=gnu99 linker (/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... yes
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking for ld used by g++ -m32... /bin/ld
+checking if the linker (/bin/ld) is GNU ld... yes
+checking whether the g++ -m32 linker (/bin/ld) supports shared libraries... yes
+checking for g++ -m32 option to produce PIC... -fPIC -DPIC
+checking if g++ -m32 PIC flag -fPIC -DPIC works... yes
+checking if g++ -m32 static flag -static works... no
+checking if g++ -m32 supports -c -o file.o... yes
+checking if g++ -m32 supports -c -o file.o... (cached) yes
+checking whether the g++ -m32 linker (/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking which extension is used for runtime loadable modules... .so
+checking which variable specifies run-time module search path... LD_LIBRARY_PATH
+checking for the default library search path... /lib64 /usr/lib64 /lib /usr/lib /usr/lib/R/lib /usr/lib/atlas /usr/lib/dyninst /usr/lib/llvm /usr/lib/mysql /usr/lib/xulrunner 
+checking for library containing dlopen... -ldl
+checking for dlerror... yes
+checking for shl_load... (cached) no
+checking for shl_load in -ldld... (cached) no
+checking for dld_link in -ldld... no
+checking for _ prefix in compiled symbols... no
+checking whether deplibs are loaded by dlopen... yes
+checking for argz.h... yes
+checking for error_t... yes
+checking for argz_add... yes
+checking for argz_append... yes
+checking for argz_count... yes
+checking for argz_create_sep... yes
+checking for argz_insert... yes
+checking for argz_next... yes
+checking for argz_stringify... yes
+checking if argz actually works... yes
+checking whether libtool supports -dlopen/-dlpreopen... yes
+checking for ltdl.h... yes
+checking whether lt_dlinterface_register is declared... yes
+checking for lt_dladvise_preload in -lltdl... yes
+checking where to find libltdl headers... 
+checking where to find libltdl library... -lltdl
+checking for unistd.h... (cached) yes
+checking for dl.h... no
+checking for sys/dl.h... no
+checking for dld.h... no
+checking for mach-o/dyld.h... no
+checking for dirent.h... yes
+checking for closedir... yes
+checking for opendir... yes
+checking for readdir... yes
+checking for strlcat... no
+checking for strlcpy... no
+checking for X... disabled
+configure: WARNING: X11 not available.
+checking tcl.h usability... yes
+checking tcl.h presence... yes
+checking for tcl.h... yes
+using /lib/tcl8.5/tclConfig.sh
+checking for wish8.6... no
+checking for wish8.5... /bin/wish8.5
+checking tk.h usability... yes
+checking tk.h presence... yes
+checking for tk.h... yes
+checking for tk.h... (cached) yes
+checking tkInt.h usability... no
+checking tkInt.h presence... no
+checking for tkInt.h... no
+using /lib/tkConfig.sh
+checking for connect... yes
+checking for gethostbyname... yes
+checking for main in -lXpm... yes
+checking X11/Intrinsic.h usability... yes
+checking X11/Intrinsic.h presence... yes
+checking for X11/Intrinsic.h... yes
+checking for X11/Xaw/Text.h... yes
+checking for main in -lXaw... yes
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for main in -lz... yes
+checking for deflateBound... yes
+checking for GDK_PIXBUF... yes
+checking for GTK... yes
+checking for GTKGL... no
+checking for GTKGLEXT... no
+checking for GLADE... no
+checking for qmake-qt4... no
+checking for qmake-qt3... no
+checking for qmake... no
+checking if have working sincos()... yes
+checking if FILE struct contains _cnt... no
+checking if FILE struct contains _r... no
+checking if FILE struct contains _next... no
+checking if FILE struct contains _IO_read_end... yes
+checking if errno externs are declared... yes
+checking if getopt externs are declared... yes
+checking if intptr_t is declared... yes
+checking if assert needs __eprintf... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/cdt/Makefile
+config.status: creating lib/cdt/libcdt.pc
+config.status: creating lib/graph/Makefile
+config.status: creating lib/graph/libgraph.pc
+config.status: creating lib/rbtree/Makefile
+config.status: creating lib/pathplan/Makefile
+config.status: creating lib/pathplan/libpathplan.pc
+config.status: creating lib/dotgen/Makefile
+config.status: creating lib/neatogen/Makefile
+config.status: creating lib/fdpgen/Makefile
+config.status: creating lib/sparse/Makefile
+config.status: creating lib/sfdpgen/Makefile
+config.status: creating lib/osage/Makefile
+config.status: creating lib/circogen/Makefile
+config.status: creating lib/twopigen/Makefile
+config.status: creating lib/patchwork/Makefile
+config.status: creating lib/pack/Makefile
+config.status: creating lib/ortho/Makefile
+config.status: creating lib/common/Makefile
+config.status: creating lib/vpsc/Makefile
+config.status: creating lib/gvc/Makefile
+config.status: creating lib/gvc/libgvc.pc
+config.status: creating lib/xdot/Makefile
+config.status: creating lib/xdot/libxdot.pc
+config.status: creating plugin/Makefile
+config.status: creating plugin/core/Makefile
+config.status: creating plugin/dot_layout/Makefile
+config.status: creating plugin/neato_layout/Makefile
+config.status: creating graphviz.spec
+config.status: creating Doxyfile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+=== configuring in libltdl (/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/libltdl)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix'  'CC=gcc -m32 -std=gnu99' 'CXX=g++ -m32' 'CFLAGS=-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables' 'CXXFLAGS=-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables' 'LDFLAGS=-Wl,-z,relro' '--libdir=/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib' '--includedir=/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include' '--with-cgraph=no' '--enable-swig=no' '--enable-static' '--disable-shared' '--with-pic' '--with-libgd=no' '--disable-ltdl' '--without-x' '--without-expat' '--without-devil' '--without-rsvg' '--without-ghostscript' '--without-visio' '--without-pangocairo' '--without-lasi' '--without-glitz' '--without-freetype2' '--without-fontconfig' '--without-rpat' '--without-glut' '--without-gts' '--without-png' '--without-tcl' '--without-jpeg' 'R_LIBS=/usr/lib/R/library:/usr/share/R/library' --cache-file=/dev/null --srcdir=.
+checking for a BSD-compatible install... /bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking for style of include used by make... GNU
+checking for gcc... gcc -m32 -std=gnu99
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc -m32 -std=gnu99 accepts -g... yes
+checking for gcc -m32 -std=gnu99 option to accept ISO C89... none needed
+checking dependency style of gcc -m32 -std=gnu99... gcc3
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc -m32 -std=gnu99... /bin/ld
+checking if the linker (/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /bin/nm -B
+checking the name lister (/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /bin/nm -B output from gcc -m32 -std=gnu99 object... ok
+checking how to run the C preprocessor... gcc -m32 -std=gnu99 -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc -m32 -std=gnu99 supports -fno-rtti -fno-exceptions... no
+checking for gcc -m32 -std=gnu99 option to produce PIC... -fPIC -DPIC
+checking if gcc -m32 -std=gnu99 PIC flag -fPIC -DPIC works... yes
+checking if gcc -m32 -std=gnu99 static flag -static works... no
+checking if gcc -m32 -std=gnu99 supports -c -o file.o... yes
+checking if gcc -m32 -std=gnu99 supports -c -o file.o... (cached) yes
+checking whether the gcc -m32 -std=gnu99 linker (/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... yes
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking which extension is used for runtime loadable modules... .so
+checking which variable specifies run-time module search path... LD_LIBRARY_PATH
+checking for the default library search path... /lib64 /usr/lib64 /lib /usr/lib /usr/lib/R/lib /usr/lib/atlas /usr/lib/dyninst /usr/lib/llvm /usr/lib/mysql /usr/lib/xulrunner 
+checking for library containing dlopen... -ldl
+checking for dlerror... yes
+checking for shl_load... (cached) no
+checking for shl_load in -ldld... (cached) no
+checking for dld_link in -ldld... no
+checking for _ prefix in compiled symbols... no
+checking whether deplibs are loaded by dlopen... yes
+checking for argz.h... yes
+checking for error_t... yes
+checking for argz_add... yes
+checking for argz_append... yes
+checking for argz_count... yes
+checking for argz_create_sep... yes
+checking for argz_insert... yes
+checking for argz_next... yes
+checking for argz_stringify... yes
+checking if argz actually works... yes
+checking whether libtool supports -dlopen/-dlpreopen... yes
+checking for unistd.h... (cached) yes
+checking for dl.h... no
+checking for sys/dl.h... no
+checking for dld.h... no
+checking for mach-o/dyld.h... no
+checking for dirent.h... yes
+checking for closedir... yes
+checking for opendir... yes
+checking for readdir... yes
+checking for strlcat... no
+checking for strlcpy... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+----------------------------------------------------------------
+
+graphviz-2.28.0 will be compiled with the following:
+
+options:
+  cgraph:        No (disabled by default - experimental)
+  digcola:       Yes
+  expat:         No (disabled)
+  fontconfig:    No (disabled)
+  freetype:      No (disabled)
+  glut:          No (disabled)
+  gts:           No (disabled)
+  ipsepcola:     No (disabled by default - C++ portability issues)
+  ltdl:          No (disabled)
+  ortho:         Yes
+  png:           No (disabled)
+  jpeg:          No (disabled)
+  sfdp:          Yes
+  shared:        No (disabled)
+  static:        Yes
+  qt:            No (qmake not found)
+
+commands:
+  dot:           Yes (always enabled)
+  neato:         Yes (always enabled)
+  fdp:           Yes (always enabled)
+  circo:         Yes (always enabled)
+  twopi:         Yes (always enabled)
+  gvpr:          Yes (always enabled)
+  gvmap:         Yes (always enabled)
+  lefty:         Yes
+  smyrna:        No (disabled by default - experimental)
+  gvedit:        No (qmake not found)
+
+plugin libraries:
+  dot_layout:    Yes (always enabled)
+  neato_layout:  Yes (always enabled)
+  core:          Yes (always enabled)
+  devil:         No (disabled)
+  gd:            No (disabled)
+  gdiplus:       No (disabled by default - Windows only)
+  gdk_pixbuf:    Yes
+  ghostscript:   No (disabled)
+  glitz:         No (disabled by default - incomplete)
+  gtk:           Yes
+  lasi:          No (disabled)
+  ming:          No (disabled by default - incomplete)
+  pangocairo:    No (disabled)
+  quartz:        No (disabled by default - Mac only)
+  rsvg:          No (disabled)
+  visio:         No (disabled by default - experimental)
+  xlib:          No (disabled or unavailable)
+
+language extensions:
+  gv_sharp:      No (swig not available)
+  gv_go:         No (disabled by default - experimental)
+  gv_guile:      No (swig not available)
+  gv_io:         No (disabled by default - no swig support yet)
+  gv_java:       No (swig not available)
+  gv_lua:        No (swig not available)
+  gv_ocaml:      No (swig not available)
+  gv_perl:       No (swig not available)
+  gv_php:        No (swig not available)
+  gv_python:     No (swig not available)
+  gv_python23:   No (disabled by default - for multiversion installs)
+  gv_python24:   No (disabled by default - for multiversion installs)
+  gv_python25:   No (disabled by default - for multiversion installs)
+  gv_python26:   No (disabled by default - for multiversion installs)
+  gv_python27:   No (disabled by default - for multiversion installs)
+  gv_R:          No (swig not available)
+  gv_ruby:       No (swig not available)
+  gv_tcl:        No (swig not available)
+
+  tcldot:        Yes
+  tclpathplan:   Yes
+  gdtclft:       No (gd not available)
+  tkspline:      Yes
+grep 'PACKAGE\|VERSION\|GVPLUGIN' config.h > graphviz_version.h
+make  install-recursive
+make[1]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+Making install in libltdl
+make[2]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/libltdl'
+make  install-am
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/libltdl'
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I.  -DLT_CONFIG_H='<config.h>' -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl   -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT dlopen.lo -MD -MP -MF .deps/dlopen.Tpo -c -o dlopen.lo `test -f 'loaders/dlopen.c' || echo './'`loaders/dlopen.c
+libtool: compile:  gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I. "-DLT_CONFIG_H=<config.h>" -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT dlopen.lo -MD -MP -MF .deps/dlopen.Tpo -c loaders/dlopen.c  -fPIC -DPIC -o dlopen.o
+mv -f .deps/dlopen.Tpo .deps/dlopen.Plo
+/bin/sh ./libtool --tag=CC   --mode=link gcc -m32 -std=gnu99  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -module -avoid-version -Wl,-z,relro -o dlopen.la  dlopen.lo -ldl -ldl 
+libtool: link: ar cru .libs/dlopen.a  dlopen.o
+libtool: link: ranlib .libs/dlopen.a
+libtool: link: ( cd ".libs" && rm -f "dlopen.la" && ln -s "../dlopen.la" "dlopen.la" )
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I.  -DLTDLOPEN=libltdlc -DLT_CONFIG_H='<config.h>' -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl   -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT libltdlc_la-preopen.lo -MD -MP -MF .deps/libltdlc_la-preopen.Tpo -c -o libltdlc_la-preopen.lo `test -f 'loaders/preopen.c' || echo './'`loaders/preopen.c
+libtool: compile:  gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I. -DLTDLOPEN=libltdlc "-DLT_CONFIG_H=<config.h>" -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT libltdlc_la-preopen.lo -MD -MP -MF .deps/libltdlc_la-preopen.Tpo -c loaders/preopen.c  -fPIC -DPIC -o libltdlc_la-preopen.o
+mv -f .deps/libltdlc_la-preopen.Tpo .deps/libltdlc_la-preopen.Plo
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I.  -DLTDLOPEN=libltdlc -DLT_CONFIG_H='<config.h>' -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl   -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT libltdlc_la-lt__alloc.lo -MD -MP -MF .deps/libltdlc_la-lt__alloc.Tpo -c -o libltdlc_la-lt__alloc.lo `test -f 'lt__alloc.c' || echo './'`lt__alloc.c
+libtool: compile:  gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I. -DLTDLOPEN=libltdlc "-DLT_CONFIG_H=<config.h>" -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT libltdlc_la-lt__alloc.lo -MD -MP -MF .deps/libltdlc_la-lt__alloc.Tpo -c lt__alloc.c  -fPIC -DPIC -o libltdlc_la-lt__alloc.o
+mv -f .deps/libltdlc_la-lt__alloc.Tpo .deps/libltdlc_la-lt__alloc.Plo
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I.  -DLTDLOPEN=libltdlc -DLT_CONFIG_H='<config.h>' -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl   -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT libltdlc_la-lt_dlloader.lo -MD -MP -MF .deps/libltdlc_la-lt_dlloader.Tpo -c -o libltdlc_la-lt_dlloader.lo `test -f 'lt_dlloader.c' || echo './'`lt_dlloader.c
+libtool: compile:  gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I. -DLTDLOPEN=libltdlc "-DLT_CONFIG_H=<config.h>" -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT libltdlc_la-lt_dlloader.lo -MD -MP -MF .deps/libltdlc_la-lt_dlloader.Tpo -c lt_dlloader.c  -fPIC -DPIC -o libltdlc_la-lt_dlloader.o
+mv -f .deps/libltdlc_la-lt_dlloader.Tpo .deps/libltdlc_la-lt_dlloader.Plo
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I.  -DLTDLOPEN=libltdlc -DLT_CONFIG_H='<config.h>' -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl   -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT libltdlc_la-lt_error.lo -MD -MP -MF .deps/libltdlc_la-lt_error.Tpo -c -o libltdlc_la-lt_error.lo `test -f 'lt_error.c' || echo './'`lt_error.c
+libtool: compile:  gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I. -DLTDLOPEN=libltdlc "-DLT_CONFIG_H=<config.h>" -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT libltdlc_la-lt_error.lo -MD -MP -MF .deps/libltdlc_la-lt_error.Tpo -c lt_error.c  -fPIC -DPIC -o libltdlc_la-lt_error.o
+mv -f .deps/libltdlc_la-lt_error.Tpo .deps/libltdlc_la-lt_error.Plo
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I.  -DLTDLOPEN=libltdlc -DLT_CONFIG_H='<config.h>' -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl   -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT libltdlc_la-ltdl.lo -MD -MP -MF .deps/libltdlc_la-ltdl.Tpo -c -o libltdlc_la-ltdl.lo `test -f 'ltdl.c' || echo './'`ltdl.c
+libtool: compile:  gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I. -DLTDLOPEN=libltdlc "-DLT_CONFIG_H=<config.h>" -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT libltdlc_la-ltdl.lo -MD -MP -MF .deps/libltdlc_la-ltdl.Tpo -c ltdl.c  -fPIC -DPIC -o libltdlc_la-ltdl.o
+ltdl.c: In function 'try_dlopen':
+ltdl.c:1268:87: warning: the address of 'libext' will always evaluate as 'true' [-Waddress]
+mv -f .deps/libltdlc_la-ltdl.Tpo .deps/libltdlc_la-ltdl.Plo
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I.  -DLTDLOPEN=libltdlc -DLT_CONFIG_H='<config.h>' -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl   -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT libltdlc_la-slist.lo -MD -MP -MF .deps/libltdlc_la-slist.Tpo -c -o libltdlc_la-slist.lo `test -f 'slist.c' || echo './'`slist.c
+libtool: compile:  gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I. -DLTDLOPEN=libltdlc "-DLT_CONFIG_H=<config.h>" -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT libltdlc_la-slist.lo -MD -MP -MF .deps/libltdlc_la-slist.Tpo -c slist.c  -fPIC -DPIC -o libltdlc_la-slist.o
+mv -f .deps/libltdlc_la-slist.Tpo .deps/libltdlc_la-slist.Plo
+/bin/sh ./libtool --tag=CC   --mode=compile gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I.  -DLT_CONFIG_H='<config.h>' -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl   -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT lt__strl.lo -MD -MP -MF .deps/lt__strl.Tpo -c -o lt__strl.lo lt__strl.c
+libtool: compile:  gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I. "-DLT_CONFIG_H=<config.h>" -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT lt__strl.lo -MD -MP -MF .deps/lt__strl.Tpo -c lt__strl.c  -fPIC -DPIC -o lt__strl.o
+mv -f .deps/lt__strl.Tpo .deps/lt__strl.Plo
+/bin/sh ./libtool --tag=CC   --mode=link gcc -m32 -std=gnu99  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -no-undefined -dlpreopen dlopen.la  -Wl,-z,relro -o libltdlc.la  libltdlc_la-preopen.lo libltdlc_la-lt__alloc.lo libltdlc_la-lt_dlloader.lo libltdlc_la-lt_error.lo libltdlc_la-ltdl.lo libltdlc_la-slist.lo lt__strl.lo -ldl 
+libtool: link: rm -f .libs/libltdlc.nm .libs/libltdlc.nmS .libs/libltdlc.nmT
+libtool: link: (cd .libs && gcc -m32 -std=gnu99 -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -c -fno-builtin  -fPIC -DPIC "libltdlcS.c")
+libtool: link: rm -f ".libs/libltdlcS.c" ".libs/libltdlc.nm" ".libs/libltdlc.nmS" ".libs/libltdlc.nmT"
+libtool: link: (cd .libs/libltdlc.lax/dlopen.a && ar x "/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/libltdl/./.libs/dlopen.a")
+libtool: link: ar cru .libs/libltdlc.a  libltdlc_la-preopen.o libltdlc_la-lt__alloc.o libltdlc_la-lt_dlloader.o libltdlc_la-lt_error.o libltdlc_la-ltdl.o libltdlc_la-slist.o lt__strl.o .libs/libltdlcS.o  .libs/libltdlc.lax/dlopen.a/dlopen.o 
+libtool: link: ranlib .libs/libltdlc.a
+libtool: link: rm -fr .libs/libltdlc.lax
+libtool: link: ( cd ".libs" && rm -f "libltdlc.la" && ln -s "../libltdlc.la" "libltdlc.la" )
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/libltdl'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/libltdl'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/libltdl'
+make[2]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/libltdl'
+Making install in lib
+make[2]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib'
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+Making install in cdt
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/cdt'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       dtclose.lo
+  CC       dtdisc.lo
+dtdisc.c:13:14: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  CC       dtextract.lo
+  CC       dtflatten.lo
+  CC       dthash.lo
+dthash.c:15:13: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+dthash.c:81:14: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+dthash.c: In function 'dthash':
+dthash.c:277:13: warning: 's' may be used uninitialized in this function [-Wmaybe-uninitialized]
+dthash.c:306:19: warning: 'r' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CC       dtlist.lo
+dtlist.c:11:14: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  CC       dtmethod.lo
+  CC       dtopen.lo
+  CC       dtrenew.lo
+  CC       dtrestore.lo
+  CC       dtsize.lo
+dtsize.c:11:12: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  CC       dtstat.lo
+dtstat.c:11:13: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+dtstat.c:31:13: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  CC       dtstrhash.lo
+  CC       dttree.lo
+dttree.c:14:14: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+dttree.c: In function 'dttree':
+dttree.c:218:16: warning: 'me' may be used uninitialized in this function [-Wmaybe-uninitialized]
+dttree.c:231:25: warning: 'root' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CC       dttreeset.lo
+dttreeset.c:11:18: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  CC       dtview.lo
+dtview.c:12:14: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+dtview.c: In function 'dtvsearch':
+dtview.c:20:11: warning: variable 'lk' set but not used [-Wunused-but-set-variable]
+dtview.c:19:8: warning: 'o' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CC       dtwalk.lo
+dtwalk.c: In function 'dtwalk':
+dtwalk.c:14:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  CCLD     libcdt.la
+  CCLD     libcdt_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/cdt'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libcdt.la '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib'
+libtool: install: /bin/install -c .libs/libcdt.lai /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libcdt.la
+libtool: install: /bin/install -c .libs/libcdt.a /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libcdt.a
+libtool: install: chmod 644 /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libcdt.a
+libtool: install: ranlib /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libcdt.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man3'
+ /bin/install -c -m 644 cdt.3 '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man3'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/install -c -m 644 cdt.3.pdf '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/install -c -m 644 libcdt.pc '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 cdt.h '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/cdt'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/cdt'
+Making install in graph
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/graph'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       attribs.lo
+  CC       agxbuf.lo
+  CC       edge.lo
+  CC       graph.lo
+  CC       graphio.lo
+  CC       lexer.lo
+lexer.c: In function 'scan_token':
+lexer.c:147:5: warning: pointer targets in return differ in signedness [-Wpointer-sign]
+lexer.c: In function 'html_pair':
+lexer.c:322:9: warning: variable 'rc' set but not used [-Wunused-but-set-variable]
+lexer.c: In function 'aglex':
+lexer.c:435:6: warning: pointer targets in passing argument 1 of 'scan_token' differ in signedness [-Wpointer-sign]
+lexer.c:136:14: note: expected 'unsigned char *' but argument is of type 'char *'
+lexer.c:435:6: warning: pointer targets in passing argument 2 of 'scan_token' differ in signedness [-Wpointer-sign]
+lexer.c:136:14: note: expected 'unsigned char *' but argument is of type 'char *'
+lexer.c: In function 'aglasterr':
+lexer.c:527:10: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+  CC       node.lo
+  CC       parser.lo
+  CC       refstr.lo
+  CC       trie.lo
+  CCLD     libgraph.la
+  CCLD     libgraph_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/graph'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libgraph.la '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib'
+libtool: install: /bin/install -c .libs/libgraph.lai /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libgraph.la
+libtool: install: /bin/install -c .libs/libgraph.a /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libgraph.a
+libtool: install: chmod 644 /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libgraph.a
+libtool: install: ranlib /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libgraph.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man3'
+ /bin/install -c -m 644 graph.3 '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man3'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/install -c -m 644 graph.3.pdf '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/install -c -m 644 libgraph.pc '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 graph.h '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/graph'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/graph'
+Making install in pathplan
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/pathplan'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       cvt.lo
+cvt.c:276:13: warning: 'append_bezier' defined but not used [-Wunused-function]
+  CC       inpoly.lo
+  CC       route.lo
+  CC       shortest.lo
+shortest.c: In function 'loadtriangle':
+shortest.c:539:8: warning: assuming signed overflow does not occur when assuming that (X + c) < X is always false [-Wstrict-overflow]
+  CC       shortestpth.lo
+  CC       solvers.lo
+  CC       triang.lo
+  CC       util.lo
+  CC       visibility.lo
+  CCLD     libpathplan.la
+  CCLD     libpathplan_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/pathplan'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libpathplan.la '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib'
+libtool: install: /bin/install -c .libs/libpathplan.lai /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libpathplan.la
+libtool: install: /bin/install -c .libs/libpathplan.a /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libpathplan.a
+libtool: install: chmod 644 /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libpathplan.a
+libtool: install: ranlib /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libpathplan.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man3'
+ /bin/install -c -m 644 pathplan.3 '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man3'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/install -c -m 644 pathplan.3.pdf '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/install -c -m 644 libpathplan.pc '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 pathgeom.h pathplan.h '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/pathplan'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/pathplan'
+Making install in vpsc
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/vpsc'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/vpsc'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/vpsc'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/vpsc'
+Making install in rbtree
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/rbtree'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       misc.lo
+  CC       red_black_tree.lo
+  CC       stack.lo
+  CCLD     librbtree_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/rbtree'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/rbtree'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/rbtree'
+Making install in ortho
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/ortho'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       fPQ.lo
+  CC       intset.lo
+  CC       maze.lo
+maze.c: In function 'mkMazeGraph':
+maze.c:411:6: warning: value computed is not used [-Wunused-value]
+maze.c:325:20: warning: variable 'ncnt' set but not used [-Wunused-but-set-variable]
+  CC       ortho.lo
+ortho.c: In function 'addLoop':
+ortho.c:461:9: warning: variable 'wt' set but not used [-Wunused-but-set-variable]
+ortho.c: In function 'addNodeEdges':
+ortho.c:497:9: warning: variable 'wt' set but not used [-Wunused-but-set-variable]
+ortho.c: In function 'orthoEdges':
+ortho.c:192:11: warning: 'prevbp.x' may be used uninitialized in this function [-Wmaybe-uninitialized]
+ortho.c:152:22: note: 'prevbp.x' was declared here
+ortho.c:179:11: warning: 'prevbp.y' may be used uninitialized in this function [-Wmaybe-uninitialized]
+ortho.c:152:22: note: 'prevbp.y' was declared here
+ortho.c:1356:9: warning: 'ps' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CC       partition.lo
+partition.c: In function 'traverse_polygon':
+partition.c:328:7: warning: variable 'do_switch' set but not used [-Wunused-but-set-variable]
+partition.c:327:7: warning: variable 'retval' set but not used [-Wunused-but-set-variable]
+partition.c: In function 'partition':
+partition.c:731:9: warning: variable 'nt' set but not used [-Wunused-but-set-variable]
+partition.c: In function 'make_new_monotone_poly':
+partition.c:274:5: warning: 'tq' may be used uninitialized in this function [-Wmaybe-uninitialized]
+partition.c:298:18: warning: 'tp' may be used uninitialized in this function [-Wmaybe-uninitialized]
+partition.c: In function 'monotonate_trapezoids':
+partition.c:665:3: warning: 'size' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CC       rawgraph.lo
+  CC       sgraph.lo
+  CC       trapezoid.lo
+trapezoid.c:22:0: warning: "__USE_ISOC99" redefined [enabled by default]
+In file included from /usr/include/string.h:25:0,
+                 from trapezoid.c:19:
+/usr/include/features.h:257:0: note: this is the location of the previous definition
+trapezoid.c:66:12: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+trapezoid.c: In function 'add_segment':
+trapezoid.c:437:7: warning: variable 'tritop' set but not used [-Wunused-but-set-variable]
+trapezoid.c:996:19: warning: 'tlastr' may be used uninitialized in this function [-Wmaybe-uninitialized]
+trapezoid.c:996:19: warning: 'tfirstr' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CCLD     libortho_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/ortho'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/ortho'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/ortho'
+Making install in sparse
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/sparse'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       SparseMatrix.lo
+SparseMatrix.c: In function 'SparseMatrix_import_binary':
+SparseMatrix.c:629:48: warning: variable 'iread' set but not used [-Wunused-but-set-variable]
+  CC       general.lo
+  CC       BinaryHeap.lo
+  CC       IntStack.lo
+  CCLD     libsparse_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/sparse'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/sparse'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/sparse'
+Making install in patchwork
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/patchwork'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       patchwork.lo
+  CC       patchworkinit.lo
+  CC       tree_map.lo
+  CCLD     libpatchwork_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/patchwork'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/patchwork'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/patchwork'
+Making install in common
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/common'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       arrows.lo
+arrows.c: In function 'arrowOrthoClip':
+arrows.c:397:21: warning: 'hlen' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CC       colxlate.lo
+  CC       fontmetrics.lo
+  CC       args.lo
+  CC       memory.lo
+  CC       globals.lo
+/usr/bin/sed "s/yy/html/g" < y.tab.h > htmlparse.h
+  CC       htmllex.lo
+/usr/bin/sed "s/yy/html/g" < y.tab.c > htmlparse.c
+  CC       htmlparse.lo
+  CC       htmltable.lo
+  CC       input.lo
+  CC       pointset.lo
+  CC       postproc.lo
+  CC       routespl.lo
+  CC       splines.lo
+  CC       psusershape.lo
+psusershape.c: In function 'user_init':
+psusershape.c:49:30: warning: variable 'rc' set but not used [-Wunused-but-set-variable]
+psusershape.c: In function 'ps_string':
+psusershape.c:268:9: warning: variable 'rc' set but not used [-Wunused-but-set-variable]
+  CC       timing.lo
+  CC       labels.lo
+labels.c: In function 'xml_url_string':
+labels.c:561:21: warning: variable 'prev' set but not used [-Wunused-but-set-variable]
+  CC       ns.lo
+  CC       shapes.lo
+  CC       utils.lo
+utils.c: In function 'htmlEntityUTF8':
+utils.c:1455:9: warning: variable 'rc' set but not used [-Wunused-but-set-variable]
+utils.c: In function 'latin1ToUTF8':
+utils.c:1530:9: warning: variable 'rc' set but not used [-Wunused-but-set-variable]
+utils.c: In function 'utf8ToLatin1':
+utils.c:1572:9: warning: variable 'rc' set but not used [-Wunused-but-set-variable]
+  CC       geom.lo
+  CC       output.lo
+  CC       emit.lo
+emit.c: In function 'emit_xdot':
+emit.c:941:11: warning: variable 'fontname' set but not used [-Wunused-but-set-variable]
+emit.c:940:12: warning: variable 'fontsize' set but not used [-Wunused-but-set-variable]
+emit.c: In function 'nodeIntersect':
+emit.c:2247:11: warning: variable 'target' set but not used [-Wunused-but-set-variable]
+emit.c:2246:11: warning: variable 'tooltip' set but not used [-Wunused-but-set-variable]
+emit.c: In function 'xdotBB':
+emit.c:2474:12: warning: variable 'sz' set but not used [-Wunused-but-set-variable]
+emit.c: In function 'style_token':
+emit.c:3262:16: warning: variable 'rc' set but not used [-Wunused-but-set-variable]
+emit.c: In function 'emit_edge_graphics':
+emit.c:1932:44: warning: 'bz.list' may be used uninitialized in this function [-Wmaybe-uninitialized]
+emit.c:1932:44: warning: 'bz.size' may be used uninitialized in this function [-Wmaybe-uninitialized]
+emit.c:1921:12: warning: 'bz.sflag' may be used uninitialized in this function [-Wmaybe-uninitialized]
+emit.c:1932:12: warning: 'bz.eflag' may be used uninitialized in this function [-Wmaybe-uninitialized]
+emit.c:1776:32: warning: 'endcolor' may be used uninitialized in this function [-Wmaybe-uninitialized]
+emit.c:1723:11: note: 'endcolor' was declared here
+emit.c:1744:9: warning: 'segs' may be used uninitialized in this function [-Wmaybe-uninitialized]
+emit.c:1721:18: note: 'segs' was declared here
+emit.c: In function 'getObjId':
+emit.c:214:13: warning: 'pfx' may be used uninitialized in this function [-Wmaybe-uninitialized]
+emit.c: In function 'xdotBB':
+emit.c:2515:9: warning: 'fontname' may be used uninitialized in this function [-Wmaybe-uninitialized]
+emit.c:2515:9: warning: 'fontsize' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CCLD     libcommon_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/common'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 arith.h geom.h color.h types.h textpara.h usershape.h '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/common'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/common'
+Making install in pack
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/pack'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       ccomps.lo
+  CC       pack.lo
+pack.c: In function 'putGraphs':
+pack.c:920:12: warning: 'pts' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CCLD     libpack_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/pack'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man3'
+ /bin/install -c -m 644 pack.3 '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man3'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/install -c -m 644 pack.3.pdf '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 pack.h '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/pack'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/pack'
+Making install in xdot
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/xdot'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       xdot.lo
+  CCLD     libxdot.la
+  CCLD     libxdot_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/xdot'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libxdot.la '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib'
+libtool: install: /bin/install -c .libs/libxdot.lai /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libxdot.la
+libtool: install: /bin/install -c .libs/libxdot.a /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libxdot.a
+libtool: install: chmod 644 /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libxdot.a
+libtool: install: ranlib /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libxdot.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man3'
+ /bin/install -c -m 644 xdot.3 '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man3'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/install -c -m 644 xdot.3.pdf '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/install -c -m 644 libxdot.pc '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 xdot.h '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/xdot'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/xdot'
+Making install in gvc
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/gvc'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       gvrender.lo
+  CC       gvlayout.lo
+  CC       gvdevice.lo
+  CC       gvloadimage.lo
+  CC       gvcontext.lo
+  CC       gvjobs.lo
+  CC       gvevent.lo
+  CC       gvplugin.lo
+  CC       gvconfig.lo
+  CC       gvtextlayout.lo
+  CC       gvusershape.lo
+  CC       gvc.lo
+  CCLD     libgvc.la
+  CCLD     libgvc_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/gvc'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libgvc.la '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib'
+libtool: install: /bin/install -c .libs/libgvc.lai /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libgvc.la
+libtool: install: /bin/install -c .libs/libgvc.a /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libgvc.a
+libtool: install: chmod 644 /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libgvc.a
+libtool: install: ranlib /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/libgvc.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man3'
+ /bin/install -c -m 644 gvc.3 '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man3'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/install -c -m 644 gvc.3.pdf '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/install -c -m 644 libgvc.pc '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 gvc.h gvcext.h gvplugin.h gvcjob.h gvcommon.h gvplugin_render.h gvplugin_layout.h gvconfig.h gvplugin_textlayout.h gvplugin_device.h gvplugin_loadimage.h '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/gvc'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/gvc'
+Making install in circogen
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/circogen'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       circularinit.lo
+  CC       nodelist.lo
+  CC       block.lo
+  CC       edgelist.lo
+  CC       circular.lo
+  CC       deglist.lo
+  CC       blocktree.lo
+  CC       blockpath.lo
+  CC       circpos.lo
+circpos.c: In function 'doBlock':
+circpos.c:338:40: warning: 'midAngle' may be used uninitialized in this function [-Wmaybe-uninitialized]
+circpos.c:264:39: note: 'midAngle' was declared here
+  CC       nodeset.lo
+  CCLD     libcircogen_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/circogen'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/circogen'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/circogen'
+Making install in dotgen
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/dotgen'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       acyclic.lo
+  CC       class1.lo
+  CC       class2.lo
+  CC       cluster.lo
+  CC       compound.lo
+  CC       conc.lo
+  CC       decomp.lo
+  CC       fastgr.lo
+  CC       flat.lo
+  CC       dotinit.lo
+  CC       mincross.lo
+mincross.c: In function 'mincross.constprop.14':
+mincross.c:421:12: warning: 'sepIndex' may be used uninitialized in this function [-Wmaybe-uninitialized]
+mincross.c:374:9: note: 'sepIndex' was declared here
+mincross.c:637:2: warning: 'maxthispass' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CC       position.lo
+  CC       rank.lo
+  CC       sameport.lo
+  CC       dotsplines.lo
+dotsplines.c: In function 'completeregularpath':
+dotsplines.c:1866:9: warning: variable 'pn' set but not used [-Wunused-but-set-variable]
+dotsplines.c:1865:13: warning: variable 'pp' set but not used [-Wunused-but-set-variable]
+dotsplines.c: In function '_dot_splines':
+dotsplines.c:490:6: warning: 'P' may be used uninitialized in this function [-Wmaybe-uninitialized]
+dotsplines.c: In function 'make_flat_edge':
+dotsplines.c:993:18: warning: 'lmaxx' may be used uninitialized in this function [-Wmaybe-uninitialized]
+dotsplines.c:882:19: note: 'lmaxx' was declared here
+dotsplines.c:997:18: warning: 'lminx' may be used uninitialized in this function [-Wmaybe-uninitialized]
+dotsplines.c:882:12: note: 'lminx' was declared here
+  CC       aspect.lo
+aspect.c: In function 'computeCombiAR':
+aspect.c:1614:12: warning: variable 'maxLayerIndex' set but not used [-Wunused-but-set-variable]
+aspect.c: In function 'rank3':
+aspect.c:750:2: warning: 'nextMaxWidth' may be used uninitialized in this function [-Wmaybe-uninitialized]
+aspect.c:703:12: note: 'nextMaxWidth' was declared here
+aspect.c:737:18: warning: 'maxLayerIndex' may be used uninitialized in this function [-Wmaybe-uninitialized]
+aspect.c:702:9: note: 'maxLayerIndex' was declared here
+  CCLD     libdotgen_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/dotgen'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/dotgen'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/dotgen'
+Making install in fdpgen
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/fdpgen'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       comp.lo
+  CC       dbg.lo
+  CC       grid.lo
+  CC       fdpinit.lo
+  CC       layout.lo
+  CC       tlayout.lo
+  CC       xlayout.lo
+  CC       clusteredges.lo
+  CCLD     libfdpgen_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/fdpgen'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/fdpgen'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/fdpgen'
+Making install in neatogen
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/neatogen'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       adjust.lo
+adjust.c: In function 'getSizes':
+adjust.c:681:17: warning: 'nedge_nodes' may be used uninitialized in this function [-Wmaybe-uninitialized]
+adjust.c: In function 'removeOverlapWith':
+adjust.c:1045:9: warning: 'ret' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CC       circuit.lo
+  CC       edges.lo
+  CC       geometry.lo
+  CC       heap.lo
+  CC       hedges.lo
+  CC       info.lo
+  CC       neatoinit.lo
+  CC       legal.lo
+  CC       lu.lo
+  CC       matinv.lo
+  CC       memory.lo
+  CC       poly.lo
+  CC       printvis.lo
+  CC       site.lo
+  CC       solve.lo
+  CC       neatosplines.lo
+neatosplines.c: In function 'makeObstacle':
+neatosplines.c:363:13: warning: variable 'desc' set but not used [-Wunused-but-set-variable]
+neatosplines.c: In function '_spline_edges':
+neatosplines.c:603:15: warning: unused variable 'rtr' [-Wunused-variable]
+  CC       stuff.lo
+  CC       voronoi.lo
+  CC       stress.lo
+stress.c: In function 'mdsModel':
+stress.c:1383:12: warning: 'delta' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CC       kkutils.lo
+  CC       matrix_ops.lo
+  CC       embed_graph.lo
+  CC       dijkstra.lo
+  CC       conjgrad.lo
+  CC       pca.lo
+  CC       closest.lo
+  CC       bfs.lo
+  CC       constraint.lo
+  CC       quad_prog_solve.lo
+  CC       smart_ini_x.lo
+  CC       constrained_majorization.lo
+  CC       opt_arrangement.lo
+  CC       overlap.lo
+  CC       call_tri.lo
+  CC       compute_hierarchy.lo
+  CC       delaunay.lo
+  CC       multispline.lo
+  CCLD     libneatogen_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/neatogen'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/neatogen'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/neatogen'
+Making install in twopigen
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/twopigen'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       twopiinit.lo
+  CC       circle.lo
+circle.c: In function 'circleLayout':
+circle.c:285:5: warning: 'delx' may be used uninitialized in this function [-Wmaybe-uninitialized]
+circle.c:268:20: note: 'delx' was declared here
+  CCLD     libtwopigen_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/twopigen'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/twopigen'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/twopigen'
+Making install in sfdpgen
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/sfdpgen'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       sfdpinit.lo
+  CC       spring_electrical.lo
+spring_electrical.c: In function 'rotate':
+spring_electrical.c:1850:10: warning: variable 'y' set but not used [-Wunused-but-set-variable]
+  CC       LinkedList.lo
+  CC       sparse_solve.lo
+  CC       post_process.lo
+post_process.c: In function 'StressMajorizationSmoother2_new':
+post_process.c:110:38: warning: variable 'dd' set but not used [-Wunused-but-set-variable]
+post_process.c: In function 'StressMajorizationSmoother_smooth':
+post_process.c:578:125: warning: variable 'res' set but not used [-Wunused-but-set-variable]
+post_process.c:578:11: warning: variable 'w' set but not used [-Wunused-but-set-variable]
+post_process.c:577:32: warning: variable 'jw' set but not used [-Wunused-but-set-variable]
+post_process.c:577:27: warning: variable 'iw' set but not used [-Wunused-but-set-variable]
+post_process.c: In function 'TriangleSmoother_new':
+post_process.c:698:68: warning: variable 'jd' set but not used [-Wunused-but-set-variable]
+post_process.c:698:63: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  CC       stress_model.lo
+  CC       uniform_stress.lo
+uniform_stress.c: In function 'uniform_stress':
+uniform_stress.c:112:10: warning: variable 'res' set but not used [-Wunused-but-set-variable]
+  CC       QuadTree.lo
+  CC       Multilevel.lo
+Multilevel.c: In function 'maximal_independent_vertex_set':
+Multilevel.c:87:30: warning: variable 'n' set but not used [-Wunused-but-set-variable]
+Multilevel.c: In function 'maximal_independent_vertex_set_RS':
+Multilevel.c:138:64: warning: variable 'removed' set but not used [-Wunused-but-set-variable]
+Multilevel.c:138:55: warning: variable 'n' set but not used [-Wunused-but-set-variable]
+Multilevel.c: In function 'maximal_independent_edge_set_heavest_edge_pernode_leaves_first':
+Multilevel.c:327:30: warning: variable 'n' set but not used [-Wunused-but-set-variable]
+Multilevel.c: In function 'maximal_independent_edge_set_heavest_edge_pernode_supernodes_first':
+Multilevel.c:502:30: warning: variable 'n' set but not used [-Wunused-but-set-variable]
+Multilevel.c: In function 'maximal_independent_edge_set_heavest_cluster_pernode_leaves_first':
+Multilevel.c:646:30: warning: variable 'n' set but not used [-Wunused-but-set-variable]
+  CC       PriorityQueue.lo
+  CCLD     libsfdpgen_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/sfdpgen'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/sfdpgen'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/sfdpgen'
+Making install in osage
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/osage'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       osageinit.lo
+  CCLD     libosage_C.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/osage'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/osage'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib/osage'
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib'
+make[2]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/lib'
+Making install in plugin
+make[2]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin'
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+Making install in core
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin/core'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       gvplugin_core.lo
+  CC       gvrender_core_dot.lo
+gvrender_core_dot.c: In function 'xdot_points':
+gvrender_core_dot.c:107:12: warning: variable 'rc' set but not used [-Wunused-but-set-variable]
+  CC       gvrender_core_fig.lo
+  CC       gvrender_core_map.lo
+  CC       gvrender_core_ps.lo
+  CC       gvrender_core_svg.lo
+  CC       gvrender_core_tk.lo
+gvrender_core_tk.c: In function 'tkgen_print_tags':
+gvrender_core_tk.c:58:18: warning: variable 'ObjId' set but not used [-Wunused-but-set-variable]
+gvrender_core_tk.c:57:21: warning: variable 'ObjPart' set but not used [-Wunused-but-set-variable]
+  CC       gvrender_core_vml.lo
+gvrender_core_vml.c: In function 'vml_ellipse':
+gvrender_core_vml.c:452:38: warning: variable 'bottom' set but not used [-Wunused-but-set-variable]
+gvrender_core_vml.c:452:26: warning: variable 'right' set but not used [-Wunused-but-set-variable]
+  CC       gvloadimage_core.lo
+  CCLD     libgvplugin_core_C.la
+  CCLD     libgvplugin_core.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin/core'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libgvplugin_core.la '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz'
+libtool: install: /bin/install -c .libs/libgvplugin_core.lai /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_core.la
+libtool: install: /bin/install -c .libs/libgvplugin_core.a /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_core.a
+libtool: install: chmod 644 /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_core.a
+libtool: install: ranlib /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_core.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin/core'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin/core'
+Making install in dot_layout
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin/dot_layout'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       gvplugin_dot_layout.lo
+  CC       gvlayout_dot_layout.lo
+gvlayout_dot_layout.c:45:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+gvlayout_dot_layout.c:46:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+  CCLD     libgvplugin_dot_layout_C.la
+  CCLD     libgvplugin_dot_layout.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin/dot_layout'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libgvplugin_dot_layout.la '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz'
+libtool: install: /bin/install -c .libs/libgvplugin_dot_layout.lai /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_dot_layout.la
+libtool: install: /bin/install -c .libs/libgvplugin_dot_layout.a /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_dot_layout.a
+libtool: install: chmod 644 /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_dot_layout.a
+libtool: install: ranlib /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_dot_layout.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin/dot_layout'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin/dot_layout'
+Making install in neato_layout
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin/neato_layout'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+  CC       gvplugin_neato_layout.lo
+  CC       gvlayout_neato_layout.lo
+  CCLD     libgvplugin_neato_layout_C.la
+  CCLD     libgvplugin_neato_layout.la
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin/neato_layout'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libgvplugin_neato_layout.la '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz'
+libtool: install: /bin/install -c .libs/libgvplugin_neato_layout.lai /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_neato_layout.la
+libtool: install: /bin/install -c .libs/libgvplugin_neato_layout.a /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_neato_layout.a
+libtool: install: chmod 644 /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_neato_layout.a
+libtool: install: ranlib /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_neato_layout.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin/neato_layout'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin/neato_layout'
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin'
+make[5]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin'
+make[2]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz/plugin'
+make[2]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[3]: Nothing to be done for `install-exec-am'.
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man7'
+ /bin/install -c -m 644 graphviz.7 '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/man/man7'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 graphviz_version.h '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz'
+ /bin/mkdir -p '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc'
+ /bin/install -c -m 644 AUTHORS COPYING ChangeLog NEWS cpl1.0.txt '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/share/graphviz/doc'
+make[3]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[2]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+make[1]: Leaving directory `/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/graphviz'
+cp: omitting directory '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/graphviz'
+cp: omitting directory '/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/lib/pkgconfig'
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for deflateBound in -lz... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for whether compiler has bool... yes
+configure: Using the following compilation and linking flags for Rgraphviz
+configure:    PKG_CFLAGS= -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz
+configure:    PKG_LIBS=libxdot.a libgvplugin_dot_layout.a libgvplugin_neato_layout.a libgvplugin_core.a libgvc.a libpathplan.a libgraph.a libcdt.a -lz
+configure:    GVIZ_DEFS=-DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1
+configure: Compiling using Graphviz version: '2.28.0'.
+configure: Using bundled Graphviz: 'TRUE'.
+configure: creating ./config.status
+config.status: creating R/graphviz_build_version.R
+config.status: creating src/Makevars
+** libs
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c LL_funcs.c -o LL_funcs.o
+LL_funcs.c: In function ‘Rgraphviz_agopenSimple’:
+LL_funcs.c:430:29: warning: variable ‘curNode’ set but not used [-Wunused-but-set-variable]
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c Rgraphviz.c -o Rgraphviz.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c RgraphvizInit.c -o RgraphvizInit.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c agopen.c -o agopen.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c agread.c -o agread.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c agwrite.c -o agwrite.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c bezier.c -o bezier.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c buildEdgeList.c -o buildEdgeList.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c buildNodeList.c -o buildNodeList.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c doLayout.c -o doLayout.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c graphvizVersion.c -o graphvizVersion.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/Rtmp7aYNyy/R.INSTALL7037a1cfaea/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c init.c -o init.o
+gcc -m32 -std=gnu99 -shared -Wl,-z,relro -o Rgraphviz.so LL_funcs.o Rgraphviz.o RgraphvizInit.o agopen.o agread.o agwrite.o bezier.o buildEdgeList.o buildNodeList.o doLayout.o graphvizVersion.o init.o libxdot.a libgvplugin_dot_layout.a libgvplugin_neato_layout.a libgvplugin_core.a libgvc.a libpathplan.a libgraph.a libcdt.a -lz -L/usr/lib/R/lib -lR
+installing to /usr/lib/R/library/Rgraphviz/libs
+** R
+** inst
+** preparing package for lazy loading
+Creating a generic function for ‘head’ from package ‘utils’ in package ‘Rgraphviz’
+Creating a generic function for ‘tail’ from package ‘utils’ in package ‘Rgraphviz’
+Creating a generic function for ‘lines’ from package ‘graphics’ in package ‘Rgraphviz’
+** help
+*** installing help indices
+  converting help for package ‘Rgraphviz’
+    finding HTML links ... done
+    AgEdge-class                            html  
+    AgNode-class                            html  
+    AgTextLabel-class                       html  
+    BezierCurve-class                       html  
+    GraphvizAttributes                      html  
+    GraphvizLayouts                         html  
+    Ragraph-class                           html  
+    agopen                                  html  
+    agopenSimple                            html  
+    agwrite                                 html  
+    boundingBox-class                       html  
+    buildNodeList                           html  
+    clusterData-methods                     html  
+    getDefaultAttrs                         html  
+    graphData-methods                       html  
+    graphDataDefaults-methods               html  
+    graphLayout                             html  
+    graphvizCapabilities                    html  
+    graphvizVersion                         html  
+    layoutGraph                             html  
+    makeNodeAttrs                           html  
+    pEdge-class                             html  
+    pNode-class                             html  
+    pieGlyph                                html  
+    plot-methods                            html  
+    removedEdges                            html  
+    renderGraph                             html  
+    toDot-methods                           html  
+    toFile                                  html  
+    xyPoint-class                           html  
+** building package indices
+** installing vignettes
+   ‘Rgraphviz.Rnw’ 
+   ‘newRgraphvizInterface.Rnw’ 
+** testing if installed package can be loaded
+
+* DONE (Rgraphviz)
+Making packages.html  ... done
+
+The downloaded source packages are in
+	‘/tmp/Rtmpiu1bNT/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making packages.html  ... done
+Old packages: 'foreign', 'lattice', 'MASS', 'Matrix', 'nlme', 'rpart',
+  'survival'
+> warnings()
+NULL
+> 
+> install.packages(
++   c(
++     'ctv',
++   ),
++   repos='http://cran.fhcrc.org'
++ )
+Error in c("ctv", ) : argument 2 is empty
+Calls: install.packages
+Execution halted
