@@ -1,8 +1,8 @@
 #! /bin/bash
 
-mkdir -p ${HOME}/local/src/tm.plugins
+mkdir -p /opt/src/tm.plugins
 
-pushd ${HOME}/local/src/tm.plugins
+pushd /opt/src/tm.plugins
 rm -fr sentiment *.tar.gz
 svn checkout svn://scm.r-forge.r-project.org/svnroot/sentiment/
 
