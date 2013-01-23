@@ -30,7 +30,8 @@ sudo yum install -y \
   kernel-tools \
   audacity \
   ggobi \
-  R
+  R \
+  rkward
 
 # Graphviz
 sudo yum install -y \

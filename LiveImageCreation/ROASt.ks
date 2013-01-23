@@ -60,6 +60,7 @@ kernel-tools
 audacity
 ggobi
 R
+rkward
 
 # Graphviz
 graphviz-R
