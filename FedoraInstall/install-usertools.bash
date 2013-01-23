@@ -50,6 +50,13 @@ sudo yum install -y \
   wordnet \
   wordnet-devel
 
+# Finance
+sudo yum install -y \
+  QuantLib-devel \
+  QuantLib-doc \
+  QuantLib-test \
+  QuantLib
+
 # Headers
 sudo yum install -y \
   atlas-devel \

@@ -68,6 +68,12 @@ python-nltk
 wordnet
 wordnet-devel
 
+# Finance
+QuantLib-devel
+QuantLib-doc
+QuantLib-test
+QuantLib
+
 # Headers
 atlas-devel
 expat-devel

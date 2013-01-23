@@ -23,6 +23,9 @@ warnings()
 library(ctv)
 update.views(
   c(
+    'Finance',
+    'Econometrics',
+    'TimeSeries',
     'NaturalLanguageProcessing',
     'ReproducibleResearch',
     'Graphics'
