@@ -11,10 +11,8 @@
 
 # Package groups
 sudo yum group install -y \
-  lxde-desktop \
-  lxde-apps \
-  lxde-media \
-  lxde-office \
+  gnome-desktop \
+  libreoffice \
   firefox \
   development-tools
 
