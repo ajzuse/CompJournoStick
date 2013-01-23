@@ -61,6 +61,13 @@ graphviz-gd
 dot2tex
 graphviz
 
+# Natural Language Processing and Semantic Web
+raptor2
+raptor2-devel
+python-nltk
+wordnet
+wordnet-devel
+
 # Headers
 atlas-devel
 expat-devel

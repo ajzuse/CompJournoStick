@@ -42,6 +42,14 @@ sudo yum install -y \
   dot2tex \
   graphviz
 
+# Natural Language Processing and Semantic Web
+sudo yum install -y \
+  raptor2 \
+  raptor2-devel \
+  python-nltk \
+  wordnet \
+  wordnet-devel
+
 # Headers
 sudo yum install -y \
   atlas-devel \

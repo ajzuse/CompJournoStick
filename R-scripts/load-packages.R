@@ -39,7 +39,9 @@ install.packages(
     'RcmdrPlugin.TextMining',
     'tm',
     'tm.plugin.dc',
-    'tm.plugin.mail'
+    'tm.plugin.mail',
+    'RDF',
+    'rrdf'
   ),
   repos='http://cran.fhcrc.org'
 )

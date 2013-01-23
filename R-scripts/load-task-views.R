@@ -23,6 +23,7 @@ warnings()
 library(ctv)
 update.views(
   c(
+    'NaturalLanguageProcessing',
     'ReproducibleResearch',
     'Graphics'
   ),
