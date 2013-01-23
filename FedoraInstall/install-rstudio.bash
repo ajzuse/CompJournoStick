@@ -9,7 +9,6 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# Package groups
 if [ `uname -m` = "x86_64" ]
 then 
   sudo yum install http://download1.rstudio.org/rstudio-0.97.311-x86_64.rpm
