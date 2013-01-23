@@ -35,17 +35,296 @@ Type 'q()' to quit R.
 +     vers <- getRversion()
 +     biocVers <- tryCatch(tools:::.BioC_version_associated_with_R_version, 
 +         error = function(...) num .... [TRUNCATED] 
+Installing package(s) into ‘/usr/lib/R/library’
+(as ‘lib’ is unspecified)
+trying URL 'http://www.bioconductor.org/packages/2.11/bioc/src/contrib/BiocInstaller_1.8.3.tar.gz'
+Content type 'application/x-gzip' length 11846 bytes (11 Kb)
+opened URL
+==================================================
+downloaded 11 Kb
+
+* installing *source* package ‘BiocInstaller’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+  converting help for package ‘BiocInstaller’
+    finding HTML links ... done
+    BiocUpgrade                             html  
+    biocLite                                html  
+    biocinstallRepos                        html  
+    packageGroups                           html  
+    useDevel                                html  
+** building package indices
+** testing if installed package can be loaded
+Bioconductor version 2.11 (BiocInstaller 1.8.3), ?biocLite for help
+
+* DONE (BiocInstaller)
+Making packages.html  ... done
+
+The downloaded source packages are in
+	‘/tmp/Rtmpi5ziwd/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making packages.html  ... done
 Bioconductor version 2.11 (BiocInstaller 1.8.3), ?biocLite for help
 > biocLite('Rgraphviz')
 BioC_mirror: http://bioconductor.org
 Using Bioconductor version 2.11 (BiocInstaller 1.8.3), R version 2.15.
 Installing package(s) 'Rgraphviz'
+also installing the dependencies ‘BiocGenerics’, ‘graph’
+
+trying URL 'http://bioconductor.org/packages/2.11/bioc/src/contrib/BiocGenerics_0.4.0.tar.gz'
+Content type 'application/x-gzip' length 23499 bytes (22 Kb)
+opened URL
+==================================================
+downloaded 22 Kb
+
+trying URL 'http://bioconductor.org/packages/2.11/bioc/src/contrib/graph_1.36.1.tar.gz'
+Content type 'application/x-gzip' length 941783 bytes (919 Kb)
+opened URL
+==================================================
+downloaded 919 Kb
+
 trying URL 'http://bioconductor.org/packages/2.11/bioc/src/contrib/Rgraphviz_2.2.1.tar.gz'
 Content type 'application/x-gzip' length 7492311 bytes (7.1 Mb)
 opened URL
 ==================================================
 downloaded 7.1 Mb
 
+* installing *source* package ‘BiocGenerics’ ...
+** R
+** inst
+** preparing package for lazy loading
+Creating a new generic function for ‘cbind’ in package ‘BiocGenerics’
+Creating a new generic function for ‘rbind’ in package ‘BiocGenerics’
+Creating a new generic function for ‘duplicated’ in package ‘BiocGenerics’
+Creating a new generic function for ‘anyDuplicated’ in package ‘BiocGenerics’
+Creating a new generic function for ‘eval’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmax’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmin’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmax.int’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmin.int’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Reduce’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Filter’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Find’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Map’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Position’ in package ‘BiocGenerics’
+Creating a new generic function for ‘get’ in package ‘BiocGenerics’
+Creating a new generic function for ‘mget’ in package ‘BiocGenerics’
+Creating a new generic function for ‘lapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘sapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘mapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘order’ in package ‘BiocGenerics’
+Creating a new generic function for ‘paste’ in package ‘BiocGenerics’
+Creating a new generic function for ‘rep.int’ in package ‘BiocGenerics’
+Creating a new generic function for ‘rownames’ in package ‘BiocGenerics’
+Creating a new generic function for ‘colnames’ in package ‘BiocGenerics’
+Creating a new generic function for ‘union’ in package ‘BiocGenerics’
+Creating a new generic function for ‘intersect’ in package ‘BiocGenerics’
+Creating a new generic function for ‘setdiff’ in package ‘BiocGenerics’
+Creating a new generic function for ‘table’ in package ‘BiocGenerics’
+Creating a new generic function for ‘tapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘unique’ in package ‘BiocGenerics’
+Creating a new generic function for ‘xtabs’ in package ‘BiocGenerics’
+** help
+*** installing help indices
+  converting help for package ‘BiocGenerics’
+    finding HTML links ... done
+    BiocGenerics-package                    html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:25: missing file link ‘rbind’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:28: missing file link ‘anyDuplicated’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:33: missing file link ‘pmax’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:34: missing file link ‘pmin’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:35: missing file link ‘pmax.int’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:36: missing file link ‘pmin.int’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:39: missing file link ‘Reduce’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:40: missing file link ‘Filter’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:41: missing file link ‘Find’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:42: missing file link ‘Map’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:43: missing file link ‘Position’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:46: missing file link ‘mget’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:49: missing file link ‘sapply’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:54: missing file link ‘ncol’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:55: missing file link ‘NROW’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:56: missing file link ‘NCOL’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:62: missing file link ‘rep.int’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:64: missing file link ‘rownames’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:65: missing file link ‘colnames’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:68: missing file link ‘union’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:69: missing file link ‘intersect’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:70: missing file link ‘setdiff’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:101: missing file link ‘annotation<-’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:106: missing file link ‘strand<-’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/BiocGenerics-package.Rd:144: missing file link ‘selectMethod’
+    Extremes                                html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/Extremes.Rd:18: missing file link ‘pmax’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/Extremes.Rd:38: missing file link ‘pmax’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/Extremes.Rd:44: missing file link ‘pmax’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/Extremes.Rd:52: missing file link ‘pmax’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/Extremes.Rd:58: missing file link ‘selectMethod’
+    annotation                              html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/annotation.Rd:33: missing file link ‘selectMethod’
+    boxplot                                 html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/boxplot.Rd:43: missing file link ‘selectMethod’
+    cbind                                   html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/cbind.Rd:52: missing file link ‘selectMethod’
+    combine                                 html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/combine.Rd:95: missing file link ‘selectMethod’
+    connection-class                        html  
+    density                                 html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/density.Rd:44: missing file link ‘selectMethod’
+    duplicated                              html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/duplicated.Rd:68: missing file link ‘selectMethod’
+    eval                                    html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/eval.Rd:57: missing file link ‘selectMethod’
+    funprog                                 html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/funprog.Rd:26: missing file link ‘Reduce’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/funprog.Rd:43: missing file link ‘Reduce’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/funprog.Rd:55: missing file link ‘Reduce’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/funprog.Rd:63: missing file link ‘Reduce’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/funprog.Rd:69: missing file link ‘selectMethod’
+    get                                     html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/get.Rd:67: missing file link ‘selectMethod’
+    image                                   html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/image.Rd:45: missing file link ‘selectMethod’
+    lapply                                  html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/lapply.Rd:60: missing file link ‘selectMethod’
+    mapply                                  html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/mapply.Rd:9: missing file link ‘sapply’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/mapply.Rd:52: missing file link ‘selectMethod’
+    nrow                                    html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/nrow.Rd:48: missing file link ‘selectMethod’
+    order                                   html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/order.Rd:66: missing file link ‘selectMethod’
+    paste                                   html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/paste.Rd:48: missing file link ‘selectMethod’
+    rep                                     html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/rep.Rd:12: missing file link ‘rep.int’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/rep.Rd:35: missing file link ‘rep.int’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/rep.Rd:43: missing file link ‘rep.int’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/rep.Rd:49: missing file link ‘selectMethod’
+    residuals                               html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/residuals.Rd:40: missing file link ‘selectMethod’
+    row_colnames                            html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/row_colnames.Rd:14: missing file link ‘rownames’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/row_colnames.Rd:30: missing file link ‘rownames’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/row_colnames.Rd:38: missing file link ‘rownames’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/row_colnames.Rd:46: missing file link ‘rownames’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/row_colnames.Rd:52: missing file link ‘selectMethod’
+    sets                                    html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/sets.Rd:16: missing file link ‘union’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/sets.Rd:55: missing file link ‘union’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/sets.Rd:63: missing file link ‘union’
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/sets.Rd:69: missing file link ‘selectMethod’
+    strand                                  html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/strand.Rd:42: missing file link ‘selectMethod’
+    table                                   html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/table.Rd:45: missing file link ‘selectMethod’
+    tapply                                  html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/tapply.Rd:49: missing file link ‘selectMethod’
+    unique                                  html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/unique.Rd:55: missing file link ‘selectMethod’
+    updateObject                            html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/updateObject.Rd:120: missing file link ‘selectMethod’
+    weights                                 html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/weights.Rd:46: missing file link ‘selectMethod’
+    xtabs                                   html  
+Rd warning: /tmp/Rtmp5hRQOR/R.INSTALL6e73f53c702/BiocGenerics/man/xtabs.Rd:49: missing file link ‘selectMethod’
+** building package indices
+** testing if installed package can be loaded
+
+* DONE (BiocGenerics)
+Making packages.html  ... done
+* installing *source* package ‘graph’ ...
+** libs
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include    -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c graph.c -o graph.o
+gcc -m32 -std=gnu99 -shared -Wl,-z,relro -o graph.so graph.o -L/usr/lib/R/lib -lR
+mv graph.so BioC_graph.so
+installing to /usr/lib/R/library/graph/libs
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+  converting help for package ‘graph’
+    finding HTML links ... done
+    DFS                                     html  
+    IMCA                                    html  
+    MAPKsig                                 html  
+    MultiGraph-class                        html  
+    acc-methods                             html  
+    addEdge                                 html  
+    addNode                                 html  
+    adj-methods                             html  
+    apoptosisGraph                          html  
+    attrData-class                          html  
+    attrDataItem-methods                    html  
+    attrDefaults-methods                    html  
+    aveNumEdges                             html  
+    biocRepos                               html  
+    boundary                                html  
+    calcProb                                html  
+    calcSumProb                             html  
+    clearNode                               html  
+    clusterGraph-class                      html  
+    clusteringCoefficient-methods           html  
+    combineNodes                            html  
+    defunct                                 html  
+    distGraph-class                         html  
+    duplicatedEdges                         html  
+    edgeData-methods                        html  
+    edgeDataDefaults-methods                html  
+    edgeMatrix                              html  
+    edgeSets                                html  
+    edgeWeights                             html  
+    fromGXL-methods                         html  
+    graph-class                             html  
+    graph2SparseM                           html  
+    graphAM-class                           html  
+    graphBAM-class                          html  
+    graphExamples                           html  
+    graphNEL-class                          html  
+    inEdges                                 html  
+    internal                                html  
+    isAdjacent-methods                      html  
+    isDirected-methods                      html  
+    leaves                                  html  
+    listEdges                               html  
+    matrix2Graph                            html  
+    mostEdges                               html  
+    multigraph                              html  
+    nodeData-methods                        html  
+    nodeDataDefaults-methods                html  
+    numNoEdges                              html  
+    pancrCaIni                              html  
+    randomEGraph                            html  
+    randomGraph                             html  
+    randomNodeGraph                         html  
+    removeEdge                              html  
+    removeNode                              html  
+    renderInfo-class                        html  
+    reverseEdgeDirections                   html  
+    settings                                html  
+    simpleEdge-class                        html  
+    standardLabeling                        html  
+    subGraph                                html  
+    toDotR-methods                          html  
+    ugraph                                  html  
+    validGraph                              html  
+    write.tlp                               html  
+** building package indices
+** installing vignettes
+   ‘GraphClass.Rnw’ 
+   ‘MultiGraphClass.Rnw’ 
+   ‘clusterGraph.Rnw’ 
+   ‘graph.Rnw’ 
+   ‘graphAttributes.Rnw’ 
+** testing if installed package can be loaded
+
+* DONE (graph)
+Making packages.html  ... done
 * installing *source* package ‘Rgraphviz’ ...
 configure: Using bundled Graphviz.
 configure: Searching for the compilers specified by R.
@@ -437,8 +716,8 @@ config.status: creating Doxyfile
 config.status: creating config.h
 config.status: executing depfiles commands
 config.status: executing libtool commands
-=== configuring in libltdl (/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/libltdl)
-configure: running /bin/sh ./configure --disable-option-checking '--prefix=/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix'  'CC=gcc -m32 -std=gnu99' 'CXX=g++ -m32' 'CFLAGS=-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables' 'CXXFLAGS=-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables' 'LDFLAGS=-Wl,-z,relro' '--libdir=/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib' '--includedir=/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include' '--with-cgraph=no' '--enable-swig=no' '--enable-static' '--disable-shared' '--with-pic' '--with-libgd=no' '--disable-ltdl' '--without-x' '--without-expat' '--without-devil' '--without-rsvg' '--without-ghostscript' '--without-visio' '--without-pangocairo' '--without-lasi' '--without-glitz' '--without-freetype2' '--without-fontconfig' '--without-rpat' '--without-glut' '--without-gts' '--without-png' '--without-tcl' '--without-jpeg' 'R_LIBS=/usr/lib/R/library:/usr/share/R/library' --cache-file=/dev/null --srcdir=.
+=== configuring in libltdl (/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/libltdl)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix'  'CC=gcc -m32 -std=gnu99' 'CXX=g++ -m32' 'CFLAGS=-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables' 'CXXFLAGS=-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables' 'LDFLAGS=-Wl,-z,relro' '--libdir=/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib' '--includedir=/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include' '--with-cgraph=no' '--enable-swig=no' '--enable-static' '--disable-shared' '--with-pic' '--with-libgd=no' '--disable-ltdl' '--without-x' '--without-expat' '--without-devil' '--without-rsvg' '--without-ghostscript' '--without-visio' '--without-pangocairo' '--without-lasi' '--without-glitz' '--without-freetype2' '--without-fontconfig' '--without-rpat' '--without-glut' '--without-gts' '--without-png' '--without-tcl' '--without-jpeg' 'R_LIBS=/usr/lib/R/library:/usr/share/R/library' --cache-file=/dev/null --srcdir=.
 checking for a BSD-compatible install... /bin/install -c
 checking whether build environment is sane... yes
 checking for a thread-safe mkdir -p... /bin/mkdir -p
@@ -626,11 +905,11 @@ language extensions:
   tkspline:      Yes
 grep 'PACKAGE\|VERSION\|GVPLUGIN' config.h > graphviz_version.h
 make  install-recursive
-make[1]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[1]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 Making install in libltdl
-make[2]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/libltdl'
+make[2]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/libltdl'
 make  install-am
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/libltdl'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/libltdl'
 /bin/sh ./libtool  --tag=CC   --mode=compile gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I.  -DLT_CONFIG_H='<config.h>' -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl   -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT dlopen.lo -MD -MP -MF .deps/dlopen.Tpo -c -o dlopen.lo `test -f 'loaders/dlopen.c' || echo './'`loaders/dlopen.c
 libtool: compile:  gcc -m32 -std=gnu99 -DHAVE_CONFIG_H -I. "-DLT_CONFIG_H=<config.h>" -DLTDL -I. -I. -Ilibltdl -I./libltdl -I./libltdl -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -MT dlopen.lo -MD -MP -MF .deps/dlopen.Tpo -c loaders/dlopen.c  -fPIC -DPIC -o dlopen.o
 mv -f .deps/dlopen.Tpo .deps/dlopen.Plo
@@ -665,23 +944,23 @@ mv -f .deps/lt__strl.Tpo .deps/lt__strl.Plo
 libtool: link: rm -f .libs/libltdlc.nm .libs/libltdlc.nmS .libs/libltdlc.nmT
 libtool: link: (cd .libs && gcc -m32 -std=gnu99 -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -c -fno-builtin  -fPIC -DPIC "libltdlcS.c")
 libtool: link: rm -f ".libs/libltdlcS.c" ".libs/libltdlc.nm" ".libs/libltdlc.nmS" ".libs/libltdlc.nmT"
-libtool: link: (cd .libs/libltdlc.lax/dlopen.a && ar x "/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/libltdl/./.libs/dlopen.a")
+libtool: link: (cd .libs/libltdlc.lax/dlopen.a && ar x "/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/libltdl/./.libs/dlopen.a")
 libtool: link: ar cru .libs/libltdlc.a  libltdlc_la-preopen.o libltdlc_la-lt__alloc.o libltdlc_la-lt_dlloader.o libltdlc_la-lt_error.o libltdlc_la-ltdl.o libltdlc_la-slist.o lt__strl.o .libs/libltdlcS.o  .libs/libltdlc.lax/dlopen.a/dlopen.o 
 libtool: link: ranlib .libs/libltdlc.a
 libtool: link: rm -fr .libs/libltdlc.lax
 libtool: link: ( cd ".libs" && rm -f "libltdlc.la" && ln -s "../libltdlc.la" "libltdlc.la" )
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/libltdl'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/libltdl'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/libltdl'
-make[2]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/libltdl'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/libltdl'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/libltdl'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/libltdl'
+make[2]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/libltdl'
 Making install in lib
-make[2]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib'
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[2]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 Making install in cdt
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/cdt'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/cdt'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       dtclose.lo
   CC       dtdisc.lo
 dtdisc.c:13:14: warning: function declaration isn't a prototype [-Wstrict-prototypes]
@@ -722,19 +1001,19 @@ dtwalk.c: In function 'dtwalk':
 dtwalk.c:14:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
   CCLD     libcdt.la
   CCLD     libcdt_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/cdt'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib'
- /bin/sh ../../libtool   --mode=install /bin/install -c   libcdt.la '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib'
-libtool: install: /bin/install -c .libs/libcdt.lai /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libcdt.la
-libtool: install: /bin/install -c .libs/libcdt.a /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libcdt.a
-libtool: install: chmod 644 /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libcdt.a
-libtool: install: ranlib /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libcdt.a
-libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/cdt'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libcdt.la '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib'
+libtool: install: /bin/install -c .libs/libcdt.lai /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libcdt.la
+libtool: install: /bin/install -c .libs/libcdt.a /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libcdt.a
+libtool: install: chmod 644 /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libcdt.a
+libtool: install: ranlib /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libcdt.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib
+   /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -750,20 +1029,20 @@ flag during linking and do at least one of the following:
 See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man3'
- /bin/install -c -m 644 cdt.3 '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man3'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
- /bin/install -c -m 644 cdt.3.pdf '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/pkgconfig'
- /bin/install -c -m 644 libcdt.pc '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/pkgconfig'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
- /bin/install -c -m 644 cdt.h '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/cdt'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/cdt'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man3'
+ /bin/install -c -m 644 cdt.3 '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man3'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/install -c -m 644 cdt.3.pdf '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/install -c -m 644 libcdt.pc '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 cdt.h '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/cdt'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/cdt'
 Making install in graph
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/graph'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/graph'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       attribs.lo
   CC       agxbuf.lo
   CC       edge.lo
@@ -787,19 +1066,19 @@ lexer.c:527:10: warning: ignoring return value of 'fread', declared with attribu
   CC       trie.lo
   CCLD     libgraph.la
   CCLD     libgraph_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/graph'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib'
- /bin/sh ../../libtool   --mode=install /bin/install -c   libgraph.la '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib'
-libtool: install: /bin/install -c .libs/libgraph.lai /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libgraph.la
-libtool: install: /bin/install -c .libs/libgraph.a /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libgraph.a
-libtool: install: chmod 644 /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libgraph.a
-libtool: install: ranlib /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libgraph.a
-libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/graph'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libgraph.la '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib'
+libtool: install: /bin/install -c .libs/libgraph.lai /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libgraph.la
+libtool: install: /bin/install -c .libs/libgraph.a /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libgraph.a
+libtool: install: chmod 644 /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libgraph.a
+libtool: install: ranlib /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libgraph.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib
+   /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -815,20 +1094,20 @@ flag during linking and do at least one of the following:
 See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man3'
- /bin/install -c -m 644 graph.3 '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man3'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
- /bin/install -c -m 644 graph.3.pdf '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/pkgconfig'
- /bin/install -c -m 644 libgraph.pc '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/pkgconfig'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
- /bin/install -c -m 644 graph.h '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/graph'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/graph'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man3'
+ /bin/install -c -m 644 graph.3 '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man3'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/install -c -m 644 graph.3.pdf '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/install -c -m 644 libgraph.pc '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 graph.h '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/graph'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/graph'
 Making install in pathplan
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/pathplan'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/pathplan'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       cvt.lo
 cvt.c:276:13: warning: 'append_bezier' defined but not used [-Wunused-function]
   CC       inpoly.lo
@@ -843,19 +1122,19 @@ shortest.c:539:8: warning: assuming signed overflow does not occur when assuming
   CC       visibility.lo
   CCLD     libpathplan.la
   CCLD     libpathplan_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/pathplan'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib'
- /bin/sh ../../libtool   --mode=install /bin/install -c   libpathplan.la '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib'
-libtool: install: /bin/install -c .libs/libpathplan.lai /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libpathplan.la
-libtool: install: /bin/install -c .libs/libpathplan.a /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libpathplan.a
-libtool: install: chmod 644 /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libpathplan.a
-libtool: install: ranlib /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libpathplan.a
-libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/pathplan'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libpathplan.la '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib'
+libtool: install: /bin/install -c .libs/libpathplan.lai /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libpathplan.la
+libtool: install: /bin/install -c .libs/libpathplan.a /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libpathplan.a
+libtool: install: chmod 644 /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libpathplan.a
+libtool: install: ranlib /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libpathplan.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib
+   /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -871,46 +1150,46 @@ flag during linking and do at least one of the following:
 See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man3'
- /bin/install -c -m 644 pathplan.3 '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man3'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
- /bin/install -c -m 644 pathplan.3.pdf '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/pkgconfig'
- /bin/install -c -m 644 libpathplan.pc '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/pkgconfig'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
- /bin/install -c -m 644 pathgeom.h pathplan.h '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/pathplan'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/pathplan'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man3'
+ /bin/install -c -m 644 pathplan.3 '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man3'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/install -c -m 644 pathplan.3.pdf '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/install -c -m 644 libpathplan.pc '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 pathgeom.h pathplan.h '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/pathplan'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/pathplan'
 Making install in vpsc
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/vpsc'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/vpsc'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/vpsc'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/vpsc'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/vpsc'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/vpsc'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/vpsc'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/vpsc'
 Making install in rbtree
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/rbtree'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/rbtree'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       misc.lo
   CC       red_black_tree.lo
   CC       stack.lo
   CCLD     librbtree_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/rbtree'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/rbtree'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/rbtree'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/rbtree'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/rbtree'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/rbtree'
 Making install in ortho
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/ortho'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/ortho'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       fPQ.lo
   CC       intset.lo
   CC       maze.lo
@@ -952,17 +1231,17 @@ trapezoid.c:437:7: warning: variable 'tritop' set but not used [-Wunused-but-set
 trapezoid.c:996:19: warning: 'tlastr' may be used uninitialized in this function [-Wmaybe-uninitialized]
 trapezoid.c:996:19: warning: 'tfirstr' may be used uninitialized in this function [-Wmaybe-uninitialized]
   CCLD     libortho_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/ortho'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/ortho'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/ortho'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/ortho'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/ortho'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/ortho'
 Making install in sparse
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/sparse'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/sparse'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       SparseMatrix.lo
 SparseMatrix.c: In function 'SparseMatrix_import_binary':
 SparseMatrix.c:629:48: warning: variable 'iread' set but not used [-Wunused-but-set-variable]
@@ -970,32 +1249,32 @@ SparseMatrix.c:629:48: warning: variable 'iread' set but not used [-Wunused-but-
   CC       BinaryHeap.lo
   CC       IntStack.lo
   CCLD     libsparse_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/sparse'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/sparse'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/sparse'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/sparse'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/sparse'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/sparse'
 Making install in patchwork
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/patchwork'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/patchwork'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       patchwork.lo
   CC       patchworkinit.lo
   CC       tree_map.lo
   CCLD     libpatchwork_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/patchwork'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/patchwork'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/patchwork'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/patchwork'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/patchwork'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/patchwork'
 Making install in common
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/common'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/common'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       arrows.lo
 arrows.c: In function 'arrowOrthoClip':
 arrows.c:397:21: warning: 'hlen' may be used uninitialized in this function [-Wmaybe-uninitialized]
@@ -1060,55 +1339,55 @@ emit.c: In function 'xdotBB':
 emit.c:2515:9: warning: 'fontname' may be used uninitialized in this function [-Wmaybe-uninitialized]
 emit.c:2515:9: warning: 'fontsize' may be used uninitialized in this function [-Wmaybe-uninitialized]
   CCLD     libcommon_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/common'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/common'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
- /bin/install -c -m 644 arith.h geom.h color.h types.h textpara.h usershape.h '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/common'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/common'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 arith.h geom.h color.h types.h textpara.h usershape.h '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/common'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/common'
 Making install in pack
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/pack'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/pack'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       ccomps.lo
   CC       pack.lo
 pack.c: In function 'putGraphs':
 pack.c:920:12: warning: 'pts' may be used uninitialized in this function [-Wmaybe-uninitialized]
   CCLD     libpack_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/pack'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/pack'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man3'
- /bin/install -c -m 644 pack.3 '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man3'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
- /bin/install -c -m 644 pack.3.pdf '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
- /bin/install -c -m 644 pack.h '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/pack'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/pack'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man3'
+ /bin/install -c -m 644 pack.3 '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man3'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/install -c -m 644 pack.3.pdf '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 pack.h '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/pack'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/pack'
 Making install in xdot
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/xdot'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/xdot'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       xdot.lo
   CCLD     libxdot.la
   CCLD     libxdot_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/xdot'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib'
- /bin/sh ../../libtool   --mode=install /bin/install -c   libxdot.la '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib'
-libtool: install: /bin/install -c .libs/libxdot.lai /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libxdot.la
-libtool: install: /bin/install -c .libs/libxdot.a /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libxdot.a
-libtool: install: chmod 644 /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libxdot.a
-libtool: install: ranlib /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libxdot.a
-libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/xdot'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libxdot.la '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib'
+libtool: install: /bin/install -c .libs/libxdot.lai /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libxdot.la
+libtool: install: /bin/install -c .libs/libxdot.a /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libxdot.a
+libtool: install: chmod 644 /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libxdot.a
+libtool: install: ranlib /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libxdot.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib
+   /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -1124,20 +1403,20 @@ flag during linking and do at least one of the following:
 See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man3'
- /bin/install -c -m 644 xdot.3 '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man3'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
- /bin/install -c -m 644 xdot.3.pdf '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/pkgconfig'
- /bin/install -c -m 644 libxdot.pc '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/pkgconfig'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
- /bin/install -c -m 644 xdot.h '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/xdot'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/xdot'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man3'
+ /bin/install -c -m 644 xdot.3 '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man3'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/install -c -m 644 xdot.3.pdf '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/install -c -m 644 libxdot.pc '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 xdot.h '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/xdot'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/xdot'
 Making install in gvc
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/gvc'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/gvc'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       gvrender.lo
   CC       gvlayout.lo
   CC       gvdevice.lo
@@ -1152,19 +1431,19 @@ make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/
   CC       gvc.lo
   CCLD     libgvc.la
   CCLD     libgvc_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/gvc'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib'
- /bin/sh ../../libtool   --mode=install /bin/install -c   libgvc.la '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib'
-libtool: install: /bin/install -c .libs/libgvc.lai /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libgvc.la
-libtool: install: /bin/install -c .libs/libgvc.a /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libgvc.a
-libtool: install: chmod 644 /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libgvc.a
-libtool: install: ranlib /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/libgvc.a
-libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/gvc'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libgvc.la '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib'
+libtool: install: /bin/install -c .libs/libgvc.lai /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libgvc.la
+libtool: install: /bin/install -c .libs/libgvc.a /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libgvc.a
+libtool: install: chmod 644 /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libgvc.a
+libtool: install: ranlib /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/libgvc.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib
+   /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -1180,20 +1459,20 @@ flag during linking and do at least one of the following:
 See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man3'
- /bin/install -c -m 644 gvc.3 '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man3'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
- /bin/install -c -m 644 gvc.3.pdf '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/pkgconfig'
- /bin/install -c -m 644 libgvc.pc '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/pkgconfig'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
- /bin/install -c -m 644 gvc.h gvcext.h gvplugin.h gvcjob.h gvcommon.h gvplugin_render.h gvplugin_layout.h gvconfig.h gvplugin_textlayout.h gvplugin_device.h gvplugin_loadimage.h '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/gvc'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/gvc'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man3'
+ /bin/install -c -m 644 gvc.3 '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man3'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/install -c -m 644 gvc.3.pdf '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc/pdf'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/install -c -m 644 libgvc.pc '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 gvc.h gvcext.h gvplugin.h gvcjob.h gvcommon.h gvplugin_render.h gvplugin_layout.h gvconfig.h gvplugin_textlayout.h gvplugin_device.h gvplugin_loadimage.h '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/gvc'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/gvc'
 Making install in circogen
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/circogen'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/circogen'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       circularinit.lo
   CC       nodelist.lo
   CC       block.lo
@@ -1208,17 +1487,17 @@ circpos.c:338:40: warning: 'midAngle' may be used uninitialized in this function
 circpos.c:264:39: note: 'midAngle' was declared here
   CC       nodeset.lo
   CCLD     libcircogen_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/circogen'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/circogen'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/circogen'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/circogen'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/circogen'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/circogen'
 Making install in dotgen
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/dotgen'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/dotgen'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       acyclic.lo
   CC       class1.lo
   CC       class2.lo
@@ -1257,17 +1536,17 @@ aspect.c:703:12: note: 'nextMaxWidth' was declared here
 aspect.c:737:18: warning: 'maxLayerIndex' may be used uninitialized in this function [-Wmaybe-uninitialized]
 aspect.c:702:9: note: 'maxLayerIndex' was declared here
   CCLD     libdotgen_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/dotgen'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/dotgen'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/dotgen'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/dotgen'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/dotgen'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/dotgen'
 Making install in fdpgen
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/fdpgen'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/fdpgen'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       comp.lo
   CC       dbg.lo
   CC       grid.lo
@@ -1277,17 +1556,17 @@ make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/
   CC       xlayout.lo
   CC       clusteredges.lo
   CCLD     libfdpgen_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/fdpgen'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/fdpgen'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/fdpgen'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/fdpgen'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/fdpgen'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/fdpgen'
 Making install in neatogen
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/neatogen'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/neatogen'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       adjust.lo
 adjust.c: In function 'getSizes':
 adjust.c:681:17: warning: 'nedge_nodes' may be used uninitialized in this function [-Wmaybe-uninitialized]
@@ -1337,34 +1616,34 @@ stress.c:1383:12: warning: 'delta' may be used uninitialized in this function [-
   CC       delaunay.lo
   CC       multispline.lo
   CCLD     libneatogen_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/neatogen'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/neatogen'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/neatogen'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/neatogen'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/neatogen'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/neatogen'
 Making install in twopigen
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/twopigen'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/twopigen'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       twopiinit.lo
   CC       circle.lo
 circle.c: In function 'circleLayout':
 circle.c:285:5: warning: 'delx' may be used uninitialized in this function [-Wmaybe-uninitialized]
 circle.c:268:20: note: 'delx' was declared here
   CCLD     libtwopigen_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/twopigen'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/twopigen'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/twopigen'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/twopigen'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/twopigen'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/twopigen'
 Making install in sfdpgen
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/sfdpgen'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/sfdpgen'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       sfdpinit.lo
   CC       spring_electrical.lo
 spring_electrical.c: In function 'rotate':
@@ -1401,45 +1680,45 @@ Multilevel.c: In function 'maximal_independent_edge_set_heavest_cluster_pernode_
 Multilevel.c:646:30: warning: variable 'n' set but not used [-Wunused-but-set-variable]
   CC       PriorityQueue.lo
   CCLD     libsfdpgen_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/sfdpgen'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/sfdpgen'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/sfdpgen'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/sfdpgen'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/sfdpgen'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/sfdpgen'
 Making install in osage
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/osage'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/osage'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       osageinit.lo
   CCLD     libosage_C.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/osage'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/osage'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/osage'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib/osage'
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/osage'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib/osage'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib'
-make[2]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/lib'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib'
+make[2]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/lib'
 Making install in plugin
-make[2]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin'
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[2]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 Making install in core
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin/core'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin/core'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       gvplugin_core.lo
   CC       gvrender_core_dot.lo
 gvrender_core_dot.c: In function 'xdot_points':
@@ -1459,19 +1738,19 @@ gvrender_core_vml.c:452:26: warning: variable 'right' set but not used [-Wunused
   CC       gvloadimage_core.lo
   CCLD     libgvplugin_core_C.la
   CCLD     libgvplugin_core.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin/core'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz'
- /bin/sh ../../libtool   --mode=install /bin/install -c   libgvplugin_core.la '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz'
-libtool: install: /bin/install -c .libs/libgvplugin_core.lai /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_core.la
-libtool: install: /bin/install -c .libs/libgvplugin_core.a /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_core.a
-libtool: install: chmod 644 /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_core.a
-libtool: install: ranlib /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_core.a
-libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin/core'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libgvplugin_core.la '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz'
+libtool: install: /bin/install -c .libs/libgvplugin_core.lai /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_core.la
+libtool: install: /bin/install -c .libs/libgvplugin_core.a /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_core.a
+libtool: install: chmod 644 /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_core.a
+libtool: install: ranlib /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_core.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz
+   /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -1488,31 +1767,31 @@ See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin/core'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin/core'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin/core'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin/core'
 Making install in dot_layout
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin/dot_layout'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin/dot_layout'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       gvplugin_dot_layout.lo
   CC       gvlayout_dot_layout.lo
 gvlayout_dot_layout.c:45:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
 gvlayout_dot_layout.c:46:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
   CCLD     libgvplugin_dot_layout_C.la
   CCLD     libgvplugin_dot_layout.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin/dot_layout'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz'
- /bin/sh ../../libtool   --mode=install /bin/install -c   libgvplugin_dot_layout.la '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz'
-libtool: install: /bin/install -c .libs/libgvplugin_dot_layout.lai /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_dot_layout.la
-libtool: install: /bin/install -c .libs/libgvplugin_dot_layout.a /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_dot_layout.a
-libtool: install: chmod 644 /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_dot_layout.a
-libtool: install: ranlib /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_dot_layout.a
-libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin/dot_layout'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libgvplugin_dot_layout.la '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz'
+libtool: install: /bin/install -c .libs/libgvplugin_dot_layout.lai /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_dot_layout.la
+libtool: install: /bin/install -c .libs/libgvplugin_dot_layout.a /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_dot_layout.a
+libtool: install: chmod 644 /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_dot_layout.a
+libtool: install: ranlib /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_dot_layout.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz
+   /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -1529,29 +1808,29 @@ See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin/dot_layout'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin/dot_layout'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin/dot_layout'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin/dot_layout'
 Making install in neato_layout
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin/neato_layout'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin/neato_layout'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
   CC       gvplugin_neato_layout.lo
   CC       gvlayout_neato_layout.lo
   CCLD     libgvplugin_neato_layout_C.la
   CCLD     libgvplugin_neato_layout.la
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin/neato_layout'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz'
- /bin/sh ../../libtool   --mode=install /bin/install -c   libgvplugin_neato_layout.la '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz'
-libtool: install: /bin/install -c .libs/libgvplugin_neato_layout.lai /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_neato_layout.la
-libtool: install: /bin/install -c .libs/libgvplugin_neato_layout.a /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_neato_layout.a
-libtool: install: chmod 644 /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_neato_layout.a
-libtool: install: ranlib /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_neato_layout.a
-libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin/neato_layout'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz'
+ /bin/sh ../../libtool   --mode=install /bin/install -c   libgvplugin_neato_layout.la '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz'
+libtool: install: /bin/install -c .libs/libgvplugin_neato_layout.lai /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_neato_layout.la
+libtool: install: /bin/install -c .libs/libgvplugin_neato_layout.a /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_neato_layout.a
+libtool: install: chmod 644 /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_neato_layout.a
+libtool: install: ranlib /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz/libgvplugin_neato_layout.a
+libtool: finish: PATH="/usr/lib/ccache:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/sbin" ldconfig -n /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz
+   /tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -1568,33 +1847,33 @@ See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin/neato_layout'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin/neato_layout'
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[4]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin'
-make[5]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[5]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin/neato_layout'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin/neato_layout'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[4]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin'
+make[5]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[5]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[4]: Nothing to be done for `install-exec-am'.
 make[4]: Nothing to be done for `install-data-am'.
-make[4]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin'
-make[2]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz/plugin'
-make[2]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[3]: Entering directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
+make[4]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin'
+make[2]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz/plugin'
+make[2]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[3]: Entering directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
 make[3]: Nothing to be done for `install-exec-am'.
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man7'
- /bin/install -c -m 644 graphviz.7 '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/man/man7'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
- /bin/install -c -m 644 graphviz_version.h '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz'
- /bin/mkdir -p '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc'
- /bin/install -c -m 644 AUTHORS COPYING ChangeLog NEWS cpl1.0.txt '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/share/graphviz/doc'
-make[3]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[2]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-make[1]: Leaving directory `/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/graphviz'
-cp: omitting directory '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/graphviz'
-cp: omitting directory '/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/lib/pkgconfig'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man7'
+ /bin/install -c -m 644 graphviz.7 '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/man/man7'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+ /bin/install -c -m 644 graphviz_version.h '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz'
+ /bin/mkdir -p '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc'
+ /bin/install -c -m 644 AUTHORS COPYING ChangeLog NEWS cpl1.0.txt '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/share/graphviz/doc'
+make[3]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[2]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+make[1]: Leaving directory `/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/graphviz'
+cp: omitting directory '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/graphviz'
+cp: omitting directory '/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/lib/pkgconfig'
 checking for grep that handles long lines and -e... /bin/grep
 checking for egrep... /bin/grep -E
 checking for ANSI C header files... yes
@@ -1615,7 +1894,7 @@ checking for stdbool.h that conforms to C99... yes
 checking for _Bool... yes
 checking for whether compiler has bool... yes
 configure: Using the following compilation and linking flags for Rgraphviz
-configure:    PKG_CFLAGS= -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz
+configure:    PKG_CFLAGS= -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz
 configure:    PKG_LIBS=libxdot.a libgvplugin_dot_layout.a libgvplugin_neato_layout.a libgvplugin_core.a libgvc.a libpathplan.a libgraph.a libcdt.a -lz
 configure:    GVIZ_DEFS=-DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1
 configure: Compiling using Graphviz version: '2.28.0'.
@@ -1624,20 +1903,20 @@ configure: creating ./config.status
 config.status: creating R/graphviz_build_version.R
 config.status: creating src/Makevars
 ** libs
-gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c LL_funcs.c -o LL_funcs.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c LL_funcs.c -o LL_funcs.o
 LL_funcs.c: In function ‘Rgraphviz_agopenSimple’:
 LL_funcs.c:430:29: warning: variable ‘curNode’ set but not used [-Wunused-but-set-variable]
-gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c Rgraphviz.c -o Rgraphviz.o
-gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c RgraphvizInit.c -o RgraphvizInit.o
-gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c agopen.c -o agopen.o
-gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c agread.c -o agread.o
-gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c agwrite.c -o agwrite.o
-gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c bezier.c -o bezier.o
-gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c buildEdgeList.c -o buildEdgeList.o
-gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c buildNodeList.c -o buildNodeList.o
-gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c doLayout.c -o doLayout.o
-gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c graphvizVersion.c -o graphvizVersion.o
-gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpboIONB/R.INSTALL441949f13592/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c init.c -o init.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c Rgraphviz.c -o Rgraphviz.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c RgraphvizInit.c -o RgraphvizInit.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c agopen.c -o agopen.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c agread.c -o agread.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c agwrite.c -o agwrite.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c bezier.c -o bezier.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c buildEdgeList.c -o buildEdgeList.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c buildNodeList.c -o buildNodeList.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c doLayout.c -o doLayout.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c graphvizVersion.c -o graphvizVersion.o
+gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG  -I/usr/local/include   -I/tmp/RtmpPIcUAZ/R.INSTALL7094c658581/Rgraphviz/src/libunix/include/graphviz -DGRAPHVIZ_MAJOR=2 -DGRAPHVIZ_MINOR=28 -DGRAPHVIZ_STATIC -DHAVE_STDBOOL_H=1 -DHAVE_BOOL=1 -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c init.c -o init.o
 gcc -m32 -std=gnu99 -shared -Wl,-z,relro -o Rgraphviz.so LL_funcs.o Rgraphviz.o RgraphvizInit.o agopen.o agread.o agwrite.o bezier.o buildEdgeList.o buildNodeList.o doLayout.o graphvizVersion.o init.o libxdot.a libgvplugin_dot_layout.a libgvplugin_neato_layout.a libgvplugin_core.a libgvc.a libpathplan.a libgraph.a libcdt.a -lz -L/usr/lib/R/lib -lR
 installing to /usr/lib/R/library/Rgraphviz/libs
 ** R
@@ -1690,7 +1969,7 @@ Creating a generic function for ‘lines’ from package ‘graphics’ in packa
 Making packages.html  ... done
 
 The downloaded source packages are in
-	‘/tmp/RtmpcWz7Ji/downloaded_packages’
+	‘/tmp/Rtmpi5ziwd/downloaded_packages’
 Updating HTML index of packages in '.Library'
 Making packages.html  ... done
 Old packages: 'foreign', 'lattice', 'MASS', 'Matrix', 'nlme', 'rpart',
@@ -1732,7 +2011,7 @@ downloaded 222 Kb
 Making packages.html  ... done
 
 The downloaded source packages are in
-	‘/tmp/RtmpcWz7Ji/downloaded_packages’
+	‘/tmp/Rtmpi5ziwd/downloaded_packages’
 Updating HTML index of packages in '.Library'
 Making packages.html  ... done
 > warnings()
@@ -2490,7 +2769,7 @@ installing to /usr/lib/R/library/plyr/libs
     raply                                   html  
     rbind.fill                              html  
     rbind.fill.matrix                       html  
-Rd warning: /tmp/Rtmpsb9jWp/R.INSTALL33630315561/plyr/man/rbind.fill.matrix.Rd:53: missing file link ‘rbind’
+Rd warning: /tmp/RtmpBwAv8V/R.INSTALL44f5376e658a/plyr/man/rbind.fill.matrix.Rd:53: missing file link ‘rbind’
     rdply                                   html  
     reduce_dim                              html  
     rename                                  html  
@@ -2586,30 +2865,30 @@ installing to /usr/lib/R/library/gtools/libs
     finding HTML links ... done
     ELISA                                   html  
     addLast                                 html  
-Rd warning: /tmp/RtmpXpxe4V/R.INSTALL36e6c2b563c/gtools/man/addLast.Rd:24: missing file link ‘.Last’
+Rd warning: /tmp/RtmpOpmzsz/R.INSTALL45286a78f76f/gtools/man/addLast.Rd:24: missing file link ‘.Last’
     ask                                     html  
     binsearch                               html  
     capture                                 html  
     checkRVersion                           html  
-Rd warning: /tmp/RtmpXpxe4V/R.INSTALL36e6c2b563c/gtools/man/checkRVersion.Rd:35: missing file link ‘R.Version’
+Rd warning: /tmp/RtmpOpmzsz/R.INSTALL45286a78f76f/gtools/man/checkRVersion.Rd:35: missing file link ‘R.Version’
     combinations                            html  
-Rd warning: /tmp/RtmpXpxe4V/R.INSTALL36e6c2b563c/gtools/man/combinations.Rd:45: missing file link ‘choose’
+Rd warning: /tmp/RtmpOpmzsz/R.INSTALL45286a78f76f/gtools/man/combinations.Rd:45: missing file link ‘choose’
     defmacro                                html  
     dirichlet                               html  
     foldchange                              html  
     gtools-deprecated                       html  
     invalid                                 html  
-Rd warning: /tmp/RtmpXpxe4V/R.INSTALL36e6c2b563c/gtools/man/invalid.Rd:21: missing file link ‘is.na’
-Rd warning: /tmp/RtmpXpxe4V/R.INSTALL36e6c2b563c/gtools/man/invalid.Rd:22: missing file link ‘is.null’
+Rd warning: /tmp/RtmpOpmzsz/R.INSTALL45286a78f76f/gtools/man/invalid.Rd:21: missing file link ‘is.na’
+Rd warning: /tmp/RtmpOpmzsz/R.INSTALL45286a78f76f/gtools/man/invalid.Rd:22: missing file link ‘is.null’
     keywords                                html  
     logit                                   html  
     mixedsort                               html  
     oddeven                                 html  
-Rd warning: /tmp/RtmpXpxe4V/R.INSTALL36e6c2b563c/gtools/man/oddeven.Rd:21: missing file link ‘round’
+Rd warning: /tmp/RtmpOpmzsz/R.INSTALL45286a78f76f/gtools/man/oddeven.Rd:21: missing file link ‘round’
     permute                                 html  
     quantcut                                html  
     running                                 html  
-Rd warning: /tmp/RtmpXpxe4V/R.INSTALL36e6c2b563c/gtools/man/running.Rd:61: missing file link ‘sapply’
+Rd warning: /tmp/RtmpOpmzsz/R.INSTALL45286a78f76f/gtools/man/running.Rd:61: missing file link ‘sapply’
     scat                                    html  
     setTCPNoDelay                           html  
     smartbind                               html  
@@ -2675,7 +2954,7 @@ configure: creating ./config.status
 config.status: creating src/Makevars
 config.status: creating R/zzz.R
 config.status: creating src/config.h
-=== configuring in jri (/tmp/RtmpcglDBw/R.INSTALL3841d9ede24/rJava/jri)
+=== configuring in jri (/tmp/Rtmp5pxoqk/R.INSTALL453e3a6cfdc2/rJava/jri)
 configure: running /bin/sh ./configure '--prefix=/usr/local'  --cache-file=/dev/null --srcdir=.
 checking build system type... i686-pc-linux-gnu
 checking host system type... i686-pc-linux-gnu
@@ -2741,9 +3020,9 @@ gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG -I. -I/usr/lib/jvm/java/include -I
 gcc -m32 -std=gnu99 -I/usr/include/R -DNDEBUG -I. -I/usr/lib/jvm/java/include -I/usr/lib/jvm/java/include/linux -I/usr/local/include    -fpic  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4  -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables  -c tools.c -o tools.o
 gcc -m32 -std=gnu99 -shared -Wl,-z,relro -o rJava.so Rglue.o arrayc.o callJNI.o callback.o fields.o init.o jri_glue.o loader.o otables.o rJava.o tools.o -L/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9/jre/lib/i386 -L/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9/jre/lib/i386/client -ljvm -L/usr/lib/R/lib -lR
 (cd ../jri && make)
-make[1]: Entering directory `/tmp/RtmpcglDBw/R.INSTALL3841d9ede24/rJava/jri'
+make[1]: Entering directory `/tmp/Rtmp5pxoqk/R.INSTALL453e3a6cfdc2/rJava/jri'
 make -C src JRI.jar
-make[2]: Entering directory `/tmp/RtmpcglDBw/R.INSTALL3841d9ede24/rJava/jri/src'
+make[2]: Entering directory `/tmp/Rtmp5pxoqk/R.INSTALL453e3a6cfdc2/rJava/jri/src'
 /usr/lib/jvm/jre/../bin/javac -target 1.4 -source 1.4 -d . ../package-info.java ../RFactor.java ../REXP.java ../Rengine.java ../Mutex.java ../RConsoleOutputStream.java ../RMainLoopCallbacks.java ../RVector.java ../RBool.java ../RList.java
 warning: [options] bootstrap class path not set in conjunction with -source 1.4
 1 warning
@@ -2886,7 +3165,7 @@ gcc -m32 -std=gnu99 -o libjri.so Rengine.o jri.o Rcallbacks.o Rinit.o globals.o 
 warning: [options] bootstrap class path not set in conjunction with -source 1.4
 1 warning
 /usr/lib/jvm/jre/../bin/jar fc JRI.jar org libjri.so
-make[2]: Leaving directory `/tmp/RtmpcglDBw/R.INSTALL3841d9ede24/rJava/jri/src'
+make[2]: Leaving directory `/tmp/Rtmp5pxoqk/R.INSTALL453e3a6cfdc2/rJava/jri/src'
 rm -f libjri.so
 cp src/libjri.so libjri.so
 /usr/lib/jvm/jre/../bin/javac -target 1.4 -source 1.4 -classpath src/JRI.jar -d examples examples/rtest.java
@@ -2899,7 +3178,7 @@ warning: [options] bootstrap class path not set in conjunction with -source 1.4
 Note: examples/rtest2.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 1 warning
-make[1]: Leaving directory `/tmp/RtmpcglDBw/R.INSTALL3841d9ede24/rJava/jri'
+make[1]: Leaving directory `/tmp/Rtmp5pxoqk/R.INSTALL453e3a6cfdc2/rJava/jri'
 installing via 'install.libs.R' to /usr/lib/R/library/rJava
 ** R
 ** inst
@@ -2966,7 +3245,7 @@ Making packages.html  ... done
     tidy.source                             html  
     unmask.source                           html  
     usage                                   html  
-Rd warning: /tmp/RtmpLi3WLz/R.INSTALLc9379cedefc/formatR/man/usage.Rd:18: missing file link ‘argsAnywhere’
+Rd warning: /tmp/RtmpiGcrMR/R.INSTALL4db7d65850c/formatR/man/usage.Rd:18: missing file link ‘argsAnywhere’
 ** building package indices
 ** installing vignettes
    ‘formatR.Rnw’ 
@@ -3599,7 +3878,7 @@ Creating a generic function for ‘source’ from package ‘base’ in package 
     finding HTML links ... done
     AssignXMLNode                           html  
     Doctype-class                           html  
-Rd warning: /tmp/RtmpxTv5I7/R.INSTALLca936da6203/XML/man/Doctype-class.Rd:24: missing file link ‘coerce’
+Rd warning: /tmp/RtmpvHJDwj/R.INSTALL4dcd537b0639/XML/man/Doctype-class.Rd:24: missing file link ‘coerce’
     Doctype                                 html  
     SAXMethods                              html  
     SAXState-class                          html  
@@ -3630,8 +3909,8 @@ Rd warning: /tmp/RtmpxTv5I7/R.INSTALLca936da6203/XML/man/Doctype-class.Rd:24: mi
     getEncoding                             html  
     getLineNumber                           html  
     getNodeSet                              html  
-Rd warning: /tmp/RtmpxTv5I7/R.INSTALLca936da6203/XML/man/getNodeSet.Rd:56: missing file link ‘sapply’
-Rd warning: /tmp/RtmpxTv5I7/R.INSTALLca936da6203/XML/man/getNodeSet.Rd:155: missing file link ‘sapply’
+Rd warning: /tmp/RtmpvHJDwj/R.INSTALL4dcd537b0639/XML/man/getNodeSet.Rd:56: missing file link ‘sapply’
+Rd warning: /tmp/RtmpvHJDwj/R.INSTALL4dcd537b0639/XML/man/getNodeSet.Rd:155: missing file link ‘sapply’
     getRelativeURL                          html  
     getXMLErrors                            html  
     isXMLString                             html  
@@ -3682,14 +3961,14 @@ Rd warning: /tmp/RtmpxTv5I7/R.INSTALLca936da6203/XML/man/getNodeSet.Rd:155: miss
     xmlSchemaValidate                       html  
     xmlSearchNs                             html  
     xmlSerializeHook                        html  
-Rd warning: /tmp/RtmpxTv5I7/R.INSTALLca936da6203/XML/man/xmlSerializeHook.Rd:20: missing file link ‘saveRDS’
-Rd warning: /tmp/RtmpxTv5I7/R.INSTALLca936da6203/XML/man/xmlSerializeHook.Rd:53: missing file link ‘saveRDS’
+Rd warning: /tmp/RtmpvHJDwj/R.INSTALL4dcd537b0639/XML/man/xmlSerializeHook.Rd:20: missing file link ‘saveRDS’
+Rd warning: /tmp/RtmpvHJDwj/R.INSTALL4dcd537b0639/XML/man/xmlSerializeHook.Rd:53: missing file link ‘saveRDS’
     xmlSize                                 html  
     xmlSource                               html  
-Rd warning: /tmp/RtmpxTv5I7/R.INSTALLca936da6203/XML/man/xmlSource.Rd:209: missing file link ‘sapply’
+Rd warning: /tmp/RtmpvHJDwj/R.INSTALL4dcd537b0639/XML/man/xmlSource.Rd:209: missing file link ‘sapply’
     xmlStopParser                           html  
     xmlStructuredStop                       html  
-Rd warning: /tmp/RtmpxTv5I7/R.INSTALLca936da6203/XML/man/xmlStructuredStop.Rd:53: missing file link ‘simpleError’
+Rd warning: /tmp/RtmpvHJDwj/R.INSTALL4dcd537b0639/XML/man/xmlStructuredStop.Rd:53: missing file link ‘simpleError’
     xmlSubset                               html  
     xmlToDataFrame                          html  
     xmlToList                               html  
@@ -4098,7 +4377,7 @@ Creating a generic function for ‘model.response’ from package ‘stats’ in
     SparseM.image                           html  
     SparseM.ontology                        html  
     SparseM.ops                             html  
-Rd warning: /tmp/RtmpVHzhwc/R.INSTALL111f4f8e761e/SparseM/man/SparseM.ops.Rd:101: missing file link ‘determinant’
+Rd warning: /tmp/RtmpWO1ilS/R.INSTALL520e404a86cb/SparseM/man/SparseM.ops.Rd:101: missing file link ‘determinant’
     SparseM.solve                           html  
     character-null-class                    html  
     lsq                                     html  
@@ -7831,7 +8110,7 @@ installing to /usr/lib/R/library/RGtk2/libs
     getSignal                               html  
     getSignalInfo                           html  
     getType                                 html  
-Rd warning: /tmp/RtmpQmgXwV/R.INSTALL117198f7cc8/RGtk2/man/getType.Rd:37: missing file link ‘.C’
+Rd warning: /tmp/RtmpRhK8o7/R.INSTALL524d53dbd320/RGtk2/man/getType.Rd:37: missing file link ‘.C’
     getters                                 html  
     gio-Desktop-file-based-GAppInfo         html  
     gio-Extension-Points                    html  
@@ -11873,7 +12152,7 @@ Making packages.html  ... done
   converting help for package ‘animation’
     finding HTML links ... done
     BM.circle                               html  
-Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/BM.circle.Rd:52: missing file link ‘rnorm’
+Rd warning: /tmp/RtmpxiSJP0/R.INSTALL561bb4ccab1/animation/man/BM.circle.Rd:52: missing file link ‘rnorm’
     CLELAL09                                html  
     HuSpeech                                html  
     MC.hitormiss                            html  
@@ -11881,15 +12160,15 @@ Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/BM.circle.Rd:52: 
     ObamaSpeech                             html  
     Rosling.bubbles                         html  
     ani.options                             html  
-Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/ani.options.Rd:69: missing file link ‘jpeg’
-Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/ani.options.Rd:79: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpxiSJP0/R.INSTALL561bb4ccab1/animation/man/ani.options.Rd:69: missing file link ‘jpeg’
+Rd warning: /tmp/RtmpxiSJP0/R.INSTALL561bb4ccab1/animation/man/ani.options.Rd:79: missing file link ‘tempdir’
     ani.pause                               html  
     ani.record                              html  
-Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/ani.record.Rd:29: missing file link ‘recordPlot’
-Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/ani.record.Rd:30: missing file link ‘replayPlot’
-Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/ani.record.Rd:41: missing file link ‘recordPlot’
-Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/ani.record.Rd:122: missing file link ‘recordPlot’
-Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/ani.record.Rd:123: missing file link ‘replayPlot’
+Rd warning: /tmp/RtmpxiSJP0/R.INSTALL561bb4ccab1/animation/man/ani.record.Rd:29: missing file link ‘recordPlot’
+Rd warning: /tmp/RtmpxiSJP0/R.INSTALL561bb4ccab1/animation/man/ani.record.Rd:30: missing file link ‘replayPlot’
+Rd warning: /tmp/RtmpxiSJP0/R.INSTALL561bb4ccab1/animation/man/ani.record.Rd:41: missing file link ‘recordPlot’
+Rd warning: /tmp/RtmpxiSJP0/R.INSTALL561bb4ccab1/animation/man/ani.record.Rd:122: missing file link ‘recordPlot’
+Rd warning: /tmp/RtmpxiSJP0/R.INSTALL561bb4ccab1/animation/man/ani.record.Rd:123: missing file link ‘replayPlot’
     ani.start                               html  
     ani.stop                                html  
     animation-defunct                       html  
@@ -11898,7 +12177,7 @@ Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/ani.record.Rd:123
     boot.iid                                html  
     boot.lowess                             html  
     brownian.motion                         html  
-Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/brownian.motion.Rd:67: missing file link ‘rnorm’
+Rd warning: /tmp/RtmpxiSJP0/R.INSTALL561bb4ccab1/animation/man/brownian.motion.Rd:67: missing file link ‘rnorm’
     buffon.needle                           html  
     clt.ani                                 html  
     conf.int                                html  
@@ -11908,7 +12187,7 @@ Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/brownian.motion.R
     ecol.death.sim                          html  
     flip.coin                               html  
     g.brownian.motion                       html  
-Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/g.brownian.motion.Rd:62: missing file link ‘rnorm’
+Rd warning: /tmp/RtmpxiSJP0/R.INSTALL561bb4ccab1/animation/man/g.brownian.motion.Rd:62: missing file link ‘rnorm’
     grad.desc                               html  
     iatemp                                  html  
     kfcv                                    html  
@@ -11934,7 +12213,7 @@ Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/g.brownian.motion
     saveHTML                                html  
     saveLatex                               html  
     saveSWF                                 html  
-Rd warning: /tmp/RtmpzUiSy1/R.INSTALL17f7fe222aa/animation/man/saveSWF.Rd:84: missing file link ‘jpeg’
+Rd warning: /tmp/RtmpxiSJP0/R.INSTALL561bb4ccab1/animation/man/saveSWF.Rd:84: missing file link ‘jpeg’
     saveVideo                               html  
     sim.qqnorm                              html  
     vanke1127                               html  
@@ -11991,7 +12270,7 @@ Making packages.html  ... done
     apsrtable                               html  
     apsrtableSummary                        html  
     modelInfo                               html  
-Rd warning: /tmp/RtmplA9hMH/R.INSTALL182730b2f038/apsrtable/man/modelInfo.Rd:37: missing file link ‘sys.frame’
+Rd warning: /tmp/RtmpoS1Xnr/R.INSTALL563151ece3a4/apsrtable/man/modelInfo.Rd:37: missing file link ‘sys.frame’
     notefunctions                           html  
 ** building package indices
 ** installing vignettes
@@ -12016,17 +12295,17 @@ Creating a generic function for ‘print’ from package ‘base’ in package �
     RweaveAsciiSetup                        html  
     RweaveAsciiWritedoc                     html  
     RweaveAsciidoc                          html  
-Rd warning: /tmp/Rtmp06aFO7/R.INSTALL1837597b3887/ascii/man/RweaveAsciidoc.Rd:60: missing file link ‘Asciidoc’
+Rd warning: /tmp/RtmpeQyjZU/R.INSTALL563c723c7783/ascii/man/RweaveAsciidoc.Rd:60: missing file link ‘Asciidoc’
     RweaveOrg                               html  
-Rd warning: /tmp/Rtmp06aFO7/R.INSTALL1837597b3887/ascii/man/RweaveOrg.Rd:89: missing file link ‘Org’
+Rd warning: /tmp/RtmpeQyjZU/R.INSTALL563c723c7783/ascii/man/RweaveOrg.Rd:89: missing file link ‘Org’
     RweavePandoc                            html  
-Rd warning: /tmp/Rtmp06aFO7/R.INSTALL1837597b3887/ascii/man/RweavePandoc.Rd:89: missing file link ‘Pandoc’
+Rd warning: /tmp/RtmpeQyjZU/R.INSTALL563c723c7783/ascii/man/RweavePandoc.Rd:89: missing file link ‘Pandoc’
     RweaveReST                              html  
-Rd warning: /tmp/Rtmp06aFO7/R.INSTALL1837597b3887/ascii/man/RweaveReST.Rd:89: missing file link ‘ReST’
+Rd warning: /tmp/RtmpeQyjZU/R.INSTALL563c723c7783/ascii/man/RweaveReST.Rd:89: missing file link ‘ReST’
     RweaveT2t                               html  
-Rd warning: /tmp/Rtmp06aFO7/R.INSTALL1837597b3887/ascii/man/RweaveT2t.Rd:89: missing file link ‘T2t’
+Rd warning: /tmp/RtmpeQyjZU/R.INSTALL563c723c7783/ascii/man/RweaveT2t.Rd:89: missing file link ‘T2t’
     RweaveTextile                           html  
-Rd warning: /tmp/Rtmp06aFO7/R.INSTALL1837597b3887/ascii/man/RweaveTextile.Rd:89: missing file link ‘Textile’
+Rd warning: /tmp/RtmpeQyjZU/R.INSTALL563c723c7783/ascii/man/RweaveTextile.Rd:89: missing file link ‘Textile’
     align.table                             html  
     as.list.matrix                          html  
     ascii                                   html  
@@ -12229,10 +12508,10 @@ installing to /usr/lib/R/library/cairoDevice/libs
     finding HTML links ... done
     Cairo                                   html  
     asCairoDevice                           html  
-Rd warning: /tmp/RtmpR6ZFcn/R.INSTALL1bdf354836a6/cairoDevice/man/asCairoDevice.Rd:5: missing file link ‘GdkDrawable’
-Rd warning: /tmp/RtmpR6ZFcn/R.INSTALL1bdf354836a6/cairoDevice/man/asCairoDevice.Rd:6: missing file link ‘GdkPixmap’
-Rd warning: /tmp/RtmpR6ZFcn/R.INSTALL1bdf354836a6/cairoDevice/man/asCairoDevice.Rd:25: missing file link ‘GdkPixmap’
-Rd warning: /tmp/RtmpR6ZFcn/R.INSTALL1bdf354836a6/cairoDevice/man/asCairoDevice.Rd:27: missing file link ‘GdkPixbuf’
+Rd warning: /tmp/Rtmp65D8XS/R.INSTALL59bc78686619/cairoDevice/man/asCairoDevice.Rd:5: missing file link ‘GdkDrawable’
+Rd warning: /tmp/Rtmp65D8XS/R.INSTALL59bc78686619/cairoDevice/man/asCairoDevice.Rd:6: missing file link ‘GdkPixmap’
+Rd warning: /tmp/Rtmp65D8XS/R.INSTALL59bc78686619/cairoDevice/man/asCairoDevice.Rd:25: missing file link ‘GdkPixmap’
+Rd warning: /tmp/Rtmp65D8XS/R.INSTALL59bc78686619/cairoDevice/man/asCairoDevice.Rd:27: missing file link ‘GdkPixbuf’
 ** building package indices
 ** testing if installed package can be loaded
 
@@ -12313,32 +12592,32 @@ Making packages.html  ... done
   converting help for package ‘exams’
     finding HTML links ... done
     exams                                   html  
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams.Rd:45: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams.Rd:45: missing file link ‘tempdir’
     exams2html                              html  
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2html.Rd:44: missing file link ‘tempdir’
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2html.Rd:46: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2html.Rd:44: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2html.Rd:46: missing file link ‘tempdir’
     exams2lops                              html  
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2lops.Rd:36: missing file link ‘tempdir’
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2lops.Rd:38: missing file link ‘tempdir’
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2lops.Rd:86: missing file link ‘make_exercise_transform_html’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2lops.Rd:36: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2lops.Rd:38: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2lops.Rd:86: missing file link ‘make_exercise_transform_html’
     exams2moodle                            html  
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2moodle.Rd:41: missing file link ‘tempdir’
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2moodle.Rd:43: missing file link ‘tempdir’
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2moodle.Rd:140: missing file link ‘make_exercise_transform_html’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2moodle.Rd:41: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2moodle.Rd:43: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2moodle.Rd:140: missing file link ‘make_exercise_transform_html’
     exams2pdf                               html  
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2pdf.Rd:49: missing file link ‘tempdir’
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2pdf.Rd:51: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2pdf.Rd:49: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2pdf.Rd:51: missing file link ‘tempdir’
     exams2qti12                             html  
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2qti12.Rd:46: missing file link ‘tempdir’
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2qti12.Rd:48: missing file link ‘tempdir’
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/exams2qti12.Rd:160: missing file link ‘make_exercise_transform_html’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2qti12.Rd:46: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2qti12.Rd:48: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/exams2qti12.Rd:160: missing file link ‘make_exercise_transform_html’
     mchoice2string                          html  
     read_exercise                           html  
     tex2image                               html  
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/tex2image.Rd:31: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/tex2image.Rd:31: missing file link ‘tempdir’
     xexams                                  html  
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/xexams.Rd:39: missing file link ‘tempdir’
-Rd warning: /tmp/RtmpKVVeDJ/R.INSTALL1d804bfe7b1e/exams/man/xexams.Rd:41: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/xexams.Rd:39: missing file link ‘tempdir’
+Rd warning: /tmp/RtmpeZo7Ll/R.INSTALL5b482c3f6097/exams/man/xexams.Rd:41: missing file link ‘tempdir’
 ** building package indices
 ** installing vignettes
    ‘exams.Rnw’ 
@@ -12651,16 +12930,16 @@ Making packages.html  ... done
   converting help for package ‘misc3d’
     finding HTML links ... done
     contour3d                               html  
-Rd warning: /tmp/Rtmp9SbhP1/R.INSTALL21aa35a2c2f/misc3d/man/contour3d.Rd:61: missing file link ‘drawScene.rgl’
+Rd warning: /tmp/RtmpYk1lb4/R.INSTALL5f23879378e/misc3d/man/contour3d.Rd:61: missing file link ‘drawScene.rgl’
     drawScene                               html  
-Rd warning: /tmp/Rtmp9SbhP1/R.INSTALL21aa35a2c2f/misc3d/man/drawScene.Rd:28: missing file link ‘panel.3dwire’
+Rd warning: /tmp/RtmpYk1lb4/R.INSTALL5f23879378e/misc3d/man/drawScene.Rd:28: missing file link ‘panel.3dwire’
     exportScene                             html  
     image3d                                 html  
     kde3d                                   html  
     lighting                                html  
     linesTetrahedra                         html  
     parametric3d                            html  
-Rd warning: /tmp/Rtmp9SbhP1/R.INSTALL21aa35a2c2f/misc3d/man/parametric3d.Rd:52: missing file link ‘drawScene.rgl’
+Rd warning: /tmp/RtmpYk1lb4/R.INSTALL5f23879378e/misc3d/man/parametric3d.Rd:52: missing file link ‘drawScene.rgl’
     pointsTetrahedra                        html  
     slices3d                                html  
     surfaceTriangles                        html  
@@ -13311,7 +13590,7 @@ Making packages.html  ... done
     finding HTML links ... done
     add_margins                             html  
     cast                                    html  
-Rd warning: /tmp/Rtmp3jLbe6/R.INSTALL27607cbcacc6/reshape2/man/cast.Rd:59: missing file link ‘.’
+Rd warning: /tmp/Rtmpt9KcKy/R.INSTALL642c5123f680/reshape2/man/cast.Rd:59: missing file link ‘.’
     colsplit                                html  
     french_fries                            html  
     guess_value                             html  
@@ -13369,21 +13648,21 @@ Making packages.html  ... done
     nobs                                    html  
     object.size                             html  
     read.xls                                html  
-Rd warning: /tmp/RtmpRkULai/R.INSTALL276f390d853d/gdata/man/read.xls.Rd:66: missing file link ‘read.csv’
+Rd warning: /tmp/Rtmp8tCuUR/R.INSTALL6437124f5e99/gdata/man/read.xls.Rd:66: missing file link ‘read.csv’
     rename.vars                             html  
     reorder                                 html  
-Rd warning: /tmp/RtmpRkULai/R.INSTALL276f390d853d/gdata/man/reorder.Rd:61: missing file link ‘reorder’
+Rd warning: /tmp/Rtmp8tCuUR/R.INSTALL6437124f5e99/gdata/man/reorder.Rd:61: missing file link ‘reorder’
     resample                                html  
     runRUnitTests                           html  
     sheetCount                              html  
     startsWith                              html  
     trim                                    html  
-Rd warning: /tmp/RtmpRkULai/R.INSTALL276f390d853d/gdata/man/trim.Rd:37: missing file link ‘sub’
-Rd warning: /tmp/RtmpRkULai/R.INSTALL276f390d853d/gdata/man/trim.Rd:37: missing file link ‘gsub’
+Rd warning: /tmp/Rtmp8tCuUR/R.INSTALL6437124f5e99/gdata/man/trim.Rd:37: missing file link ‘sub’
+Rd warning: /tmp/Rtmp8tCuUR/R.INSTALL6437124f5e99/gdata/man/trim.Rd:37: missing file link ‘gsub’
     trimSum                                 html  
     unknown                                 html  
     unmatrix                                html  
-Rd warning: /tmp/RtmpRkULai/R.INSTALL276f390d853d/gdata/man/unmatrix.Rd:23: missing file link ‘as.vector’
+Rd warning: /tmp/Rtmp8tCuUR/R.INSTALL6437124f5e99/gdata/man/unmatrix.Rd:23: missing file link ‘as.vector’
     upperTriangle                           html  
     wideByFactor                            html  
     write.fwf                               html  
@@ -13412,7 +13691,7 @@ installing to /usr/lib/R/library/caTools/libs
     finding HTML links ... done
     ENVI                                    html  
     GIF                                     html  
-Rd warning: /tmp/RtmpEvSLdg/R.INSTALL278870917077/caTools/man/GIF.Rd:152: missing file link ‘brewer.pal’
+Rd warning: /tmp/RtmpAcQHGa/R.INSTALL6447f562035/caTools/man/GIF.Rd:152: missing file link ‘brewer.pal’
     LogitBoost                              html  
     base64                                  html  
     caTools-internal                        html  
@@ -13443,7 +13722,7 @@ Making packages.html  ... done
   converting help for package ‘evaluate’
     finding HTML links ... done
     create_traceback                        html  
-Rd warning: /tmp/Rtmp7zcB9n/R.INSTALL27b419f7e15/evaluate/man/create_traceback.Rd:9: missing file link ‘sys.calls’
+Rd warning: /tmp/RtmphIqFDi/R.INSTALL64695f508cf/evaluate/man/create_traceback.Rd:9: missing file link ‘sys.calls’
     evaluate                                html  
     getSrcRegion                            html  
     is.message                              html  
@@ -13489,7 +13768,7 @@ Making packages.html  ... done
     Rdoc                                    html  
     RdocException                           html  
     abort                                   html  
-Rd warning: /tmp/Rtmppn4Art/R.INSTALL27c2191090ca/R.oo/man/abort.Rd:76: missing file link ‘invokeRestart’
+Rd warning: /tmp/RtmpsJgw6j/R.INSTALL64744bd059ea/R.oo/man/abort.Rd:76: missing file link ‘invokeRestart’
     argsToString.Class                      html  
     argsToString.Rdoc                       html  
     as.character.BasicObject                html  
@@ -13645,8 +13924,8 @@ Rd warning: /tmp/Rtmppn4Art/R.INSTALL27c2191090ca/R.oo/man/abort.Rd:76: missing 
     showDescriptionFile.Package             html  
     showHowToCite.Package                   html  
     startupMessage.Package                  html  
-Rd warning: /tmp/Rtmppn4Art/R.INSTALL27c2191090ca/R.oo/man/startupMessage.Package.Rd:26: missing file link ‘packageStartupMessage’
-Rd warning: /tmp/Rtmppn4Art/R.INSTALL27c2191090ca/R.oo/man/startupMessage.Package.Rd:36: missing file link ‘packageStartupMessage’
+Rd warning: /tmp/RtmpsJgw6j/R.INSTALL64744bd059ea/R.oo/man/startupMessage.Package.Rd:26: missing file link ‘packageStartupMessage’
+Rd warning: /tmp/RtmpsJgw6j/R.INSTALL64744bd059ea/R.oo/man/startupMessage.Package.Rd:36: missing file link ‘packageStartupMessage’
     staticCode.Object                       html  
     throw.Exception                         html  
     throw                                   html  
@@ -13834,7 +14113,7 @@ installing to /usr/lib/R/library/ape/libs
     collapsed.intervals                     html  
     compar.cheverud                         html  
     compar.gee                              html  
-Rd warning: /tmp/RtmpLtC3gz/R.INSTALL27f044d81e12/ape/man/compar.gee.Rd:100: missing file link ‘drop1’
+Rd warning: /tmp/RtmpQCI1UN/R.INSTALL648a69e716fc/ape/man/compar.gee.Rd:100: missing file link ‘drop1’
     compar.lynch                            html  
     compar.ou                               html  
     compute.brlen                           html  
@@ -13868,12 +14147,12 @@ Rd warning: /tmp/RtmpLtC3gz/R.INSTALL27f044d81e12/ape/man/compar.gee.Rd:100: mis
     howmanytrees                            html  
     identify.phylo                          html  
     image.DNAbin                            html  
-Rd warning: /tmp/RtmpLtC3gz/R.INSTALL27f044d81e12/ape/man/image.DNAbin.Rd:31: missing file link ‘image.default’
+Rd warning: /tmp/RtmpQCI1UN/R.INSTALL648a69e716fc/ape/man/image.DNAbin.Rd:31: missing file link ‘image.default’
     is.binary.tree                          html  
     is.compatible                           html  
     is.monophyletic                         html  
     is.ultrametric                          html  
-Rd warning: /tmp/RtmpLtC3gz/R.INSTALL27f044d81e12/ape/man/is.ultrametric.Rd:27: missing file link ‘.Machine’
+Rd warning: /tmp/RtmpQCI1UN/R.INSTALL648a69e716fc/ape/man/is.ultrametric.Rd:27: missing file link ‘.Machine’
     kronoviz                                html  
     ladderize                               html  
     landplants                              html  
@@ -13918,7 +14197,7 @@ Rd warning: /tmp/RtmpLtC3gz/R.INSTALL27f044d81e12/ape/man/is.ultrametric.Rd:27: 
     read.nexus.data                         html  
     read.tree                               html  
     reorder.phylo                           html  
-Rd warning: /tmp/RtmpLtC3gz/R.INSTALL27f044d81e12/ape/man/reorder.phylo.Rd:51: missing file link ‘reorder’
+Rd warning: /tmp/RtmpQCI1UN/R.INSTALL648a69e716fc/ape/man/reorder.phylo.Rd:51: missing file link ‘reorder’
     richness.yule.test                      html  
     rlineage                                html  
     root                                    html  
@@ -13952,9 +14231,9 @@ Rd warning: /tmp/RtmpLtC3gz/R.INSTALL27f044d81e12/ape/man/reorder.phylo.Rd:51: m
     yule.cov                                html  
     yule.time                               html  
     zoom                                    html  
-Rd warning: /tmp/RtmpLtC3gz/R.INSTALL27f044d81e12/ape/man/zoom.Rd:37: missing file link ‘rainbow’
-Rd warning: /tmp/RtmpLtC3gz/R.INSTALL27f044d81e12/ape/man/zoom.Rd:43: missing file link ‘rainbow’
-Rd warning: /tmp/RtmpLtC3gz/R.INSTALL27f044d81e12/ape/man/zoom.Rd:44: missing file link ‘grey’
+Rd warning: /tmp/RtmpQCI1UN/R.INSTALL648a69e716fc/ape/man/zoom.Rd:37: missing file link ‘rainbow’
+Rd warning: /tmp/RtmpQCI1UN/R.INSTALL648a69e716fc/ape/man/zoom.Rd:43: missing file link ‘rainbow’
+Rd warning: /tmp/RtmpQCI1UN/R.INSTALL648a69e716fc/ape/man/zoom.Rd:44: missing file link ‘grey’
 ** building package indices
 ** installing vignettes
    ‘MoranI.Rnw’ 
@@ -14330,7 +14609,7 @@ installing to /usr/lib/R/library/Hmisc/libs
     t.test.cluster                          html  
     transace                                html  
     transcan                                html  
-Rd warning: /tmp/RtmprbzqzD/R.INSTALL28ec16d376d5/Hmisc/man/transcan.Rd:252: missing file link ‘lm.fit’
+Rd warning: /tmp/RtmpZc2Vlq/R.INSTALL655a47250754/Hmisc/man/transcan.Rd:252: missing file link ‘lm.fit’
     translate                               html  
     trunc.POSIXt                            html  
     units                                   html  
@@ -14385,8 +14664,8 @@ Creating a generic function for ‘plot’ from package ‘graphics’ in packag
     itermplot                               html  
     key.control                             html  
     longtsPlot                              html  
-Rd warning: /tmp/RtmppONsCo/R.INSTALL29562d68e21/IDPmisc/man/longtsPlot.Rd:122: missing file link ‘dev.print’
-Rd warning: /tmp/RtmppONsCo/R.INSTALL29562d68e21/IDPmisc/man/longtsPlot.Rd:126: missing file link ‘dev.print’
+Rd warning: /tmp/RtmpUNlMCe/R.INSTALL65a018408d9/IDPmisc/man/longtsPlot.Rd:122: missing file link ‘dev.print’
+Rd warning: /tmp/RtmpUNlMCe/R.INSTALL65a018408d9/IDPmisc/man/longtsPlot.Rd:126: missing file link ‘dev.print’
     ok                                      html  
     peaks                                   html  
     pkg-internal                            html  
@@ -14548,9 +14827,9 @@ Creating a generic function for ‘sample’ from package ‘base’ in package 
   converting help for package ‘memisc’
     finding HTML links ... done
     00memisc                                html  
-Rd warning: /tmp/Rtmp0Jsnj4/R.INSTALL29b318e97e2c/memisc/man/00memisc.Rd:133: missing file link ‘lattice’
-Rd warning: /tmp/Rtmp0Jsnj4/R.INSTALL29b318e97e2c/memisc/man/00memisc.Rd:223: missing file link ‘sapply’
-Rd warning: /tmp/Rtmp0Jsnj4/R.INSTALL29b318e97e2c/memisc/man/00memisc.Rd:225: missing file link ‘sapply’
+Rd warning: /tmp/RtmpshoQ5h/R.INSTALL65dd20d21ed1/memisc/man/00memisc.Rd:133: missing file link ‘lattice’
+Rd warning: /tmp/RtmpshoQ5h/R.INSTALL65dd20d21ed1/memisc/man/00memisc.Rd:223: missing file link ‘sapply’
+Rd warning: /tmp/RtmpshoQ5h/R.INSTALL65dd20d21ed1/memisc/man/00memisc.Rd:225: missing file link ‘sapply’
     By                                      html  
     Descriptives                            html  
     Foreach                                 html  
@@ -14568,17 +14847,17 @@ Rd warning: /tmp/Rtmp0Jsnj4/R.INSTALL29b318e97e2c/memisc/man/00memisc.Rd:225: mi
     codebook                                html  
     collect                                 html  
     contrasts                               html  
-Rd warning: /tmp/Rtmp0Jsnj4/R.INSTALL29b318e97e2c/memisc/man/contrasts.Rd:14: missing file link ‘contr.treatment’
-Rd warning: /tmp/Rtmp0Jsnj4/R.INSTALL29b318e97e2c/memisc/man/contrasts.Rd:15: missing file link ‘contr.sum’
-Rd warning: /tmp/Rtmp0Jsnj4/R.INSTALL29b318e97e2c/memisc/man/contrasts.Rd:49: missing file link ‘contr.treatment’
-Rd warning: /tmp/Rtmp0Jsnj4/R.INSTALL29b318e97e2c/memisc/man/contrasts.Rd:52: missing file link ‘contr.treatment’
+Rd warning: /tmp/RtmpshoQ5h/R.INSTALL65dd20d21ed1/memisc/man/contrasts.Rd:14: missing file link ‘contr.treatment’
+Rd warning: /tmp/RtmpshoQ5h/R.INSTALL65dd20d21ed1/memisc/man/contrasts.Rd:15: missing file link ‘contr.sum’
+Rd warning: /tmp/RtmpshoQ5h/R.INSTALL65dd20d21ed1/memisc/man/contrasts.Rd:49: missing file link ‘contr.treatment’
+Rd warning: /tmp/RtmpshoQ5h/R.INSTALL65dd20d21ed1/memisc/man/contrasts.Rd:52: missing file link ‘contr.treatment’
     dataSets                                html  
-Rd warning: /tmp/Rtmp0Jsnj4/R.INSTALL29b318e97e2c/memisc/man/dataSets.Rd:72: missing file link ‘within’
+Rd warning: /tmp/RtmpshoQ5h/R.INSTALL65dd20d21ed1/memisc/man/dataSets.Rd:72: missing file link ‘within’
     dimrename                               html  
     errbars                                 html  
     getSummary                              html  
     importers                               html  
-Rd warning: /tmp/Rtmp0Jsnj4/R.INSTALL29b318e97e2c/memisc/man/importers.Rd:134: missing file link ‘description’
+Rd warning: /tmp/RtmpshoQ5h/R.INSTALL65dd20d21ed1/memisc/man/importers.Rd:134: missing file link ‘description’
     include                                 html  
     items                                   html  
     labels                                  html  
@@ -14592,7 +14871,7 @@ Rd warning: /tmp/Rtmp0Jsnj4/R.INSTALL29b318e97e2c/memisc/man/importers.Rd:134: m
     relabel                                 html  
     rename                                  html  
     reorder.array                           html  
-Rd warning: /tmp/Rtmp0Jsnj4/R.INSTALL29b318e97e2c/memisc/man/reorder.array.Rd:49: missing file link ‘reorder’
+Rd warning: /tmp/RtmpshoQ5h/R.INSTALL65dd20d21ed1/memisc/man/reorder.array.Rd:49: missing file link ‘reorder’
     retain                                  html  
     sample-methods                          html  
     simulation                              html  
@@ -15841,7 +16120,7 @@ Making packages.html  ... done
     assocstats                              html  
     cd_plot                                 html  
     co_table                                html  
-Rd warning: /tmp/RtmpkFZpzF/R.INSTALL2c8c22393be4/vcd/man/co_table.Rd:19: missing file link ‘[’
+Rd warning: /tmp/Rtmpl4oOEz/R.INSTALL68482ca9b683/vcd/man/co_table.Rd:19: missing file link ‘[’
     coindep_test                            html  
     cotab_panel                             html  
     cotabplot                               html  
@@ -15865,8 +16144,8 @@ Rd warning: /tmp/RtmpkFZpzF/R.INSTALL2c8c22393be4/vcd/man/co_table.Rd:19: missin
     plot.loglm                              html  
     rootogram                               html  
     shadings                                html  
-Rd warning: /tmp/RtmpkFZpzF/R.INSTALL2c8c22393be4/vcd/man/shadings.Rd:109: missing file link ‘diverge_hcl’
-Rd warning: /tmp/RtmpkFZpzF/R.INSTALL2c8c22393be4/vcd/man/shadings.Rd:169: missing file link ‘diverge_hcl’
+Rd warning: /tmp/Rtmpl4oOEz/R.INSTALL68482ca9b683/vcd/man/shadings.Rd:109: missing file link ‘diverge_hcl’
+Rd warning: /tmp/Rtmpl4oOEz/R.INSTALL68482ca9b683/vcd/man/shadings.Rd:169: missing file link ‘diverge_hcl’
     sieve                                   html  
     spacings                                html  
     spine                                   html  
@@ -15895,7 +16174,7 @@ Making packages.html  ... done
   converting help for package ‘vioplot’
     finding HTML links ... done
     vioplot                                 html  
-Rd warning: /tmp/RtmpUM04Ep/R.INSTALL2ca81e778546/vioplot/man/vioplot.Rd:52: missing file link ‘sm’
+Rd warning: /tmp/RtmptboSaA/R.INSTALL68531be073f0/vioplot/man/vioplot.Rd:52: missing file link ‘sm’
 ** building package indices
 ** testing if installed package can be loaded
 
@@ -16015,7 +16294,7 @@ Warning in setGenericS3.default(name, export = exportGeneric, envir = envir,  :
     Verbose                                 html  
     addFinalizerToLast                      html  
     arrayIndex                              html  
-Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/arrayIndex.Rd:59: missing file link ‘arrayInd’
+Rd warning: /tmp/RtmpZZhgFe/R.INSTALL68695d17f46b/R.utils/man/arrayIndex.Rd:59: missing file link ‘arrayInd’
     as.character.GString                    html  
     as.character.Options                    html  
     as.character.ProgressBar                html  
@@ -16059,10 +16338,10 @@ Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/arrayIndex.Rd:59: 
     draw.density                            html  
     enter.Verbose                           html  
     env                                     html  
-Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/env.Rd:22: missing file link ‘evalq’
-Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/env.Rd:24: missing file link ‘new.env’
-Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/env.Rd:57: missing file link ‘new.env’
-Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/env.Rd:57: missing file link ‘evalq’
+Rd warning: /tmp/RtmpZZhgFe/R.INSTALL68695d17f46b/R.utils/man/env.Rd:22: missing file link ‘evalq’
+Rd warning: /tmp/RtmpZZhgFe/R.INSTALL68695d17f46b/R.utils/man/env.Rd:24: missing file link ‘new.env’
+Rd warning: /tmp/RtmpZZhgFe/R.INSTALL68695d17f46b/R.utils/man/env.Rd:57: missing file link ‘new.env’
+Rd warning: /tmp/RtmpZZhgFe/R.INSTALL68695d17f46b/R.utils/man/env.Rd:57: missing file link ‘evalq’
     equals.Options                          html  
     equals.Verbose                          html  
     evalCapture                             html  
@@ -16118,7 +16397,7 @@ Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/env.Rd:57: missing
     getVector.Arguments                     html  
     getVerbose.Arguments                    html  
     getWritablePathname.Arguments           html  
-Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/getWritablePathname.Arguments.Rd:51: missing file link ‘dir.create’
+Rd warning: /tmp/RtmpZZhgFe/R.INSTALL68695d17f46b/R.utils/man/getWritablePathname.Arguments.Rd:51: missing file link ‘dir.create’
     gzip                                    html  
     hasOption.Options                       html  
     hasUrlProtocol                          html  
@@ -16200,7 +16479,7 @@ Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/getWritablePathnam
     removeDirectory                         html  
     renameFile                              html  
     resample                                html  
-Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/resample.Rd:27: missing file link ‘sample.int’
+Rd warning: /tmp/RtmpZZhgFe/R.INSTALL68695d17f46b/R.utils/man/resample.Rd:27: missing file link ‘sample.int’
     reset.ProgressBar                       html  
     reset.SmartComments                     html  
     reset.VComments                         html  
@@ -16216,7 +16495,7 @@ Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/resample.Rd:27: mi
     setMaxValue.ProgressBar                 html  
     setOption.Options                       html  
     setOption                               html  
-Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/setOption.Rd:34: missing file link ‘getOption’
+Rd warning: /tmp/RtmpZZhgFe/R.INSTALL68695d17f46b/R.utils/man/setOption.Rd:34: missing file link ‘getOption’
     setProgress.ProgressBar                 html  
     setStepLength.ProgressBar               html  
     setThreshold.Verbose                    html  
@@ -16233,7 +16512,7 @@ Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/setOption.Rd:34: m
     summary.Verbose                         html  
     swapXY.density                          html  
     systemR                                 html  
-Rd warning: /tmp/RtmpNYE7uY/R.INSTALL2cc975812da6/R.utils/man/systemR.Rd:50: missing file link ‘R.home’
+Rd warning: /tmp/RtmpZZhgFe/R.INSTALL68695d17f46b/R.utils/man/systemR.Rd:50: missing file link ‘R.home’
     timestamp.Verbose                       html  
     timestampOn.Verbose                     html  
     toCamelCase                             html  
@@ -16336,9 +16615,9 @@ Making packages.html  ... done
     all_labels                              html  
     all_patterns                            html  
     chunk_hook                              html  
-Rd warning: /tmp/RtmppBD2MW/R.INSTALL2d20751427b9/knitr/man/chunk_hook.Rd:60: missing file link ‘recordPlot’
-Rd warning: /tmp/RtmppBD2MW/R.INSTALL2d20751427b9/knitr/man/chunk_hook.Rd:74: missing file link ‘rgl.snapshot’
-Rd warning: /tmp/RtmppBD2MW/R.INSTALL2d20751427b9/knitr/man/chunk_hook.Rd:75: missing file link ‘rgl.postscript’
+Rd warning: /tmp/RtmpbXq9Sq/R.INSTALL6894d0650d1/knitr/man/chunk_hook.Rd:60: missing file link ‘recordPlot’
+Rd warning: /tmp/RtmpbXq9Sq/R.INSTALL6894d0650d1/knitr/man/chunk_hook.Rd:74: missing file link ‘rgl.snapshot’
+Rd warning: /tmp/RtmpbXq9Sq/R.INSTALL6894d0650d1/knitr/man/chunk_hook.Rd:75: missing file link ‘rgl.postscript’
     dep_auto                                html  
     dep_prev                                html  
     eclipse_theme                           html  
@@ -16346,16 +16625,16 @@ Rd warning: /tmp/RtmppBD2MW/R.INSTALL2d20751427b9/knitr/man/chunk_hook.Rd:75: mi
     hook_animation                          html  
     hook_document                           html  
     hook_plot                               html  
-Rd warning: /tmp/RtmppBD2MW/R.INSTALL2d20751427b9/knitr/man/hook_plot.Rd:44: missing file link ‘recordPlot’
+Rd warning: /tmp/RtmpbXq9Sq/R.INSTALL6894d0650d1/knitr/man/hook_plot.Rd:44: missing file link ‘recordPlot’
     image_uri                               html  
     imgur_upload                            html  
     knit                                    html  
-Rd warning: /tmp/RtmppBD2MW/R.INSTALL2d20751427b9/knitr/man/knit.Rd:18: missing file link ‘Stangle’
+Rd warning: /tmp/RtmpbXq9Sq/R.INSTALL6894d0650d1/knitr/man/knit.Rd:18: missing file link ‘Stangle’
     knit2html                               html  
     knit2pdf                                html  
-Rd warning: /tmp/RtmppBD2MW/R.INSTALL2d20751427b9/knitr/man/knit2pdf.Rd:11: missing file link ‘texi2pdf’
-Rd warning: /tmp/RtmppBD2MW/R.INSTALL2d20751427b9/knitr/man/knit2pdf.Rd:19: missing file link ‘texi2pdf’
-Rd warning: /tmp/RtmppBD2MW/R.INSTALL2d20751427b9/knitr/man/knit2pdf.Rd:48: missing file link ‘texi2pdf’
+Rd warning: /tmp/RtmpbXq9Sq/R.INSTALL6894d0650d1/knitr/man/knit2pdf.Rd:11: missing file link ‘texi2pdf’
+Rd warning: /tmp/RtmpbXq9Sq/R.INSTALL6894d0650d1/knitr/man/knit2pdf.Rd:19: missing file link ‘texi2pdf’
+Rd warning: /tmp/RtmpbXq9Sq/R.INSTALL6894d0650d1/knitr/man/knit2pdf.Rd:48: missing file link ‘texi2pdf’
     knit_child                              html  
     knit_engines                            html  
     knit_expand                             html  
@@ -16381,7 +16660,7 @@ Rd warning: /tmp/RtmppBD2MW/R.INSTALL2d20751427b9/knitr/man/knit2pdf.Rd:48: miss
     spin                                    html  
     stitch                                  html  
     write_bib                               html  
-Rd warning: /tmp/RtmppBD2MW/R.INSTALL2d20751427b9/knitr/man/write_bib.Rd:23: missing file link ‘toBibtex’
+Rd warning: /tmp/RtmpbXq9Sq/R.INSTALL6894d0650d1/knitr/man/write_bib.Rd:23: missing file link ‘toBibtex’
 ** building package indices
 ** installing vignettes
    ‘knitr-intro.Rnw’ 
@@ -16452,7 +16731,7 @@ installing to /usr/lib/R/library/rms/libs
     finding HTML links ... done
     Function                                html  
     Glm                                     html  
-Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/Glm.Rd:44: missing file link ‘residuals.glm’
+Rd warning: /tmp/RtmpjFTbGT/R.INSTALL68aa7c1e6db9/rms/man/Glm.Rd:44: missing file link ‘residuals.glm’
     Gls                                     html  
     Predict                                 html  
     Rq                                      html  
@@ -16460,9 +16739,9 @@ Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/Glm.Rd:44: missing fil
     bj                                      html  
     bootcov                                 html  
     bplot                                   html  
-Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/bplot.Rd:99: missing file link ‘wireframe’
-Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/bplot.Rd:160: missing file link ‘contourplot’
-Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/bplot.Rd:160: missing file link ‘wireframe’
+Rd warning: /tmp/RtmpjFTbGT/R.INSTALL68aa7c1e6db9/rms/man/bplot.Rd:99: missing file link ‘wireframe’
+Rd warning: /tmp/RtmpjFTbGT/R.INSTALL68aa7c1e6db9/rms/man/bplot.Rd:160: missing file link ‘contourplot’
+Rd warning: /tmp/RtmpjFTbGT/R.INSTALL68aa7c1e6db9/rms/man/bplot.Rd:160: missing file link ‘wireframe’
     calibrate                               html  
     contrast                                html  
     cph                                     html  
@@ -16475,8 +16754,8 @@ Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/bplot.Rd:160: missing 
     hazard.ratio.plot                       html  
     ie.setup                                html  
     latex.cph                               html  
-Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/latex.cph.Rd:41: missing file link ‘latex.default’
-Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/latex.cph.Rd:53: missing file link ‘latex.default’
+Rd warning: /tmp/RtmpjFTbGT/R.INSTALL68aa7c1e6db9/rms/man/latex.cph.Rd:41: missing file link ‘latex.default’
+Rd warning: /tmp/RtmpjFTbGT/R.INSTALL68aa7c1e6db9/rms/man/latex.cph.Rd:53: missing file link ‘latex.default’
     latexrms                                html  
     lrm                                     html  
     lrm.fit                                 html  
@@ -16502,8 +16781,8 @@ Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/latex.cph.Rd:53: missi
     rms                                     html  
     rms.trans                               html  
     rmsMisc                                 html  
-Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/rmsMisc.Rd:364: missing file link ‘latexTabular’
-Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/rmsMisc.Rd:365: missing file link ‘latexSN’
+Rd warning: /tmp/RtmpjFTbGT/R.INSTALL68aa7c1e6db9/rms/man/rmsMisc.Rd:364: missing file link ‘latexTabular’
+Rd warning: /tmp/RtmpjFTbGT/R.INSTALL68aa7c1e6db9/rms/man/rmsMisc.Rd:365: missing file link ‘latexSN’
     robcov                                  html  
     sensuc                                  html  
     specs.rms                               html  
@@ -16516,8 +16795,8 @@ Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/rmsMisc.Rd:365: missin
     val.prob                                html  
     val.surv                                html  
     validate                                html  
-Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/validate.Rd:73: missing file link ‘latex.default’
-Rd warning: /tmp/RtmpBvaR5n/R.INSTALL2d414f58a5ad/rms/man/validate.Rd:89: missing file link ‘latex.default’
+Rd warning: /tmp/RtmpjFTbGT/R.INSTALL68aa7c1e6db9/rms/man/validate.Rd:73: missing file link ‘latex.default’
+Rd warning: /tmp/RtmpjFTbGT/R.INSTALL68aa7c1e6db9/rms/man/validate.Rd:89: missing file link ‘latex.default’
     validate.Rq                             html  
     validate.cph                            html  
     validate.lrm                            html  
@@ -16582,7 +16861,7 @@ Making packages.html  ... done
     Literal                                 html  
     PlusMinus                               html  
     RowFactor                               html  
-Rd warning: /tmp/Rtmp9ebgDE/R.INSTALL2d857a5f8b80/tables/man/RowFactor.Rd:41: missing file link ‘latexTranslate’
+Rd warning: /tmp/RtmpIzAb6g/R.INSTALL68ce1b772d59/tables/man/RowFactor.Rd:41: missing file link ‘latexTranslate’
     as.matrix.tabular                       html  
     latex.tabular                           html  
     latexNumeric                            html  
@@ -16744,10 +17023,10 @@ Making packages.html  ... done
     guide_legend                            html  
     guides                                  html  
     hmisc                                   html  
-Rd warning: /tmp/RtmpbEGosZ/R.INSTALL2da68822109/ggplot2/man/hmisc.Rd:28: missing file link ‘smean.cl.boot’
-Rd warning: /tmp/RtmpbEGosZ/R.INSTALL2da68822109/ggplot2/man/hmisc.Rd:29: missing file link ‘smean.cl.normal’
-Rd warning: /tmp/RtmpbEGosZ/R.INSTALL2da68822109/ggplot2/man/hmisc.Rd:30: missing file link ‘smean.sdl’
-Rd warning: /tmp/RtmpbEGosZ/R.INSTALL2da68822109/ggplot2/man/hmisc.Rd:31: missing file link ‘smedian.hilow’
+Rd warning: /tmp/RtmpYdUaeH/R.INSTALL68e43441133c/ggplot2/man/hmisc.Rd:28: missing file link ‘smean.cl.boot’
+Rd warning: /tmp/RtmpYdUaeH/R.INSTALL68e43441133c/ggplot2/man/hmisc.Rd:29: missing file link ‘smean.cl.normal’
+Rd warning: /tmp/RtmpYdUaeH/R.INSTALL68e43441133c/ggplot2/man/hmisc.Rd:30: missing file link ‘smean.sdl’
+Rd warning: /tmp/RtmpYdUaeH/R.INSTALL68e43441133c/ggplot2/man/hmisc.Rd:31: missing file link ‘smedian.hilow’
     interleave                              html  
     is.coord                                html  
     is.facet                                html  
@@ -16977,7 +17256,7 @@ Warning in setGenericS3.default(name, export = exportGeneric, envir = envir,  :
     processRsp.HttpDaemon                   html  
     restart.HttpDaemon                      html  
     rsp                                     html  
-Rd warning: /tmp/Rtmpx1cZuX/R.INSTALL2de96fb6ad1b/R.rsp/man/rsp.Rd:27: missing file link ‘stdout’
+Rd warning: /tmp/RtmpExXRoE/R.INSTALL69064dd449aa/R.rsp/man/rsp.Rd:27: missing file link ‘stdout’
     rspToHtml                               html  
     rsptex                                  html  
     setRootPaths.HttpDaemon                 html  
@@ -17038,7 +17317,7 @@ Making packages.html  ... done
 Making packages.html  ... done
 
 The downloaded source packages are in
-	‘/tmp/RtmpcWz7Ji/downloaded_packages’
+	‘/tmp/Rtmpi5ziwd/downloaded_packages’
 Updating HTML index of packages in '.Library'
 Making packages.html  ... done
 Warning message:
