@@ -1,5 +1,6 @@
+#! /bin/bash
 #
-# Copyright (C) 2012 by M. Edward (Ed) Borasky
+# Copyright (C) 2013 by M. Edward (Ed) Borasky
 #
 # This program is licensed to you under the terms of version 3 of the
 # GNU Affero General Public License. This program is distributed WITHOUT
@@ -8,23 +9,9 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-install.packages(
-  c(
-    'ctv'
-  ),
-  repos='http://cran.fhcrc.org'
-)
-warnings()
-library(ctv)
-update.views(
-  c(
-    'Finance',
-    'Econometrics',
-    'TimeSeries',
-    'NaturalLanguageProcessing',
-    'ReproducibleResearch',
-    'Graphics'
-  ),
-  repos='http://cran.fhcrc.org'
-)
-warnings()
+for i in Rgraphviz task-views packages
+do
+  sudo ./rootload.bash ${i}
+done
+
+sudo ./load-tm.plugins-svn.bash 2>&1 | tee tm.plugins-svn.log
