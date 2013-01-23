@@ -72,6 +72,7 @@ sudo yum install -y \
   mpfr-devel \
   openjpeg-devel \
   openssl-devel \
+  qtwebkit-devel \
   R-devel \
   readline-devel \
   tcl-devel \
