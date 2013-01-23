@@ -2,15 +2,20 @@
 #
 # Description:
 # - R on a Stick Fedora Remix with the LXDE Desktop Environment
+# - Derived from /usr/share/spin-kickstarts/fedora-livecd-lxde.ks
 #
 # Maintainer(s):
 # - M. Edward (Ed) Borasky <znmeb@znmeb.net>
 #
-# Note: Minimizations removed, since we're targeting USB sticks
+# Note: I've removed all the minimizations and space saving tricks since 
+# we're targeting USB sticks.
 
 %include fedora-live-base.ks
+
+# begin znmeb additions
 part / --size 6144 --fstype ext4
 repo --name=local --baseurl=file:///opt/RStudio
+# end znmeb additions
 
 %packages
 ### LXDE desktop
