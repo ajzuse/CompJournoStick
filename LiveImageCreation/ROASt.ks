@@ -122,7 +122,7 @@ fedora-remix-logos
 %end
 
 # copy stuff to the image
-%post --no-chroot
+%post --nochroot
 cp -a /opt/R-scripts /mnt/sysimage/opt/
 %end
 
