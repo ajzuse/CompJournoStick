@@ -1,4 +1,4 @@
-ROASt
-=====
+CompJournoStick
+===============
 
-R on a Stick
+Computational Journalism on a Stick
