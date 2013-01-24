@@ -75,7 +75,7 @@ sudo yum install -y \
   libicu-devel \
   libjpeg-turbo-devel \
   libpng-devel \
-  libpng12-devel \
+  libpng12 \
   libsndfile-devel \
   libtiff-devel \
   libtool-ltdl-devel \
