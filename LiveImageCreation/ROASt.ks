@@ -91,6 +91,7 @@ libcurl-devel
 libicu-devel
 libjpeg-turbo-devel
 libpng-devel
+libpng12-devel
 libsndfile-devel
 libtiff-devel
 libtool-ltdl-devel
@@ -123,6 +124,7 @@ fedora-remix-logos
 
 # copy stuff to the image
 %post --nochroot
+mkdir -p /mnt/sysimage/opt
 cp -a /opt/R-scripts /mnt/sysimage/opt/
 %end
 
