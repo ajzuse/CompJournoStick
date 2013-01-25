@@ -11,8 +11,8 @@
 
 for i in Rgraphviz task-views packages
 do
-  sudo ./rootload.bash ${i}
+  ./rootload.bash ${i}
 done
 
-sudo ./load-tm.plugins-svn.bash 2>&1 | tee tm.plugins-svn.log
-sudo ./load-sna-extras.bash 2>&1 | tee sna-extras.log
+./load-tm.plugins-svn.bash 2>&1 | tee tm.plugins-svn.log
+./load-sna-extras.bash 2>&1 | tee sna-extras.log
