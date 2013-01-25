@@ -257,4 +257,13 @@ sudo yum install -y \
   fftw-devel \
   ggobi-devel \
   gdal-devel \
-  geos-devel
+  geos-devel \
+  proj-devel \
+  mpfr-devel \
+  libpng-devel \
+  librsvg2-devel \
+  libjpeg-turbo-devel \
+  openjpeg-devel \
+  libtiff-devel \
+  libgeotiff-devel \
+  libXt-devel
