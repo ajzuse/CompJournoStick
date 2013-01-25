@@ -29,6 +29,7 @@ sudo yum group install -y \
   fedora-packager
 
 # Developer packages
+sudo yum install -y \
   yum-utils \
   livecd-tools \
   spin-kickstarts \
