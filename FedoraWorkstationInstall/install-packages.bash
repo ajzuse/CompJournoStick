@@ -12,6 +12,9 @@
 ./set-env.bash
 source ~/.bash_profile
 
+# Run update first
+sudo yum update
+
 # Package groups
 sudo yum group install -y \
   gnome-desktop \
