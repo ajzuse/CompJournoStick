@@ -27,9 +27,6 @@ part / --size 16384 --fstype ext4
 # desktop image at some point.  We won't touch this one for now.
 nss-mdns
 
-# This one needs to be kicked out of @standard
--smartmontools
-
 # The gnome-shell team does not want extensions in the default spin;
 # ibus support in gnome-shell will be integrated in GNOME 3.4
 -ibus-gnome3
