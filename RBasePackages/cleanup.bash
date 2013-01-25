@@ -9,7 +9,5 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-rm -f *.log
-rm -f *~
-rm -f *.tar.gz
-git status
+rm -fr src
+../common/cleanup.bash

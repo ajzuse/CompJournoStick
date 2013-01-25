@@ -1,3 +1,4 @@
+#! /bin/bash
 #
 # Copyright (C) 2012 by M. Edward (Ed) Borasky
 #
@@ -8,24 +9,8 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-install.packages(
-  c(
-    'ctv'
-  ),
-  repos='http://cran.fhcrc.org'
-)
-warnings()
-library(ctv)
-update.views(
-  c(
-    'Spatial',
-    'Finance',
-    'Econometrics',
-    'TimeSeries',
-    'NaturalLanguageProcessing',
-    'ReproducibleResearch',
-    'Graphics'
-  ),
-  repos='http://cran.fhcrc.org'
-)
-warnings()
+source ~/.bash_profile
+for i in CRAN tm.plugins-svn
+do
+  ./install-${i}.bash 2>&1 | tee ${i}.log
+done
