@@ -34,11 +34,8 @@ nss-mdns
 # begin znmeb added packages
 
 # Package groups
-@gnome-desktop
 @multimedia
 @office
-@libreoffice
-@firefox
 @design-suite
 @development-tools
 @development-libraries

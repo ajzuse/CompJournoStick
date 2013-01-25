@@ -10,18 +10,14 @@
 #
 
 # since we run as root, use global directories
-rm -fr /opt/ROASt; mkdir -p /opt/ROASt
-cp /usr/share/spin-kickstarts/*.ks /opt/ROASt # base kickstart files
-cp *.ks /opt/ROASt/ # our over-rides
+rm -fr /opt/CompJournoStick; mkdir -p /opt/CompJournoStick
+cp /usr/share/spin-kickstarts/*.ks /opt/CompJournoStick # base kickstart files
+cp *.ks /opt/CompJournoStick/ # our over-rides
 
-# Scripts to install R packages
-rm -fr /opt/R-scripts
-cp -a ../R-scripts /opt/
-
-pushd /opt/ROASt
+pushd /opt/CompJournoStick
 setenforce 0
 /usr/bin/time setarch x86_64 livecd-creator \
-  --config=ROASt.ks \
-  --fslabel=ROASt --cache=/var/cache/live
-checkisomd5 --verbose ROASt.iso
+  --config=CompJournoStick.ks \
+  --fslabel=CompJournoStick --cache=/var/cache/live
+checkisomd5 --verbose CompJournoStick.iso
 popd

@@ -13,5 +13,5 @@ sudo livecd-iso-to-disk --format --reset-mbr --efi \
   --unencrypted-home \
   --overlay-size-mb 2047 \
   --home-size-mb 2047 \
-  /opt/ROASt/ROASt.iso \
+  /opt/CompJournoStick/CompJournoStick.iso \
   $1
