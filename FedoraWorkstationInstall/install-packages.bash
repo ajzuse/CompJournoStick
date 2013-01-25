@@ -24,9 +24,9 @@ sudo yum group install -y \
   firefox \
   design-suite \
   development-tools \
-  development-libraries \
+  development-libs \
   virtualization \
-  books-and-guides \
+  books \
   mongodb \
   sql-server \
   fedora-packager
@@ -257,6 +257,7 @@ sudo yum install -y \
 
 # Missing headers
 sudo yum install -y \
+  libuuid-devel \
   gmp-devel \
   gsl-devel \
   sqlite-devel \

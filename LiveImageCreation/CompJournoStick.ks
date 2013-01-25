@@ -34,9 +34,9 @@ nss-mdns
 @office
 @design-suite
 @development-tools
-@development-libraries
+@development-libs
 @virtualization
-@books-and-guides
+@books
 @mongodb
 @sql-server
 @fedora-packager
