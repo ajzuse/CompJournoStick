@@ -1,9 +1,9 @@
 #! /bin/bash
 
+rm -fr /opt/src/tm.plugins
 mkdir -p /opt/src/tm.plugins
 
 pushd /opt/src/tm.plugins
-rm -fr sentiment *.tar.gz
 svn checkout svn://scm.r-forge.r-project.org/svnroot/sentiment/
 
 pushd sentiment/pkg
