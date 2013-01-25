@@ -11,4 +11,5 @@
 
 rm -f *.log
 rm -f *~
+rm -f *.tar.gz
 git status
