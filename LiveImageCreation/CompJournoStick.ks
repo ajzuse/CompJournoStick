@@ -31,7 +31,6 @@ nss-mdns
 
 # Package groups
 @multimedia
-@office
 @design-suite
 @development-tools
 @development-libs
@@ -253,6 +252,7 @@ R-xtable
 R-zoo
 
 # Missing headers
+libuuid-devel
 gmp-devel
 gsl-devel
 sqlite-devel

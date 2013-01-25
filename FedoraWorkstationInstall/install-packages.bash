@@ -19,7 +19,6 @@ sudo yum update
 sudo yum group install -y \
   gnome-desktop \
   multimedia \
-  office \
   libreoffice \
   firefox \
   design-suite \
