@@ -7,11 +7,19 @@
 # MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. Please refer to the
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
-
+warnings()
+install.packages(
+  c(
+    'RDF',
+    'rrdf'
+  ),
+  repos='http://cran.fhcrc.org'
+)
+warnings()
 library(ctv)
 update.views(
   c(
-    'ReproducibleResearch'
+    'NaturalLanguageProcessing'
   ),
   repos='http://cran.fhcrc.org'
 )

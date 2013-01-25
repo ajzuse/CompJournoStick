@@ -8,6 +8,16 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
+install.packages(
+  c(
+    'acs',
+    'UScensus2000blkgrp',
+    'UScensus2000cdp',
+    'UScensus2000tract',
+    'UScensus2010'
+  ),
+  repos='http://cran.fhcrc.org'
+)
 library(ctv)
 update.views(
   c(
