@@ -268,4 +268,5 @@ sudo yum install -y \
   libtiff-devel \
   libgeotiff-devel \
   libXt-devel \
-  libsndfile-devel
+  libsndfile-devel \
+  openssl-devel
