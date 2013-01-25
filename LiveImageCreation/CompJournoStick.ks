@@ -27,10 +27,6 @@ part / --size 16384 --fstype ext4
 # desktop image at some point.  We won't touch this one for now.
 nss-mdns
 
-# The gnome-shell team does not want extensions in the default spin;
-# ibus support in gnome-shell will be integrated in GNOME 3.4
--ibus-gnome3
-
 # begin znmeb added packages
 
 # Package groups
@@ -93,13 +89,13 @@ libreoffice-postgresql
 postgresql-contrib
 postgresql-devel
 postgresql-docs
+postgresql-odbc
 postgresql-plparrot
 postgresql-plperl
 postgresql-plpython
 postgresql-plpython3
 postgresql-plruby
 postgresql-pltcl
-postgresql-odbc
 pgadmin3
 
 # eBook / Web / audio / photo / video editing
@@ -200,6 +196,7 @@ qgis-grass
 grass
 gdal
 gdal-doc
+geos
 proj
 
 # LibreOffice add-ons
@@ -221,8 +218,11 @@ libreoffice-writer2latex
 libreoffice-writer2xhtml
 libreoffice-xsltfilter
 ooo2gd
+openoffice.org-diafilter
 
 # R and friends
+R
+R-devel
 ggobi
 rkward
 R-abind
@@ -250,6 +250,29 @@ R-wavethresh
 R-XML
 R-xtable
 R-zoo
+
+# Missing headers
+gmp-devel
+gsl-devel
+sqlite-devel
+netcdf-devel
+freeglut-devel
+fftw-devel
+ggobi-devel
+gdal-devel
+geos-devel
+proj-devel
+mpfr-devel
+libpng-devel
+librsvg2-devel
+libjpeg-turbo-devel
+openjpeg-devel
+libtiff-devel
+libgeotiff-devel
+libXt-devel
+libsndfile-devel
+openssl-devel
+unixODBC-devel
 # end znmeb added packages
 %end
 

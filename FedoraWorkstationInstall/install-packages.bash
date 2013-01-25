@@ -219,10 +219,13 @@ sudo yum install -y \
   libreoffice-writer2latex \
   libreoffice-writer2xhtml \
   libreoffice-xsltfilter \
-  ooo2gd
+  ooo2gd \
+  openoffice.org-diafilter
 
 # R and friends
 sudo yum install -y \
+  R \
+  R-devel \
   ggobi \
   rkward \
   R-abind \
