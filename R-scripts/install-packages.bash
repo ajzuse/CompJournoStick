@@ -13,6 +13,3 @@ for i in Rgraphviz packages
 do
   ./rootload.bash ${i}
 done
-
-./load-tm.plugins-svn.bash 2>&1 | tee tm.plugins-svn.log
-./load-sna-extras.bash 2>&1 | tee sna-extras.log
