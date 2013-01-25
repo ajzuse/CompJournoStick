@@ -193,6 +193,7 @@ sudo yum install -y \
   grass \
   gdal \
   gdal-doc \
+  geos \
   proj
 
 # LibreOffice add-ons
@@ -245,3 +246,15 @@ sudo yum install -y \
   R-XML \
   R-xtable \
   R-zoo
+
+# Missing headers
+sudo yum install -y \
+  gmp-devel \
+  gsl-devel \
+  sqlite-devel \
+  netcdf-devel \
+  freeglut-devel \
+  fftw-devel \
+  ggobi-devel \
+  gdal-devel \
+  geos-devel
