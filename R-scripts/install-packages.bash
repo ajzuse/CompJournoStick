@@ -9,11 +9,10 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-for i in Rgraphviz task-views packages
+for i in Rgraphviz packages
 do
   ./rootload.bash ${i}
 done
 
 ./load-tm.plugins-svn.bash 2>&1 | tee tm.plugins-svn.log
 ./load-sna-extras.bash 2>&1 | tee sna-extras.log
-df -h > after-disk.log
