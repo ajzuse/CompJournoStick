@@ -21,7 +21,7 @@ install.packages(
     'igraph',
     'igraphtosonia',
     'inline',
-    'latentnet', ,
+    'latentnet',
     'leaps',
     'markdown',
     'network',
