@@ -42,6 +42,7 @@ nss-mdns
 @fedora-packager
 
 # Developer packages
+cmake
 yum-utils
 livecd-tools
 spin-kickstarts

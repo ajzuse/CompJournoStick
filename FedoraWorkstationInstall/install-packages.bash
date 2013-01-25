@@ -33,6 +33,7 @@ sudo yum group install -y \
 
 # Developer packages
 sudo yum install -y \
+  cmake \
   yum-utils \
   livecd-tools \
   spin-kickstarts \
