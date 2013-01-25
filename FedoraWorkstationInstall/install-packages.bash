@@ -269,4 +269,5 @@ sudo yum install -y \
   libgeotiff-devel \
   libXt-devel \
   libsndfile-devel \
-  openssl-devel
+  openssl-devel \
+  unixODBC-devel
