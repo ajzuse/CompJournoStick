@@ -82,6 +82,12 @@ sudo yum install -y \
   postgresql-devel \
   postgresql-docs \
   postgresql-odbc \
+  postgresql-plparrot \
+  postgresql-plperl \
+  postgresql-plpython \
+  postgresql-plpython3 \
+  postgresql-plruby \
+  postgresql-pltcl \
   pgadmin3
 
 # eBook / Web / audio / photo / video editing
@@ -169,6 +175,7 @@ sudo yum install -y \
 
 # Social Network Analysis
 sudo yum install -y \
+  python3-networkx \
   python-networkx \
   python-networkx-doc
 

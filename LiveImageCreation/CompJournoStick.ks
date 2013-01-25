@@ -15,6 +15,9 @@
 
 %include fedora-live-base.ks
 
+# BIGGER!
+part / --size 16384 --fstype ext4
+
 %packages
 @firefox
 @gnome-desktop
@@ -93,6 +96,12 @@ libreoffice-postgresql
 postgresql-contrib
 postgresql-devel
 postgresql-docs
+postgresql-plparrot
+postgresql-plperl
+postgresql-plpython
+postgresql-plpython3
+postgresql-plruby
+postgresql-pltcl
 postgresql-odbc
 pgadmin3
 
@@ -177,6 +186,7 @@ riak
 redis
 
 # Social Network Analysis
+python3-networkx
 python-networkx
 python-networkx-doc
 
