@@ -18,6 +18,7 @@ warnings()
 library(ctv)
 update.views(
   c(
+    'Spatial',
     'Finance',
     'Econometrics',
     'TimeSeries',
