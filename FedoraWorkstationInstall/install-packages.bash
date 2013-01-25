@@ -267,4 +267,5 @@ sudo yum install -y \
   openjpeg-devel \
   libtiff-devel \
   libgeotiff-devel \
-  libXt-devel
+  libXt-devel \
+  libsndfile-devel
