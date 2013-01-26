@@ -227,32 +227,7 @@ sudo yum install -y \
   R \
   R-devel \
   ggobi \
-  rkward \
-  R-abind \
-  R-biglm \
-  R-bigmemory \
-  R-bitops \
-  R-car \
-  R-combinat \
-  R-core \
-  R-DBI \
-  R-DynDoc \
-  R-java \
-  R-lmtest \
-  R-multcomp \
-  R-Rcompression \
-  R-RCurl \
-  R-rlecuyer \
-  R-RODBC \
-  R-RScaLAPACK \
-  R-RSQLite \
-  R-RUnit \
-  R-timeDate \
-  R-waveslim \
-  R-wavethresh \
-  R-XML \
-  R-xtable \
-  R-zoo
+  rkward
 
 # Missing headers
 sudo yum install -y \
