@@ -10,7 +10,7 @@
 #
 
 source ~/.bash_profile
-for i in CRAN
+for i in Rmpi CRAN
 do
   ./install-${i}.bash 2>&1 | tee ${i}.log
 done
