@@ -1,6 +1,6 @@
 #! /bin/bash
 
-rm -fr src
+sudo rm -fr src
 mkdir -p src
 
 pushd src
