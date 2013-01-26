@@ -33,6 +33,7 @@ install.packages(
     'Rcmdr',
     'RcmdrPlugin.TextMining',
     'relimp',
+    'rJava',
     'RJSONIO',
     'roxygen2',
     'RPostgreSQL',
