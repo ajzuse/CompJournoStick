@@ -249,6 +249,12 @@ libXt-devel
 libsndfile-devel
 openssl-devel
 unixODBC-devel
+atlas-devel
+opencl-utils
+opencl-utils-devel
+blacs-openmpi-devel
+openmpi-devel
+scalapack-openmpi-devel
 # end znmeb added packages
 %end
 

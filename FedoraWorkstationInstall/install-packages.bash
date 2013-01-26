@@ -251,4 +251,10 @@ sudo yum install -y \
   libXt-devel \
   libsndfile-devel \
   openssl-devel \
-  unixODBC-devel
+  unixODBC-devel \
+  atlas-devel \
+  opencl-utils \
+  opencl-utils-devel \
+  blacs-openmpi-devel \
+  openmpi-devel \
+  scalapack-openmpi-devel
