@@ -63,7 +63,6 @@ powertop
 kernel-tools
 
 # Graphviz
-graphviz-R
 graphviz-devel
 graphviz-devil
 graphviz-doc

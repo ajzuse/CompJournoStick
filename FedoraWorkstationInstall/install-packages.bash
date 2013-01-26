@@ -55,7 +55,6 @@ sudo yum install -y \
 
 # Graphviz
 sudo yum install -y \
-  graphviz-R \
   graphviz-devel \
   graphviz-devil \
   graphviz-doc \
