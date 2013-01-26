@@ -9,6 +9,8 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
+source ~/.profile
+
 # since we run as root, use global directories
 rm -fr /opt/CompJournoStick; mkdir -p /opt/CompJournoStick
 cp /usr/share/spin-kickstarts/*.ks /opt/CompJournoStick # base kickstart files

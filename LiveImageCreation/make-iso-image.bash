@@ -9,4 +9,5 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
+source ~/.bash_profile
 sudo ./run-livecd-creator.bash 2>&1 | tee livecd-creator.log
