@@ -10,16 +10,17 @@
 #
 
 source ~/.bash_profile
-
-# recursive installer
 for i in */install-all.bash
+  Econometrics
+  Finance
+  Graphics
+  NaturalLanguageProcessing
+  ReproducibleResearch
+  SocialNetworkAnalysis
+  Spatial
+  TimeSeries
 do
-  j=`echo ${i} | sed 's/install-all.bash//'`
-  if [ "${j}" != "common/" ]
-  then
-    echo ${j}
-    pushd ${j}
-    ./install-all.bash
-    popd
-  fi
+  pushd ${j}
+  ./install-all.bash
+  popd
 done
