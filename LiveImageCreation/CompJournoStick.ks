@@ -257,6 +257,14 @@ opencl-utils-devel
 blacs-openmpi-devel
 openmpi-devel
 scalapack-openmpi-devel
+
+# De-branding
+-fedora-logos
+-fedora-release
+-fedora-release-notes
+generic-logos
+generic-release
+generic-release-notes
 # end znmeb added packages
 %end
 
