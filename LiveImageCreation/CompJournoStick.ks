@@ -227,6 +227,7 @@ ggobi
 rkward
 
 # Missing headers
+qtwebkit-devel
 libuuid-devel
 gmp-devel
 gsl-devel
