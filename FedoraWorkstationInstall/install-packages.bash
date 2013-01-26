@@ -230,6 +230,7 @@ sudo yum install -y \
 
 # Missing headers
 sudo yum install -y \
+  qtwebkit-devel \
   libuuid-devel \
   gmp-devel \
   gsl-devel \
