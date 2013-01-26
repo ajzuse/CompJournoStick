@@ -1,5 +1,3 @@
-#! /bin/bash
-#
 # Copyright (C) 2012 by M. Edward (Ed) Borasky
 #
 # This program is licensed to you under the terms of version 3 of the
@@ -8,19 +6,12 @@
 # MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. Please refer to the
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
-
-# make sure stuff works
-if [ -f "$HOME/.profile" ]
-then
-  if [ ! -f "$HOME/.bash_profile" ]
-  then
-    echo ".profile exists but .bash_profile doesn't -- making symlink!"
-    ln -sf $HOME/.profile $HOME/.bash_profile
-  fi
-fi
-
-cat bashrc >> ~/.bashrc
-cat bash_profile >> ~/.bash_profile
-cat Rprofile >> ~/.Rprofile
-source ~/.bash_profile
-ls -ltrA $HOME
+# .Rprofile -- commands to execute at the beginning of each R session
+#
+# You can use this file to load packages, set options, etc.
+#
+# NOTE: changes in this file won't be reflected until after you quit
+# and start a new session
+#
+system('mkdir -p ~/.rkward/library')
+.libPaths(c("~/.rkward/library", .libPaths()))
