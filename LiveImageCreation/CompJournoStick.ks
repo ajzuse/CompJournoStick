@@ -50,6 +50,8 @@ isomd5sum
 createrepo
 yumex
 R2spec
+git-annex
+git-annex-docs
 
 # End-user packages
 xchat

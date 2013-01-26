@@ -39,7 +39,9 @@ sudo yum install -y \
   isomd5sum \
   createrepo \
   yumex \
-  R2spec
+  R2spec \
+  git-annex \
+  git-annex-docs
 
 # End-user packages
 sudo yum install -y \
