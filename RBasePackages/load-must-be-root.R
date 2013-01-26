@@ -8,17 +8,5 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# Graphics task view needs Rgraphviz
-source("http://bioconductor.org/biocLite.R", echo=TRUE)
-biocLite('Rgraphviz')
-warnings()
 update.packages(ask=FALSE, repos='http://cran.fhcrc.org')
-warnings()
-install.packages(
-  c(
-    'ctv',
-    'rJava'
-  ),
-  repos='http://cran.fhcrc.org'
-)
 warnings()
