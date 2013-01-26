@@ -16,6 +16,7 @@ warnings()
 install.packages(
   c(
     'audio',
+    'ctv',
     'devtools',
     'doRedis',
     'e1071',
