@@ -8,10 +8,6 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# update first
-update.packages(ask=FALSE, repos='http://cran.fhcrc.org')
-warnings()
-
 # Graphics task view needs Rgraphviz
 source("http://bioconductor.org/biocLite.R", echo=TRUE)
 biocLite('Rgraphviz')
