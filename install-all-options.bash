@@ -13,12 +13,12 @@ source ~/.bash_profile
 for i in \
   Econometrics \
   Finance \
-  Graphics \
   NaturalLanguageProcessing \
-  ReproducibleResearch \
   SocialNetworkAnalysis \
   Spatial \
-  TimeSeries
+  TimeSeries \
+  MachineLearning \
+  HighPerformanceComputing
 do
   pushd ${i}
   ./install-all.bash
