@@ -10,14 +10,14 @@
 #
 
 source ~/.bash_profile
-for i in */install-all.bash
-  Econometrics
-  Finance
-  Graphics
-  NaturalLanguageProcessing
-  ReproducibleResearch
-  SocialNetworkAnalysis
-  Spatial
+for i in \
+  Econometrics \
+  Finance \
+  Graphics \
+  NaturalLanguageProcessing \
+  ReproducibleResearch \
+  SocialNetworkAnalysis \
+  Spatial \
   TimeSeries
 do
   pushd ${j}
