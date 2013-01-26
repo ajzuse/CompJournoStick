@@ -22,6 +22,27 @@ install.packages(
   repos='http://cran.fhcrc.org'
 )
 warnings()
+
+# Graphics task view is part of base
+library(ctv)
+update.views(
+  c(
+    'Graphics'
+  ),
+  repos='http://cran.fhcrc.org'
+)
+warnings()
+
+# Reproducible research task view
+update.views(
+  c(
+    'ReproducibleResearch'
+  ),
+  repos='http://cran.fhcrc.org'
+)
+warnings()
+
+# other packages
 install.packages(
   c(
     'audio',
