@@ -10,8 +10,4 @@
 #
 
 source ~/.bash_profile
-sudo ./install-must-be-root.bash 2>&1 | tee must-be-root.log
-for i in CRAN tm.plugins-svn
-do
-  ./install-${i}.bash 2>&1 | tee ${i}.log
-done
+/usr/bin/time R --no-save --no-restore < load-must-be-root.R
