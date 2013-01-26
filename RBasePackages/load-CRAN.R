@@ -8,6 +8,11 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
+# Graphics task view needs Rgraphviz
+source("http://bioconductor.org/biocLite.R", echo=TRUE)
+biocLite('Rgraphviz')
+warnings()
+
 install.packages(
   c(
     'audio',
@@ -42,13 +47,8 @@ install.packages(
     'tm.plugin.dc',
     'tm.plugin.mail',
     'tuneR',
-    'twitteR',
+    'twitteR'
   ),
   repos='http://cran.fhcrc.org'
 )
-warnings()
-
-# Graphics task view needs Rgraphviz
-source("http://bioconductor.org/biocLite.R", echo=TRUE)
-biocLite('Rgraphviz')
 warnings()
