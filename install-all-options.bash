@@ -20,7 +20,7 @@ for i in \
   Spatial \
   TimeSeries
 do
-  pushd ${j}
+  pushd ${i}
   ./install-all.bash
   popd
 done
