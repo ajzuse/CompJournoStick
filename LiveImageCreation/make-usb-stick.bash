@@ -12,6 +12,7 @@
 source ~/.bash_profile
 sudo livecd-iso-to-disk --format --reset-mbr --efi \
   --unencrypted-home \
+  --swap-size-mb 2047 \
   --overlay-size-mb 2047 \
   --home-size-mb 2047 \
   /opt/CompJournoStick/CompJournoStick.iso \
