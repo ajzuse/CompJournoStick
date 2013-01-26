@@ -32,6 +32,7 @@ install.packages(
     'filehash',
     'filehashSQLite',
     'foreach',
+    'HiveR',
     'inline',
     'leaps',
     'markdown',
