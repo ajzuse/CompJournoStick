@@ -42,7 +42,8 @@ sudo yum install -y \
   R2spec \
   git-all \
   git-annex \
-  git-annex-docs
+  git-annex-docs \
+  dkms
 
 # End-user packages
 sudo yum install -y \
@@ -173,8 +174,7 @@ sudo yum install -y \
 
 # NoSQL
 sudo yum install -y \
-  desktopcouch \
-  desktopcouch-tools \
+  couchdb \
   riak \
   redis
 
