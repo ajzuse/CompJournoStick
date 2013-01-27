@@ -52,6 +52,7 @@ R2spec
 git-all
 git-annex
 git-annex-docs
+dkms
 
 # End-user packages
 xchat
@@ -174,8 +175,7 @@ tesseract-langpack-ukr
 tesseract-langpack-vie
 
 # NoSQL
-desktopcouch
-desktopcouch-tools
+couchdb
 riak
 redis
 
