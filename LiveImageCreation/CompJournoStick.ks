@@ -30,7 +30,10 @@ nss-mdns
 # begin znmeb added packages
 
 # Package groups
+@gnome-desktop
 @multimedia
+@libreoffice
+@firefox
 @design-suite
 @development-tools
 @development-libs
@@ -50,6 +53,7 @@ isomd5sum
 createrepo
 yumex
 R2spec
+git-all
 git-annex
 git-annex-docs
 

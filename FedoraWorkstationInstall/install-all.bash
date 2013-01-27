@@ -40,6 +40,7 @@ sudo yum install -y \
   createrepo \
   yumex \
   R2spec \
+  git-all \
   git-annex \
   git-annex-docs
 
