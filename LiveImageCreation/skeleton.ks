@@ -15,7 +15,7 @@
 
 %include fedora-live-base.ks
 
-part / --size 16384
+part / --size 16384 --fstype ext4
 
 %packages
 @firefox
