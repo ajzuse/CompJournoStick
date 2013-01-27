@@ -15,7 +15,6 @@
 
 %include fedora-live-base.ks
 
-# BIGGER!
 part / --size 16384 --fstype ext4
 
 %packages
@@ -30,10 +29,7 @@ nss-mdns
 # begin znmeb added packages
 
 # Package groups
-@gnome-desktop
 @multimedia
-@libreoffice
-@firefox
 @design-suite
 @development-tools
 @development-libs
