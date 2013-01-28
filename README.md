@@ -24,6 +24,7 @@ Computational Journalism on a Stick - a Fedora Remix for computational journalis
     * The [Rhythmbox](http://projects.gnome.org/rhythmbox/) music management application,
     * The [Shotwell](http://yorba.org/shotwell/) photo organizer, and
     * The [LibreOffice](http://www.libreoffice.org/) personal productivity suite.
+
 ## Getting the scripts
 1. Boot up Fedora 18 and log in. You'll be in the GNOME 3 desktop.
 1. If you've never used the GNOME 3 desktop, the easiest way to start an application is to move the mouse to the upper left corner of the screen. If you don't see the application you want in the 'Favorites' menu on the left, start typing and you'll see a search bar and some possible candidates. For example, to open a terminal, move the mouse to the upper left and type 'term'.
