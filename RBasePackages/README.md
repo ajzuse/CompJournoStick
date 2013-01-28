@@ -10,3 +10,5 @@ To install these packages, open a terminal and type
 cd ~/CompJ<TAB>/RBase<TAB><ENT>
 ./inst<TAB><ENT>
 ```
+
+# [Next step: Installing RStudio](https://github.com/znmeb/CompJournoStick/blob/master/RStudio/README.md)
