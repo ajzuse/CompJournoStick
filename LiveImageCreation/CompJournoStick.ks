@@ -123,6 +123,7 @@ gimp-fourier-plugin
 bluefish
 calibre
 python-django
+python-django-doc
 freemind
 jabref
 lyx

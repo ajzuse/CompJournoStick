@@ -120,6 +120,7 @@ sudo yum install -y \
   bluefish \
   calibre \
   python-django \
+  python-django-doc \
   freemind \
   jabref \
   lyx \
