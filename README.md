@@ -27,6 +27,7 @@ Computational Journalism on a Stick - a Fedora Remix for computational journalis
     * The [LibreOffice](http://www.libreoffice.org/) personal productivity suite.
 
 ## Getting used to GNOME 3
+
 If you've never used the GNOME 3 desktop before, here are some tips.
 1. To start an application, move the mouse to the upper left hand corner. You should see a 'Favorites' bar on the left, which is pre-loaded with Firefox, Rhythmbox, Evolution, Shotwell, File Manager, and some of the LibreOffice tools. If that's what you want, just click the icon. If it isn't ...
 1. There's a 'grid' at the bottom of the favorites bar. Click on that and you'll get a list of all the applications installed. Or ...
