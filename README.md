@@ -30,7 +30,7 @@ Computational Journalism on a Stick - a Fedora Remix for computational journalis
 1. If you've never used the GNOME 3 desktop, the easiest way to start an application is to move the mouse to the upper left corner of the screen. If you don't see the application you want in the 'Favorites' menu on the left, start typing and you'll see a search bar and some possible candidates. For example, to open a terminal, move the mouse to the upper left and type 'term'.
 1. Download the CompJournoStick scripts. Start Firefox; it's in the 'Favorites' menu on the left when you move your mouse to the upper left screen corner. Download the most recent 'Source code (zip)' archive file from the [Github tags page](https://github.com/znmeb/CompJournoStick/tags). 
 1. Open the archive with the Archive Manager and press the 'Extract' button on the upper right. In the file selection dialog, pick your home directory and press the 'Extract' button on the lower right.
-1. Open a terminal. This one isn't in the initial menu, so move your mouse to the upper left and type 'term'. When you see the terminal, right-click on it an select 'Add to favorites', because you'll be doing a lot with the terminal.
+1. Open a terminal. This one isn't in the initial menu, so move your mouse to the upper left and type 'term'. When you see the terminal, right-click on it and select 'Add to favorites', because you'll be doing a lot with the terminal.
 1. The terminal uses a shell called 'Bourne Again Shell (bash)'. This has a convenient feature called 'tab completion'. In the terminal, type
 
 ```
