@@ -39,4 +39,4 @@ cd CompJou<TAB>
 
 The shell will complete the directory name for you. Then press <RETURN> and you'll be in the script directory.
 
-[## Next step: installing packages from Fedora](https://github.com/znmeb/CompJournoStick/blob/master/FedoraWorkstationInstall/README.md)
+## [Next step: installing packages from Fedora](https://github.com/znmeb/CompJournoStick/blob/master/FedoraWorkstationInstall/README.md)
