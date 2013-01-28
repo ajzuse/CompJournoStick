@@ -2,19 +2,19 @@
 
 Now that you have an installed computational journalism workstation, the next step is to make a live ISO image. If you're not still in a terminal, open one. Then type
 
-```
-cd ~/CompJ<TAB>/Live<TAB><RETURN>
-```
+    ```
+    cd ~/CompJ<TAB>/Live<TAB><RETURN>
+    ```
 to get into the right directory. Now type
 
-```
-./make-iso<TAB><RETURN>
-```
+    ```
+    ./make-iso<TAB><RETURN>
+    ```
 to start creating an ISO image. This will take a long time - it can run two hours the first time, when it's downloading packages for the image. You can run applications while it's doing all this. When it's done, the ISO image will be in
 
-```
-/opt/CompJournoStick/CompJournoStick.iso
-```
+    ```
+    /opt/CompJournoStick/CompJournoStick.iso
+    ```
 What's an ISO image? It's a file that contains the exact same bit patterns as a CD or DVD. It's very similar to the Fedora 18 Live installer you downloaded from the Fedora Project web site at the beginning. It's different in that it will have more packages and it will have the most recent versions of the packages. In other words, it will be a Fedora Remix!
 
 Once you have this image, you can burn it to a DVD. It's too big for a CD, though. It will boot on a real or virtual machine just like the Fedora 18 Live installer did. And it will contain a live installer package, so you can install it to a real or virtual hard drive. If you're in a virtual machine, you don't need to burn the file to a DVD; just connect the ISO file to the virtual machine's virtual "CD/DVD" drive.
@@ -57,17 +57,19 @@ The command will be completed.
 Now press 'RETURN'.
 1. The script will check the ISO file for errors. You should see something like this:
 
-> Verifying image...
-> /opt/CompJournoStick/CompJournoStick.iso:   b281baff738250dbc92f01189f274b30
-> Fragment sums: 4fda78557dde4512d7c5cd13718b2eec9f3961a83eb73832bab5f36fabf2
-> Fragment count: 20
-> Press [Esc] to abort check.
-> Checking: 100.0%
-> 
-> The media check is complete, the result is: PASS.
-> 
-> It is OK to use this media.
-> WARNING: THIS WILL DESTROY ANY DATA ON /dev/sdc!!!
-> Press Enter to continue or ctrl-c to abort
+    ```
+    Verifying image...
+    /opt/CompJournoStick/CompJournoStick.iso:   b281baff738250dbc92f01189f274b30
+    Fragment sums: 4fda78557dde4512d7c5cd13718b2eec9f3961a83eb73832bab5f36fabf2
+    Fragment count: 20
+    Press [Esc] to abort check.
+    Checking: 100.0%
+    
+    The media check is complete, the result is: PASS.
+    
+    It is OK to use this media.
+    WARNING: THIS WILL DESTROY ANY DATA ON /dev/sdc!!!
+    Press Enter to continue or ctrl-c to abort
+    ```
 
 ***Make sure that the device name listed is actually the USB stick! If it isn't you will destroy the data on some other hard drive!*** Then press 'Enter" to continue. This will also take some time, depending on how fast your USB port and drive are. On my laptop with a USB 3.0 port and a 32 GB USB 3.0 stick, it only takes a few minutes.
