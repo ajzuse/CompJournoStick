@@ -1,20 +1,18 @@
 ## Next step: the "on a stick" part
 
 Now that you have an installed computational journalism workstation, the next step is to make a live ISO image. If you're not still in a terminal, open one. Then type
-
-    ```
-    cd ~/CompJ'TAB'/Live'TAB''RETURN'
-    ```
+```
+cd ~/CompJ'TAB'/Live'TAB''RETURN'
+```
 to get into the right directory. Now type
 
-    ```
-    ./make-iso'TAB''RETURN'
-    ```
+```
+./make-iso'TAB''RETURN'
+```
 to start creating an ISO image. This will take a long time - it can run two hours the first time, when it's downloading packages for the image. You can run applications while it's doing all this. When it's done, the ISO image will be in
-
-    ```
-    /opt/CompJournoStick/CompJournoStick.iso
-    ```
+```
+/opt/CompJournoStick/CompJournoStick.iso
+```
 What's an ISO image? It's a file that contains the exact same bit patterns as a CD or DVD. It's very similar to the Fedora 18 Live installer you downloaded from the Fedora Project web site at the beginning. It's different in that it will have more packages and it will have the most recent versions of the packages. In other words, it will be a Fedora Remix!
 
 Once you have this image, you can burn it to a DVD. It's too big for a CD, though. It will boot on a real or virtual machine just like the Fedora 18 Live installer did. And it will contain a live installer package, so you can install it to a real or virtual hard drive. If you're in a virtual machine, you don't need to burn the file to a DVD; just connect the ISO file to the virtual machine's virtual "CD/DVD" drive.
