@@ -49,13 +49,12 @@ On my machine, the USB stick is the one 'Mounted on' '/run/media/znmeb/606C-2D0F
     ./make-usb<TAB>
     ```
 The command will be completed.
-1. Type '/dev/sdX', where 'X' is the character after 'sd' in the 'Filesystem' name you wrote down above. In this case, the completed command is
+1. Type '/dev/sdX', where 'X' is the character after 'sd' in the 'Filesystem' name you wrote down above. In my case, the completed command is
 
-```
-./make-usb-stick.bash /dev/sdc
-```
-
-Now press <RETURN>.
+    ```
+    ./make-usb-stick.bash /dev/sdc
+    ```
+Now press 'RETURN'.
 1. The script will check the ISO file for errors. You should see something like this:
 
 > Verifying image...
