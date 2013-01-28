@@ -9,7 +9,22 @@ to get into the right directory. Now type
 ```
 ./make-iso<TAB><ENT>
 ```
-to start creating an ISO image. This will take a long time - it can run two hours the first time, when it's downloading packages for the image. You can run applications while it's doing all this. When it's done, the ISO image will be in
+to start creating an ISO image. This will take a long time - it can run two hours the first time, when it's downloading packages for the image. You can run applications while it's doing all this. 
+
+When it's done, it will print a burst of messages like this:
+```
+5554.08user 668.75system 1:30:06elapsed 115%CPU (0avgtext+0avgdata 520996maxresident)k
+42768350inputs+34981536outputs (3062major+47407898minor)pagefaults 0swaps
+CompJournoStick.iso:   952b9a7448ddb4b0b3413d1875f4b313
+Fragment sums: 44c9a629735b6a46432a2933f8de29d2198f24a659fe1dd5a24c1fb81c2d
+Fragment count: 20
+Press [Esc] to abort check.
+Checking: 100.0%
+The media check is complete, the result is: PASS.
+
+It is OK to use this media.
+```
+In this case it took about an hour and a half ('1:30:06elapsed'). If you don't see the 'PASS' lines, it didn't work and you'll need to re-run it. If it worked, the ISO image will be in
 ```
 /opt/CompJournoStick/CompJournoStick.iso
 ```
