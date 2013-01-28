@@ -3,6 +3,7 @@
 Computational Journalism on a Stick - a Fedora Remix for computational journalists
 
 > “There are three kinds of men. The one that learns by reading. The few who learn by observation. The rest of them have to pee on the electric fence for themselves.” - Will Rogers
+
 ## What you need to tell your lawyer
 
 1. CompJournoStick is a [Fedora Remix](http://fedoraproject.org/wiki/Remix): "a combination of Fedora® software, with or without add-ons, that can be created by any community member at any time to produce interesting and compelling products."
