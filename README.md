@@ -11,7 +11,7 @@ Computational Journalism on a Stick - a Fedora Remix for computational journalis
 3. CompJournoStick licenses: the code is licensed under the [GNU Affero General Public License](http://www.gnu.org/licenses/agpl-3.0.html). The documentation is licensed under the [Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](http://creativecommons.org/licenses/by-sa/3.0/) license.
 4. Fedora software contains some components that are regulated by the Federal government of the United States of America. You may not export CompJournoStick to some places of interest to some journalists - Cuba, North Korea, Iran, Syria and Sudan. I am not a lawyer, which is why you should talk to yours. See [Fedora Export Control Product Matrix ](https://fedoraproject.org/wiki/Legal:Export?rd=Distribution/Download/ExportRegulations) for the details.
 
-## Quick Start
+## Quick start
 1. Minimum system requirements: you'll need a 64-bit Intel or AMD PC with at least 4 GB of RAM and 32 GB of free disk space. If you're installing to a virtual machine, the virtual machine must have at least 2 GB of RAM and a 32 GB virtual disk drive. You'll need reliable wall power and a reliable Internet connection.
 1. Go to the [Fedora Project home page](https://fedoraproject.org/) and [download Fedora 18](http://download.fedoraproject.org/pub/fedora/linux/releases/18/Live/x86_64/Fedora-18-x86_64-Live-Desktop.iso).
 1. Install Fedora 18 on a real or virtual machine. I run Fedora 18 on real machines as my primary operating system, but it works fine in virtual machines under VMware Player, VMware Workstation, VirtualBox, Windows 8 Pro Client Hyper-V or Fedora Virtual Machine Manager.
