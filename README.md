@@ -21,6 +21,8 @@ Computational Journalism on a Stick - a Fedora Remix for computational journalis
 1. Open the archive with the Archive Manager and press the 'Extract' button on the upper right. In the file selection dialog, pick your home directory and press the 'Extract' button on the lower right.
 1. Open a terminal. This one isn't in the initial menu, so move your mouse to the upper left and type 'term'. When you see the terminal, right-click on it an select 'Add to favorites', because you'll be doing a lot with the terminal.
 1. The terminal uses a shell called 'Bourne Again Shell (bash)'. This has a convenient feature called 'tab completion'. In the terminal, type
+    ```
     cd CompJou<TAB>
+    ```
 
 The shell will complete the file name for you and you'll be in the script directory.
