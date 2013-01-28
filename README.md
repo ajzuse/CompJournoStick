@@ -4,9 +4,7 @@ Computational Journalism on a Stick - a Fedora Remix for computational journalis
 
 ## What you need to tell your lawyer
 
-1. CompJournoStick is a [Fedora Remix](http://fedoraproject.org/wiki/Remix):
-
-"a combination of Fedora® software, with or without add-ons, that can be created by any community member at any time to produce interesting and compelling products."
+1. CompJournoStick is a [Fedora Remix](http://fedoraproject.org/wiki/Remix): "a combination of Fedora® software, with or without add-ons, that can be created by any community member at any time to produce interesting and compelling products."
     * CompJournoStick is not provided or supported by the Fedora Project.
     * Official Fedora software is available through the [Fedora Project website](http://fedoraproject.org/).
 2. CompJournoStick is licensed under the [GNU Affero General Public License](http://www.gnu.org/licenses/agpl-3.0.html).
