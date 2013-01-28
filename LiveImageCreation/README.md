@@ -2,12 +2,12 @@
 
 Now that you have an installed computational journalism workstation, the next step is to make a live ISO image. If you're not still in a terminal, open one. Then type
 ```
-cd ~/CompJ<TAB>/Live<TAB>'RETURN'
+cd ~/CompJ<TAB>/Live<TAB><ENT>
 ```
 to get into the right directory. Now type
 
 ```
-./make-iso<TAB>'RETURN'
+./make-iso<TAB><ENT>
 ```
 to start creating an ISO image. This will take a long time - it can run two hours the first time, when it's downloading packages for the image. You can run applications while it's doing all this. When it's done, the ISO image will be in
 ```
@@ -52,7 +52,7 @@ The command will be completed.
     ```
     ./make-usb-stick.bash /dev/sdc
     ```
-Now press 'RETURN'.
+Now press <ENT>.
 1. The script will check the ISO file for errors. You should see something like this:
 
     ```
