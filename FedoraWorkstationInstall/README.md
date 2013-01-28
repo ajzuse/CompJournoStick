@@ -16,6 +16,7 @@ The additional packages brought in by the script include
 * The [PiTiVi](http://www.pitivi.org/) movie editor,
 * The [Calibre](http://calibre-ebook.com/), [Sigil](http://code.google.com/p/sigil/), and [LyX](http://www.lyx.org/) ebook editors,
 * The [Bluefish](http://bluefish.openoffice.nl/index.html) HTML editor and [Freemind](http://freemind.sourceforge.net/wiki/index.php/Main_Page) mind-mapping package,
+* The [Django](http://www.djangoproject.com/) high-level Python Web framework
 * The Python [Natural Language Tool Kit](http://nltk.org/) and [NetworkX](http://networkx.github.com/) packages,
 * The [WordNet](http://wordnet.princeton.edu/) lexical database,
 * The [QuantLib](http://quantlib.org/index.shtml) library for quantitative finance,
