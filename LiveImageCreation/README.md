@@ -2,12 +2,12 @@
 
 Now that you have an installed computational journalism workstation, the next step is to make a live ISO image. If you're not still in a terminal, open one. Then type
 ```
-cd ~/CompJ'TAB'/Live'TAB''RETURN'
+cd ~/CompJ<TAB>/Live<TAB>'RETURN'
 ```
 to get into the right directory. Now type
 
 ```
-./make-iso'TAB''RETURN'
+./make-iso<TAB>'RETURN'
 ```
 to start creating an ISO image. This will take a long time - it can run two hours the first time, when it's downloading packages for the image. You can run applications while it's doing all this. When it's done, the ISO image will be in
 ```
