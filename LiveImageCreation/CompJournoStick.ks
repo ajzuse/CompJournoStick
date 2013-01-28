@@ -122,6 +122,7 @@ xsane-gimp
 gimp-fourier-plugin
 bluefish
 calibre
+python-django
 freemind
 jabref
 lyx
