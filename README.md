@@ -33,13 +33,13 @@ If you've never used the GNOME 3 desktop before, here are some tips.
 1. There's a 'grid' at the bottom of the favorites bar. Click on that and you'll get a list of all the applications installed. Or ...
 1. If you know part of the name of the application, just start typing it. You'll get a search bar and the icons of partial matches. When you see the one you want, right-click on it and either add it to 'Favorites' or open a new window.
 1. Like most Linux systems, you will be doing quite a bit in the terminal. So ... move your mouse to the upper left, type 'term' and add the Terminal to the 'Favorites' bar.
-1. The terminal uses a shell called 'Bourne Again Shell (bash)'. This has a convenient feature called 'tab completion'. In the terminal, you type the first part of a command or file name and press <TAB>. If the shell can complete the command / file name, it will. Otherwise it will list the possibilities. You can then enter the next few characters and press <TAB> again to finish it.
+1. The terminal uses a shell called 'Bourne Again Shell (bash)'. This has a convenient feature called 'tab completion'. In the terminal, you type the first part of a command or file name and press 'TAB'. If the shell can complete the command / file name, it will. Otherwise it will list the possibilities. You can then enter the next few characters and press 'TAB' again to finish it.
 For example, suppose you want to run the script './install-all.bash'. Type
 
     ```
     ./ins
     ```
-and press 'TAB'. If the script is present, 'bash' will complete the command and all you have to do is press 'ENTER'. In the following, I'll use the code ```<TAB>``` for 'TAB" and```<ENT>``` for 'Enter'.
+and press 'TAB'. If the script is present, 'bash' will complete the command and all you have to do is press 'ENTER'. In the following, I'll use the code ```<TAB>``` for 'TAB' and ```<ENT>``` for 'ENTER'.
 
 ## Getting the scripts
 1. Boot up Fedora 18 and log in. You'll be in the GNOME 3 desktop.
