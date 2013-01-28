@@ -1,14 +1,17 @@
 ## Next step: the "on a stick" part
 
 Now that you have an installed computational journalism workstation, the next step is to make a live ISO image. If you're not still in a terminal, open one. Then type
+
     ```
-    cd ~/CompJ<TAB>/Live<TAB><RETURN>
+    cd ~/CompJ'TAB'/Live'TAB''RETURN'
     ```
 to get into the right directory. Now type
+
     ```
-    ./make-iso<TAB><RETURN>
+    ./make-iso'TAB''RETURN'
     ```
 to start creating an ISO image. This will take a long time - it can run two hours the first time, when it's downloading packages for the image. You can run applications while it's doing all this. When it's done, the ISO image will be in
+
     ```
     /opt/CompJournoStick/CompJournoStick.iso
     ```
@@ -20,10 +23,12 @@ Once you have this image, you can burn it to a DVD. It's too big for a CD, thoug
 1. Get a fresh USB stick. It needs to be 8 GB or more and 32 GB or less. ***If you have one you want to re-use, back up everything on it, because this process will wipe it clean!***
 1. You'll need a real computer running Fedora 18 plus the packages installed by the 'FedoraWorkstationInstall/install-all.bash' script for the next part. I haven't been able to get this to work from a virtual machine yet. Plug the USB stick into a port. You should see a dialog window offering to open it in the File Manager. Select 'Open with Files'.
 1. In a terminal window, type
+
     ```
     df -h
     ```
 You should see something like this:
+
     ```
     Filesystem      Size  Used Avail Use% Mounted on
     devtmpfs        1.8G     0  1.8G   0% /dev
@@ -39,16 +44,19 @@ On my machine, the USB stick is the one 'Mounted on' '/run/media/znmeb/606C-2D0F
 1. Go into the File Manager window that opened when you selected 'Open with Files'. You'll see the USB stick listed under 'Devices' with an 'Eject' button to the right. Press the 'Eject' button.
 1. Go back to the terminal window and type 'df -h' again. ***The row for the USB stick should be gone!***
 1. Type
+
     ```
-    ./make-usb<TAB>
+    ./make-usb'TAB'
     ```
 The command will be completed.
 1. Type '/dev/sdX', where 'X' is the character after 'sd' in the 'Filesystem' name you wrote down above. In my case, the completed command is
+
     ```
     ./make-usb-stick.bash /dev/sdc
     ```
 Now press 'RETURN'.
 1. The script will check the ISO file for errors. You should see something like this:
+
     ```
     Verifying image...
     /opt/CompJournoStick/CompJournoStick.iso:   b281baff738250dbc92f01189f274b30
