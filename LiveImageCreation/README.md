@@ -40,8 +40,7 @@ tmpfs           1.9G  396K  1.9G   1% /tmp
 /dev/sdb2       226G   34G  181G  16% /data
 /dev/sdc1       7.5G  4.0K  7.5G   1% /run/media/znmeb/606C-2D0F
 ```
-
-1. On my machine, the USB stick is the one 'Mounted on' '/run/media/znmeb/606C-2D0F'. Yours will probably be different, but the '/run/media' part should be the same. Write down the 'Filesystem' name for that row, in this case, '/dev/sdc1'.
+On my machine, the USB stick is the one 'Mounted on' '/run/media/znmeb/606C-2D0F'. Yours will probably be different, but the '/run/media' part should be the same. Write down the 'Filesystem' name for that row, in this case, '/dev/sdc1'.
 1. Go into the File Manager window that opened when you selected 'Open with Files'. You'll see the USB stick listed under 'Devices' with an 'Eject' button to the right. Press the 'Eject' button.
 1. Go back to the terminal window and type 'df -h' again. ***The row for the USB stick should be gone!***
 1. Type
