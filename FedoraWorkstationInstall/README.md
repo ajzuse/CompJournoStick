@@ -1,4 +1,4 @@
-## Next step: installing packages from Fedora
+## Installing packages from Fedora
 CompJournoStick contains many packages from the Fedora repositories. The next step is to install them over the Internet. Open a terminal and type
 ```
 cd ~/CompJourn<TAB>/Fed<TAB><ENT>

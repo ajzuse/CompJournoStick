@@ -1,4 +1,4 @@
-## Next step: the "on a stick" part
+## The "on a stick" part
 
 Now that you have an installed computational journalism workstation, the next step is to make a live ISO image. If you're not still in a terminal, open one. Then type
 ```
