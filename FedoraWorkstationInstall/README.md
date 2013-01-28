@@ -27,7 +27,12 @@ The additional packages brought in by the script include
 * The [GGOBI](http://www.ggobi.org/) data visualization system, and, of course,
 * [R](http://r-project.org), and the [RKWard](http://rkward.sourceforge.net/) R IDE/GUI.
 
-You now have a pretty comprehensive ***100 percent open source*** computational journalism workstation / laptop. Feel free to visit the sites in the links above, join the communities, read the documentation, etc. Whenever a package has documentation supplied in Fedora, I've put it into the installation, so you'll be able to learn a lot without going to the Internet once you've completed this step.
+You now have a pretty comprehensive ***100 percent open source*** computational journalism workstation / laptop. Feel free to visit the sites in the links above, join the communities, read the documentation, etc.
+
+Whenever a package has documentation supplied in Fedora, I've put it into the installation, so you'll be able to learn a lot without going to the Internet once you've completed this step. Much of the documentation can be found in the directory '/usr/share/doc'. For example, to explore the Django documentation, type
+```
+firefox /usr/share/doc/python-django-doc*/index.html
+```
 
 Oh ... in addition to all those computational journalism tools, the script also installed some tools so you can
 
