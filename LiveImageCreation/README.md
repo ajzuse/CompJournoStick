@@ -10,6 +10,7 @@ to get into the right directory. Now type
 
 ```
 ./make-iso<TAB><RETURN>
+```
 
 to start creating an ISO image. This will take a long time - it can run two hours the first time, when it's downloading packages for the image. You can run applications while it's doing all this. When it's done, the ISO image will be in
 
