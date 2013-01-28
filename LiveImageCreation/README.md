@@ -24,7 +24,7 @@ Once you have this image, you can burn it to a DVD. It's too big for a CD, thoug
 
 ## Making a live persistent bootable USB stick
 1. Get a fresh USB stick. It needs to be 8 GB or more and 32 GB or less. ***If you have one you want to re-use, back up everything on it, because this process will wipe it clean!***
-1. You'll need a real computer running Fedora 18 for the next part. I haven't been able to get this to work from a virtual machine yet. Plug the USB stick into a port. You should see a dialog window offering to open it in the File Manager. Select 'Open with Files'.
+1. You'll need a real computer running Fedora 18 plus the packages installed by the 'FedoraWorkstationInstall/install-all.bash' script for the next part. I haven't been able to get this to work from a virtual machine yet. Plug the USB stick into a port. You should see a dialog window offering to open it in the File Manager. Select 'Open with Files'.
 1. In a terminal window, type
 
 ```
