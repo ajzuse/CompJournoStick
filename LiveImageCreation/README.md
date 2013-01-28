@@ -3,12 +3,12 @@
 Now that you have an installed computational journalism workstation, the next step is to make a live ISO image. If you're not still in a terminal, open one. Then type
 
     ```
-    cd ~/CompJ'TAB'/Live'TAB''RETURN'
+    cd ~/CompJ<TAB>/Live<TAB>'RETURN'
     ```
 to get into the right directory. Now type
 
     ```
-    ./make-iso'TAB''RETURN'
+    ./make-iso<TAB>'RETURN'
     ```
 to start creating an ISO image. This will take a long time - it can run two hours the first time, when it's downloading packages for the image. You can run applications while it's doing all this. When it's done, the ISO image will be in
 
@@ -46,7 +46,7 @@ On my machine, the USB stick is the one 'Mounted on' '/run/media/znmeb/606C-2D0F
 1. Type
 
     ```
-    ./make-usb'TAB'
+    ./make-usb<TAB>
     ```
 The command will be completed.
 1. Type '/dev/sdX', where 'X' is the character after 'sd' in the 'Filesystem' name you wrote down above. In my case, the completed command is
