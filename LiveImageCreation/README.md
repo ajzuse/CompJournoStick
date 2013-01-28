@@ -24,31 +24,30 @@ Once you have this image, you can burn it to a DVD. It's too big for a CD, thoug
 1. You'll need a real computer running Fedora 18 plus the packages installed by the 'FedoraWorkstationInstall/install-all.bash' script for the next part. I haven't been able to get this to work from a virtual machine yet. Plug the USB stick into a port. You should see a dialog window offering to open it in the File Manager. Select 'Open with Files'.
 1. In a terminal window, type
 
-```
-df -h
-```
+    ```
+    df -h
+    ```
 You should see something like this:
 
-```
-Filesystem      Size  Used Avail Use% Mounted on
-devtmpfs        1.8G     0  1.8G   0% /dev
-tmpfs           1.9G  216K  1.9G   1% /dev/shm
-tmpfs           1.9G  7.8M  1.9G   1% /run
-tmpfs           1.9G     0  1.9G   0% /sys/fs/cgroup
-/dev/sda2       143G   22G  115G  16% /
-tmpfs           1.9G  396K  1.9G   1% /tmp
-/dev/sdb2       226G   34G  181G  16% /data
-/dev/sdc1       7.5G  4.0K  7.5G   1% /run/media/znmeb/606C-2D0F
-```
+    ```
+    Filesystem      Size  Used Avail Use% Mounted on
+    devtmpfs        1.8G     0  1.8G   0% /dev
+    tmpfs           1.9G  216K  1.9G   1% /dev/shm
+    tmpfs           1.9G  7.8M  1.9G   1% /run
+    tmpfs           1.9G     0  1.9G   0% /sys/fs/cgroup
+    /dev/sda2       143G   22G  115G  16% /
+    tmpfs           1.9G  396K  1.9G   1% /tmp
+    /dev/sdb2       226G   34G  181G  16% /data
+    /dev/sdc1       7.5G  4.0K  7.5G   1% /run/media/znmeb/606C-2D0F
+    ```
 On my machine, the USB stick is the one 'Mounted on' '/run/media/znmeb/606C-2D0F'. Yours will probably be different, but the '/run/media' part should be the same. Write down the 'Filesystem' name for that row, in this case, '/dev/sdc1'.
 1. Go into the File Manager window that opened when you selected 'Open with Files'. You'll see the USB stick listed under 'Devices' with an 'Eject' button to the right. Press the 'Eject' button.
 1. Go back to the terminal window and type 'df -h' again. ***The row for the USB stick should be gone!***
 1. Type
 
-```
-./make-usb<TAB>
-```
-
+    ```
+    ./make-usb<TAB>
+    ```
 The command will be completed.
 1. Type '/dev/sdX', where 'X' is the character after 'sd' in the 'Filesystem' name you wrote down above. In this case, the completed command is
 
