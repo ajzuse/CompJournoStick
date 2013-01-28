@@ -67,3 +67,5 @@ Now press <ENT>.
     Press Enter to continue or ctrl-c to abort
     ```
 ***Make sure that the device name listed is actually the USB stick! If it isn't you will destroy the data on some other hard drive!*** Then press 'Enter" to continue. This will also take some time, depending on how fast your USB port and drive are. On my laptop with a USB 3.0 port and a 32 GB USB 3.0 stick, it only takes a few minutes.
+
+## [Next step: installing library packages from the Comprehensive R Archive Network (CRAN)](https://github.com/znmeb/CompJournoStick/blob/master/RBasePackages/README.md)
