@@ -32,4 +32,4 @@ The additional packages brought in by the script include
 
 You now have a pretty comprehensive ***100 percent open source*** computational journalism workstation / laptop. Feel free to visit the sites in the links above, join the communities, read the documentation, etc. Whenever a package has documentation supplied in Fedora, I've put it into the installation, so you'll be able to learn a lot without going to the Internet once you've completed this step.
 
-## Next step: the "on a stick" part
+## [Next step: the "on a stick" part](https://github.com/znmeb/CompJournoStick/blob/master/LiveImageCreation/README.md)
