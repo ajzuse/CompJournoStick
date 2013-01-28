@@ -1,5 +1,5 @@
 ## Installing [RStudio](http://www.rstudio.com/)
-My original plan was to put RStudio on the CompJournoStick media from the RPMs built by the RStudio project. However, I couldn't come up with a simple maintenance strategy, so I instead am installing RStudio, both desktop and server, from scripts in 'RStudio'.
+My original plan was to put RStudio on the CompJournoStick media from the RPMs built by the RStudio project. However, I couldn't come up with a simple maintenance strategy, so I instead am installing RStudio, both desktop and server, from scripts in ['RStudio'](https://github.com/znmeb/CompJournoStick/tree/master/RStudio).
 
 To install RStudio, open a terminal and type
 ```
