@@ -10,7 +10,7 @@
 #
 
 source ~/.bash_profile
-sudo livecd-iso-to-disk --format --reset-mbr --efi \
+sudo livecd-iso-to-disk --format --reset-mbr \
   --unencrypted-home \
   --overlay-size-mb 2047 \
   --home-size-mb 2047 \
