@@ -10,8 +10,8 @@
 #
 
 source ~/.bash_profile
-sudo livecd-iso-to-disk --format --reset-mbr \
+sudo livecd-iso-to-disk --reset-mbr \
   --unencrypted-home \
-  --overlay-size-mb 1500 \
+  --overlay-size-mb 1100 \
   /opt/CompJournoStick/CompJournoStick.iso \
   $1
