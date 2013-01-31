@@ -1,1 +1,1 @@
-make-16g-usb.bash
+make-8g-usb.bash
