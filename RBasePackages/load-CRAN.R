@@ -13,7 +13,7 @@ source("http://bioconductor.org/biocLite.R", echo=TRUE)
 biocLite('Rgraphviz')
 warnings()
 
-# must haves
+# must haves for task views
 install.packages(
   c(
     'ctv',
@@ -61,7 +61,6 @@ install.packages(
     'rattle',
     'rbenchmark',
     'Rcmdr',
-    'RcmdrPlugin.TextMining',
     'relimp',
     'RJSONIO',
     'roxygen2',
