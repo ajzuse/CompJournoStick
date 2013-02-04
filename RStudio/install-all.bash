@@ -14,4 +14,3 @@ for i in rstudio-source rstudio-desktop rstudio-server
 do
   ./install-${i}.bash 2>&1 | tee ${i}.log
 done
-./fedora-server-config.bash
