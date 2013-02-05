@@ -15,9 +15,9 @@ echo "Fetching RStudio ${VERSION}"
 export HERE=`pwd` # save pointer to where the hacked files are
 
 # get source tarball from Github
-sudo rm -fr src
-mkdir -p src
-pushd src
+rm -fr /opt/src
+mkdir -p /opt/src
+pushd /opt/src
   rm -fr rstudio*
   curl -k -L https://github.com/rstudio/rstudio/tarball/${VERSION} > rstudio.tgz
   tar xf rstudio.tgz

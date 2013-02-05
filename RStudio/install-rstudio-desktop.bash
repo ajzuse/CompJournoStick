@@ -9,9 +9,9 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-pushd src/rstudio-*/build
+pushd /opt/src/rstudio-*/build
   cmake \
     -DRSTUDIO_TARGET=Desktop \
     -DCMAKE_BUILD_TYPE=Release ..
-  sudo /usr/bin/time make install
+  /usr/bin/time make install
 popd
