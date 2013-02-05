@@ -10,4 +10,4 @@
 #
 
 source ~/.bash_profile
-sudo ./run-livecd-creator.bash 2>&1 | tee livecd-creator.log
+sudo nice ./run-livecd-creator.bash 2>&1 | tee livecd-creator.log
