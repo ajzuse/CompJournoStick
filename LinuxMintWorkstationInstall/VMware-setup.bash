@@ -1,0 +1,1 @@
+../FedoraWorkstationInstall/VMware-setup.bash
