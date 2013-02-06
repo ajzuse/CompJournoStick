@@ -1,0 +1,13 @@
+Loaded plugins: langpacks, presto, refresh-packagekit
+
+Group: LibreOffice
+ Group-Id: libreoffice
+ Description: LibreOffice Productivity Suite
+ Mandatory Packages:
+   libreoffice-calc
+   libreoffice-draw
+   libreoffice-graphicfilter
+   libreoffice-impress
+   libreoffice-math
+   libreoffice-writer
+   libreoffice-xsltfilter

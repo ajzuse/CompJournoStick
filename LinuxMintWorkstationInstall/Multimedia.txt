@@ -1,0 +1,19 @@
+Loaded plugins: langpacks, presto, refresh-packagekit
+
+Group: Multimedia
+ Group-Id: multimedia
+ Description: Audio/video framework common to desktops
+ Mandatory Packages:
+   PackageKit-gstreamer-plugin
+   alsa-plugins-pulseaudio
+   alsa-utils
+   gstreamer-plugins-bad-free
+   gstreamer-plugins-espeak
+   gstreamer-plugins-good
+   pulseaudio
+   pulseaudio-module-x11
+   pulseaudio-utils
+ Conditional Packages:
+   gstreamer1-plugins-bad-free
+   gstreamer1-plugins-espeak
+   gstreamer1-plugins-good

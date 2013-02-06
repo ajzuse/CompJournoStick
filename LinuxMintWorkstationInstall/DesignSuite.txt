@@ -1,0 +1,44 @@
+Loaded plugins: langpacks, presto, refresh-packagekit
+
+Group: Design Suite
+ Group-Id: design-suite
+ Description: These packages are targeted towards professional designers, like the Fedora Design Team.
+ Default Packages:
+   GREYCstoration
+   ImageMagick
+   blender
+   cinepaint
+   dia
+   entangle
+   fontforge
+   fontmatrix
+   gimp
+   gimp-data-extras
+   gimp-help
+   gimp-help-browser
+   inkscape
+   mypaint
+   nautilus-image-converter
+   optipng
+   pinta
+   postr
+   rawtherapee
+   scribus
+   shotwell
+   synfig
+   ufraw
+ Optional Packages:
+   audacity
+   calligra-karbon
+   calligra-krita
+   digikam
+   gthumb
+   hugin
+   istanbul
+   openclipart
+   pitivi
+   pngcrush
+ Conditional Packages:
+   kipi-plugins
+   sane-backends-drivers-scanners
+   xsane-gimp

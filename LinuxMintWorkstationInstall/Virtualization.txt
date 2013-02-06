@@ -1,0 +1,17 @@
+Loaded plugins: langpacks, presto, refresh-packagekit
+
+Group: Virtualization
+ Group-Id: virtualization
+ Description: These packages provide a virtualization environment.
+ Mandatory Packages:
+   python-virtinst
+ Default Packages:
+   libvirt
+   qemu-kvm
+   virt-manager
+   virt-viewer
+ Optional Packages:
+   guestfs-browser
+   libguestfs-tools
+   python-libguestfs
+   virt-top
