@@ -30,3 +30,4 @@ sudo yum install -y \
 sudo /usr/sbin/useradd -m makerpm
 sudo usermod -a -G mock makerpm
 sudo passwd makerpm
+su - makerpm -c 'rpmdev-setuptree'
