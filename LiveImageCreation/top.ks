@@ -3,7 +3,7 @@
 # Description: Computational Journalism on a Stick - a Fedora Remix for
 # computational journalists
 #
-# Derived from /usr/share/spin-kickstarts/fedora-livecd-lxde.ks
+# Derived from /usr/share/spin-kickstarts/fedora-live-desktop.ks
 # I've removed all the minimizations and space saving tricks since we're 
 # targeting USB sticks.
 #
@@ -18,29 +18,15 @@
 part / --size 16384 --fstype ext4
 
 %packages
-### LXDE desktop
-@lxde-desktop
-@lxde-apps
-@lxde-media
-@lxde-office
 @firefox
+@gnome-desktop
+@cinnamon-desktop
+@mate-desktop
+@libreoffice
 
-# pam-fprint causes a segfault in LXDM when enabled
--fprintd-pam
+# FIXME; apparently the glibc maintainers dislike this, but it got put into the
+# desktop image at some point.  We won't touch this one for now.
+nss-mdns
 
-# LXDE has lxpolkit. Make sure no other authentication agents end up in the spin.
--polkit-gnome
--polkit-kde
-
-# make sure xfce4-notifyd is not pulled in
-notification-daemon
--xfce4-notifyd
-
-# make sure xfwm4 is not pulled in for firstboot
-# https://bugzilla.redhat.com/show_bug.cgi?id=643416
-metacity
-
-# we need UPower for suspend and hibernate
-upower
-
+# begin znmeb added packages
 # begin CompJournoStick packages
