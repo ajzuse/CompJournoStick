@@ -8,48 +8,63 @@ generic-logos
 generic-release
 generic-release-notes
 # end znmeb added packages
-
 %end
 
 %post
-# LXDE and LXDM configuration
-
-# create /etc/sysconfig/desktop (needed for installation)
-cat > /etc/sysconfig/desktop <<EOF
-PREFERRED=/usr/bin/startlxde
-DISPLAYMANAGER=/usr/sbin/lxdm
-EOF
-
 cat >> /etc/rc.d/init.d/livesys << EOF
-# disable screensaver locking and make sure gamin gets started
-cat > /etc/xdg/lxsession/LXDE/autostart << FOE
-/usr/libexec/gam_server
-@lxpanel --profile LXDE
-@pcmanfm --desktop --profile LXDE
-/usr/libexec/notification-daemon
+# disable screensaver locking
+cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.override << FOE
+[org.gnome.desktop.screensaver]
+lock-enabled=false
 FOE
 
-# set up preferred apps 
-cat > /etc/xdg/libfm/pref-apps.conf << FOE 
-[Preferred Applications]
-WebBrowser=firefox.desktop
-MailClient=redhat-sylpheed.desktop
+# and hide the lock screen option
+cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.lockdown.gschema.override << FOE
+[org.gnome.desktop.lockdown]
+disable-lock-screen=true
 FOE
 
-# set up auto-login for liveuser
-sed -i 's|# autologin=dgod|autologin=liveuser|g' /etc/lxdm/lxdm.conf
+# disable updates plugin
+cat >> /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.updates.gschema.override << FOE
+[org.gnome.settings-daemon.plugins.updates]
+active=false
+FOE
 
-# Show harddisk install on the desktop
-sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
-mkdir /home/liveuser/Desktop
-cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
+# make the installer show up
+if [ -f /usr/share/applications/liveinst.desktop ]; then
+  # Show harddisk install in shell dash
+  sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop ""
+  # need to move it to anaconda.desktop to make shell happy
+  mv /usr/share/applications/liveinst.desktop /usr/share/applications/anaconda.desktop
 
-# Add autostart for parcellite
-cp /usr/share/applications/fedora-parcellite.desktop /etc/xdg/autostart
+  cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
+[org.gnome.shell]
+favorite-apps=['firefox.desktop', 'evolution.desktop', 'empathy.desktop', 'rhythmbox.desktop', 'shotwell.desktop', 'openoffice.org-writer.desktop', 'nautilus.desktop', 'anaconda.desktop']
+FOE
 
-# this goes at the end after all other changes.
-chown -R liveuser:liveuser /home/liveuser
-restorecon -R /home/liveuser
+  # Make the welcome screen show up
+  if [ -f /usr/share/anaconda/gnome/fedora-welcome.desktop ]; then
+    mkdir -p ~liveuser/.config/autostart
+    cp /usr/share/anaconda/gnome/fedora-welcome.desktop /usr/share/applications/
+    cp /usr/share/anaconda/gnome/fedora-welcome.desktop ~liveuser/.config/autostart/
+    chown -R liveuser:liveuser /home/liveuser/.config/
+  fi
+fi
+
+# rebuild schema cache with any overrides we installed
+glib-compile-schemas /usr/share/glib-2.0/schemas
+
+# set up auto-login
+cat >> /etc/gdm/custom.conf << FOE
+[daemon]
+AutomaticLoginEnable=True
+AutomaticLogin=liveuser
+FOE
+
+# Turn off PackageKit-command-not-found while uninstalled
+if [ -f /etc/PackageKit/CommandNotFound.conf ]; then
+  sed -i -e 's/^SoftwareSourceSearch=true/SoftwareSourceSearch=false/' /etc/PackageKit/CommandNotFound.conf
+fi
 
 EOF
 
