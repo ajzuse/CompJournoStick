@@ -1,12 +1,21 @@
-# fedora-livecd-lxde.ks
+# CompJournoStick.ks
 #
-# Description:
-# - Fedora Live Spin with the light-weight LXDE Desktop Environment
+# Description: Computational Journalism on a Stick - a Fedora Remix for
+# computational journalists
 #
-# Maintainer(s):
-# - Christoph Wickert <cwickert@fedoraproject.org>
+# Derived from /usr/share/spin-kickstarts/fedora-livecd-lxde.ks
+# I've removed all the minimizations and space saving tricks since we're 
+# targeting USB sticks.
+#
+# Maintainer(s): M. Edward (Ed) Borasky <znmeb@znmeb.net>
+# 
+# Web site: https://znmeb.github.com/CompJournoStick
+#
+# License: AGPL3
 
 %include fedora-live-base.ks
+
+part / --size 16384 --fstype ext4
 
 %packages
 ### LXDE desktop
