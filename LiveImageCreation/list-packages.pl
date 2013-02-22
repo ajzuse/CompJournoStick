@@ -9,21 +9,25 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-system './get-latest-workbench.bash';
-my @files = `find Computational-Journalism-Publishers-Workbench-* -name 'yum-*.bash'`;
-
-my $file;
-foreach $file (@files) {
-  next if $file =~ /updateos/;
-  next if $file =~ /remove/;
-  chomp $file;
-  
-  &listPackages($file);
+while (<>) {
+  next if $_ =~ /updateos/;
+  next if $_ =~ /remove/;
+  chomp $_;
+  &listPackages($_);
 }
-
 exit;
 
 sub listPackages {
   my ($file) = @_;
-  print "${file}\n";
+  open SCRIPT, $file;
+  while (<SCRIPT>) {
+    next if $_ !~ /yum install/;
+    while (<SCRIPT>) {
+      last if $_ =~ /^[ \t]*$/; # done on blank line
+      chomp $_;
+      $_ =~ s/^  //; $_ =~ s/ .*$//;
+      print "${_}\n";
+    }
+  }
+  close SCRIPT;
 }

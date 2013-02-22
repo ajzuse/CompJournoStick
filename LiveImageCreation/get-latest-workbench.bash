@@ -24,3 +24,9 @@ export WHAT="v${VERSION}.tar.gz"
 curl -L ${WHERE}/${WHAT} > ${TARBALL}
 rm -fr ${DIR}
 tar xf ${TARBALL}
+
+# get package list
+find ${DIR} -name 'yum-*.bash' | ./list-packages.pl | sort -u > package-list.txt
+
+# make kickstart file
+cat top.ks package-list.txt bottom.ks > CompJournoStick.ks

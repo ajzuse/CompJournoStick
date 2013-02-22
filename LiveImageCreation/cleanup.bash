@@ -10,4 +10,5 @@
 #
 
 rm -fr Computational-Journalism-Publishers-Workbench*
+rm -f package-list.txt
 ../common/cleanup.bash
