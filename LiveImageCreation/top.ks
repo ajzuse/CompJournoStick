@@ -22,7 +22,6 @@ part / --size 16384 --fstype ext4
 @gnome-desktop
 @kde-desktop
 @cinnamon-desktop
-@mate-desktop
 @libreoffice
 
 # FIXME; apparently the glibc maintainers dislike this, but it got put into the
