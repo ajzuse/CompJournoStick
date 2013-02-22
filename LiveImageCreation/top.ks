@@ -20,6 +20,7 @@ part / --size 16384 --fstype ext4
 %packages
 @firefox
 @gnome-desktop
+@kde-desktop
 @cinnamon-desktop
 @mate-desktop
 @libreoffice
