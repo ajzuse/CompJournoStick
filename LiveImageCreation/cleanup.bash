@@ -11,4 +11,5 @@
 
 rm -fr Computational-Journalism-Publishers-Workbench*
 rm -f package-list.txt
+rm -f CompJournoStick.ks
 ../common/cleanup.bash
