@@ -1,5 +1,14 @@
 # end CompJournoStick packages
 
+# De-branding
+-fedora-logos
+-fedora-release
+-fedora-release-notes
+generic-logos
+generic-release
+generic-release-notes
+# end znmeb added packages
+
 %end
 
 %post
