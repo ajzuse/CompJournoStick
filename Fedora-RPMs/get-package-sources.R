@@ -11,6 +11,6 @@ packages <- installed.packages()
 download.packages(
   pkgs=packages[,1],
   destdir='~/rpmbuild/SOURCES',
-  method='wget'
+  method='lynx'
 )
 warnings()
