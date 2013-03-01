@@ -8,7 +8,7 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 packages <- installed.packages()
-write.csv(packages, file='packages.csv', row.names=FALSE, col.names=TRUE)
+write.csv(packages, file='packages.csv', row.names=FALSE)
 download.packages(
   pkgs=packages[,1],
   destdir='~/rpmbuild/SOURCES',
