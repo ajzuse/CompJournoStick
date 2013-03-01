@@ -24,6 +24,12 @@ sudo yum install -y \
   liveusb-creator \
   isomd5sum \
   createrepo \
-  R2spec
+  R2spec \
+  curl \
+  wget \
+  lynx \
+  aria2 \
+  fedora-review \
+  mock
 
 rpmdev-setuptree
