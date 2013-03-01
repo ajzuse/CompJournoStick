@@ -10,4 +10,5 @@
 #
 
 source ~/.bash_profile
+rpmdev-setuptree
 /usr/bin/time R --no-save --no-restore < get-package-sources.R 2>&1 | tee package-sources.log
