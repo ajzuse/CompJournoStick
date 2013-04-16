@@ -12,7 +12,7 @@
 source ~/.bash_profile
 
 # Run update first
-sudo yum update
+sudo yum update -y
 
 # Live CD/DVD and USB tools
 sudo yum install -y \
