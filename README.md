@@ -6,11 +6,13 @@ Computational Journalism on a Stick - a Fedora Remix for computational journalis
 
 ## Road Map - 2013-05-25
 I've just come back to this project after a fairly long absence. Here's what's going on:
+
 1. The next release will be based on Fedora 19. They're going to release a beta on 2013-05-28, but I'm testing with the alpha and things are in pretty good shape.
 1. The desktop will be MATE with Compiz, based on the kickstart file from Fedora.
 2. R will come from the Fedora repository and RStudio will probably come from the RStudio project binaries. I need to check the 'boost' and 'Qt' dependencies; I had some problems with those.
 3. No R packages will ship with the project, but there will be scripts you can download to install them.
 4. As near as I can tell now, everything in the current branch of Computational Journalism Publishers Workbench from Fedora will be there. I'm running my machines on Fedora 19 and testing continuously now.
+5. I am planning to boot test USB sticks on a Windows 8 Pro and a Macintosh machine to verify that they boot.
 
 ## What you need to tell your lawyer
 1. CompJournoStick is a [Fedora Remix](http://fedoraproject.org/wiki/Remix): "a combination of Fedora® software, with or without add-ons, that can be created by any community member at any time to produce interesting and compelling products."
