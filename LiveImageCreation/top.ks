@@ -3,7 +3,7 @@
 # Description: Computational Journalism on a Stick - a Fedora Remix for
 # computational journalists
 #
-# Derived from /usr/share/spin-kickstarts/fedora-live-desktop.ks
+# Derived from /usr/share/spin-kickstarts/fedora-live-mate-compiz.ks
 # I've removed all the minimizations and space saving tricks since we're 
 # targeting USB sticks.
 #
@@ -18,15 +18,33 @@
 part / --size 16384 --fstype ext4
 
 %packages
+-realmd                     # only seems to be used in GNOME
+-PackageKit*                # we switched to yumex, so we don't need this
 @firefox
-@gnome-desktop
-@kde-desktop
-@cinnamon-desktop
+@mate
+compiz
+compiz-plugins-main
+compiz-plugins-extra
+compiz-manager
+compizconfig-python
+compiz-plugins-unsupported
+compiz-bcop
+compiz-mate
+libcompizconfig
+compiz-plugins-main
+ccsm
+emerald-themes
+emerald
+fusion-icon
+fusion-icon-gtk
 @libreoffice
 
 # FIXME; apparently the glibc maintainers dislike this, but it got put into the
 # desktop image at some point.  We won't touch this one for now.
 nss-mdns
+
+# This one needs to be kicked out of @standard
+-smartmontools
 
 # begin znmeb added packages
 # begin CompJournoStick packages
