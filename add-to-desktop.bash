@@ -31,7 +31,15 @@ sudo yum install -y \
   vim-vimoutliner \
   @Firefox\ Web\ Browser \
   git-all \
-  R-java-devel
+  R-java-devel \
+  R-RCurl \
+  R-XML \
+  R-RODBC \
+  ntp \
+  ntpdate \
+  sigil \
+  calibre \
+  qtwebkit
 
 # RStudio Desktop
 sudo yum install -y \
