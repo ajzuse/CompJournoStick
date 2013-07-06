@@ -8,6 +8,7 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
+update.packages(ask=FALSE)
 install.packages(
   c(
     'devtools',
