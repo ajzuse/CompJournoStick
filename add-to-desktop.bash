@@ -33,8 +33,11 @@ sudo yum install -y \
   git-all \
   R-java-devel \
   R-RCurl \
+  libcurl-devel \
   R-XML \
+  libxml2-devel \
   R-RODBC \
+  unixODBC-devel \
   ntp \
   ntpdate \
   sigil \
