@@ -9,8 +9,19 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# Run update first
+sudo yum install -y \
+  yum-plugin-fastestmirror
+
+# cleanup
+sudo yum clean all
 sudo yum update -y
+
+# Adobe repositories
+sudo yum install -y \
+  http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+
+sudo yum install -y \
+  flash-plugin
 
 # Basics
 sudo yum install -y \
