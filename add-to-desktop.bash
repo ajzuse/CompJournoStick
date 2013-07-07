@@ -45,20 +45,9 @@ sudo yum install -y \
   vim-vimoutliner \
   git-all \
   R-java-devel \
-  R-RCurl \
   libcurl-devel \
-  R-XML \
   libxml2-devel \
-  R-RODBC \
   unixODBC-devel \
-  R-bigmemory \
-  R-bigmemory-devel \
-  R-RSQLite \
-  R-RScaLAPACK \
-  R-biglm \
-  R-rlecuyer \
-  R-xtable \
-  R-DBI \
   ntp \
   ntpdate \
   sigil \
