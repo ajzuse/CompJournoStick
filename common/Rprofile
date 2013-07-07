@@ -13,7 +13,6 @@
 # NOTE: changes in this file won't be reflected until after you quit
 # and start a new session
 #
-.libPaths(c(paste(R.home(), '/', 'site-library', sep=''), .libPaths()))
 options(repos=c(
   CRAN='http://cran.rstudio.com/',
   BioCsoft='http://www.bioconductor.org/packages/2.12/bioc',
