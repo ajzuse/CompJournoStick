@@ -9,12 +9,7 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-while (<>) {
-  next if $_ =~ /updateos/;
-  next if $_ =~ /remove/;
-  chomp $_;
-  &listPackages($_);
-}
+&listPackages('../add-to-desktop.bash');
 exit;
 
 sub listPackages {
