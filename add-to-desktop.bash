@@ -38,11 +38,11 @@ rpmdev-setuptree
 
 # Basics
 sudo yum install -y \
+  firefox \
   vim-X11 \
   vim-enhanced \
   vim-perl-support \
   vim-vimoutliner \
-  @Firefox\ Web\ Browser \
   git-all \
   R-java-devel \
   R-RCurl \
