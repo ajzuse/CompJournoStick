@@ -63,6 +63,8 @@ sudo yum install -y \
   ntpdate \
   sigil \
   calibre \
+  lyx \
+  bluefish \
   qtwebkit \
   R2spec
 
