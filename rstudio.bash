@@ -9,12 +9,20 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# RStudio Desktop
-if [ `uname -m` == "x86_64" ]
-then
-  sudo yum install -y \
-    http://download1.rstudio.org/rstudio-0.97.551-x86_64.rpm
-else
-  sudo yum install -y \
-    http://download1.rstudio.org/rstudio-0.97.551-i686.rpm
-fi
+# Create a repository
+sudo rm -fr /opt/RStudioPackages
+sudo mkdir -p /opt/RStudioPackages
+
+# Get the RStudio Desktop RPMs
+pushd /opt/RStudioPackages
+sudo wget http://download1.rstudio.org/rstudio-0.97.551-x86_64.rpm
+sudo wget http://download1.rstudio.org/rstudio-0.97.551-i686.rpm
+popd
+
+# Make repository and enable it with yum
+sudo createrepo --database /opt/RStudioPackages
+sudo yum-config-manager --add-repo file:///opt/RStudioPackages/
+
+# Install
+sudo yum install -y \
+  rstudio
