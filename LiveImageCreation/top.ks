@@ -17,6 +17,8 @@
 
 part / --size 16384 --fstype ext4
 
+repo --name=RStudioPackages --baseurl=file:///opt/RStudioPackages
+
 %packages
 @firefox
 @gnome-desktop
