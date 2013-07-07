@@ -16,13 +16,6 @@ sudo yum install -y \
 sudo yum clean all
 sudo yum update -y
 
-# Adobe repositories
-sudo yum install -y \
-  http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
-
-sudo yum install -y \
-  flash-plugin
-
 # Live CD/DVD and USB tools
 sudo yum install -y \
   @development-tools \
@@ -75,7 +68,3 @@ sudo yum install -y \
 
 # copy new repository configuration file
 sudo cp repos.cfg /etc/R2spec/repos.cfg
-
-# RStudio Desktop
-sudo yum install -y \
-  http://download1.rstudio.org/rstudio-0.97.551-x86_64.rpm
