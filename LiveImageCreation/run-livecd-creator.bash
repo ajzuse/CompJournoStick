@@ -20,4 +20,5 @@ setenforce 0
   --config=CompJournoStick.ks \
   --fslabel=CompJournoStick --cache=/var/cache/live
 checkisomd5 --verbose CompJournoStick.iso
+setenforce 1
 popd
