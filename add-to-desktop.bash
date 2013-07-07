@@ -68,8 +68,7 @@ sudo yum install -y \
   ebook-tools \
   FlightCrew \
   qtwebkit \
-  R2spec \
-  ppp
+  R2spec
 
 # copy new repository configuration file
 sudo cp repos.cfg /etc/R2spec/repos.cfg
