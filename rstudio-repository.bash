@@ -22,7 +22,3 @@ popd
 # Make repository and enable it with yum
 sudo createrepo --database /opt/RStudioPackages
 sudo yum-config-manager --add-repo file:///opt/RStudioPackages/
-
-# Install
-sudo yum install -y \
-  rstudio

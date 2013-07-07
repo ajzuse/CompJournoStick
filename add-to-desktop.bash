@@ -61,6 +61,9 @@ sudo yum install -y \
   tor \
   vidalia
 
+# RStudio (Desktop)
+sudo yum install -y \
+  rstudio
 
 # copy new repository configuration file
 sudo cp repos.cfg /etc/R2spec/repos.cfg
