@@ -69,7 +69,9 @@ sudo yum install -y \
   FlightCrew \
   qtwebkit \
   R2spec \
-  xorg-x11-drv-qxl
+  xorg-x11-drv-qxl \
+  tor \
+  vidalia
 
 # copy new repository configuration file
 sudo cp repos.cfg /etc/R2spec/repos.cfg
