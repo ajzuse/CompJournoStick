@@ -23,6 +23,26 @@ sudo yum install -y \
 sudo yum install -y \
   flash-plugin
 
+# Live CD/DVD and USB tools
+sudo yum install -y \
+  @development-tools \
+  fedora-packager \
+  yum-utils \
+  livecd-tools \
+  spin-kickstarts \
+  liveusb-creator \
+  isomd5sum \
+  createrepo \
+  curl \
+  wget \
+  lynx \
+  aria2 \
+  fedora-review \
+  mock
+
+# make a place to build packages
+rpmdev-setuptree
+
 # Basics
 sudo yum install -y \
   vim-X11 \
@@ -38,11 +58,23 @@ sudo yum install -y \
   libxml2-devel \
   R-RODBC \
   unixODBC-devel \
+  R-bigmemory \
+  R-bigmemory-devel \
+  R-RSQLite \
+  R-RScaLAPACK \
+  R-biglm \
+  R-rlecuyer \
+  R-xtable \
+  R-DBI \
   ntp \
   ntpdate \
   sigil \
   calibre \
-  qtwebkit
+  qtwebkit \
+  R2spec
+
+# copy new repository configuration file
+sudo cp repos.cfg /etc/R2spec/repos.cfg
 
 # RStudio Desktop
 sudo yum install -y \
