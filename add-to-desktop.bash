@@ -66,12 +66,15 @@ sudo yum install -y \
   lyx \
   bluefish \
   ebook-tools \
+  texlive-ebook \
+  texlive-ebook-doc \
   FlightCrew \
   qtwebkit \
   R2spec \
   xorg-x11-drv-qxl \
   tor \
   vidalia
+
 
 # copy new repository configuration file
 sudo cp repos.cfg /etc/R2spec/repos.cfg
