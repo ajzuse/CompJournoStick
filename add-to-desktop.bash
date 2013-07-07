@@ -65,6 +65,8 @@ sudo yum install -y \
   calibre \
   lyx \
   bluefish \
+  ebook-tools \
+  FlightCrew \
   qtwebkit \
   R2spec
 
