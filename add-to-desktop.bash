@@ -68,7 +68,8 @@ sudo yum install -y \
   ebook-tools \
   FlightCrew \
   qtwebkit \
-  R2spec
+  R2spec \
+  xorg-x11-drv-qxl
 
 # copy new repository configuration file
 sudo cp repos.cfg /etc/R2spec/repos.cfg
