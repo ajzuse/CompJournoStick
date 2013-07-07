@@ -9,13 +9,12 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# Adobe repositories
-sudo yum install -y \
-  http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
-
-sudo yum install -y \
-  flash-plugin
-
 # RStudio Desktop
-sudo yum install -y \
-  http://download1.rstudio.org/rstudio-0.97.551-x86_64.rpm
+if [ `uname -m` == "x86_64" ]
+then
+  sudo yum install -y \
+    http://download1.rstudio.org/rstudio-0.97.551-x86_64.rpm
+else
+  sudo yum install -y \
+    http://download1.rstudio.org/rstudio-0.97.551-i686.rpm
+fi
