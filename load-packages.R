@@ -10,6 +10,7 @@
 
 install.packages(
   c(
+    'shiny',
     'devtools',
     'knitcitations',
     'knitr',
@@ -20,3 +21,7 @@ install.packages(
   )
 )
 warnings()
+require(devtools)
+install_github("slidify", "ramnathv")
+install_github("slidifyLibraries", "ramnathv")
+install_github("rCharts", "ramnathv")
