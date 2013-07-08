@@ -67,6 +67,7 @@ sudo yum install -y \
   qtwebkit
 
 # Anonymous Internet tools
+sudo yum install -y \
   bitlbee \
   bitlbee-otr \
   xchat \
