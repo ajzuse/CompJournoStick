@@ -9,14 +9,15 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
+# make sure 'fastestmirror' plugin is installed
 sudo yum install -y \
   yum-plugin-fastestmirror
 
-# cleanup
+# cleanup and update
 sudo yum clean all
 sudo yum update -y
 
-# Live CD/DVD and USB tools
+# R, development, live CD/DVD and USB tools
 sudo yum install -y \
   @development-tools \
   fedora-packager \
@@ -31,36 +32,53 @@ sudo yum install -y \
   lynx \
   aria2 \
   fedora-review \
-  mock
-
-# make a place to build packages
-rpmdev-setuptree
-
-# Basics
-sudo yum install -y \
-  firefox \
-  vim-X11 \
-  vim-enhanced \
-  vim-perl-support \
-  vim-vimoutliner \
-  git-all \
+  R2spec \
   R-java-devel \
   libcurl-devel \
   libxml2-devel \
   unixODBC-devel \
+  mock
+
+# install new R2spec repository configuration file
+sudo cp repos.cfg /etc/R2spec/repos.cfg
+
+# make a place to build packages
+rpmdev-setuptree
+
+# create RStudio repository
+./rstudio-repository.bash
+
+# Desktop basics that may not be there
+sudo yum install -y \
+  firefox \
+  vim-X11 \
+  vim-enhanced \
+  git-all \
   ntp \
-  ntpdate \
+  ntpdate
+
+# Editing tools
+sudo yum install -y \
   sigil \
   calibre \
   lyx \
   bluefish \
   FlightCrew \
-  qtwebkit \
-  R2spec \
+  qtwebkit
+
+# Anonymous Internet tools
+  bitlbee \
+  bitlbee-otr \
+  xchat \
+  xchat-otr \
+  irssi \
+  irssi-otr \
+  pidgin \
+  pidgin-otr \
   tor \
   vidalia
 
-# Video drivers
+# Video drivers - needed for some VM hosts
 sudo yum install -y \
   xorg-x11-drv-apm \
   xorg-x11-drv-ati \
@@ -96,6 +114,3 @@ sudo yum install -y \
 # RStudio (Desktop)
 sudo yum install -y \
   rstudio
-
-# copy new repository configuration file
-sudo cp repos.cfg /etc/R2spec/repos.cfg
