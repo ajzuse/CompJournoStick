@@ -8,9 +8,8 @@ If you've never used the GNOME 3 desktop before, here are some tips.
 1. Like most Linux systems, you will be doing quite a bit in the terminal. So ... move your mouse to the upper left, type 'term' in the 'Type to search' box. Right-click on the terminal icon and add the Terminal to the 'Favorites' bar.
 1. The terminal uses a shell called 'Bourne Again SHell (bash)'. This has a convenient feature called 'tab completion'. In the terminal, you type the first part of a command or file name and press 'TAB'. If the shell can complete the command / file name, it will. Otherwise it will list the possibilities. You can then enter the next few characters and press 'TAB' again to finish it.
 
-For example, suppose you want to run the script './install-all.bash'. Type
-
+    For example, suppose you want to run the script './install-all.bash'. Type
     ```
     ./ins
     ```
-and press 'TAB'. If the script is present, 'bash' will complete the command and all you have to do is press 'ENTER'. In the following, I'll use the code ```<TAB>``` for 'TAB' and ```<ENT>``` for 'ENTER'.
+    and press 'TAB'. If the script is present, 'bash' will complete the command and all you have to do is press 'ENTER'. In the following, I'll use the code ```<TAB>``` for 'TAB' and ```<ENT>``` for 'ENTER'.

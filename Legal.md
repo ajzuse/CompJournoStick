@@ -1,6 +1,6 @@
 ## What you need to tell your lawyer
 
-1. CompJournoStick is a [Fedora Remix](http://fedoraproject.org/wiki/Remix): "a combination of Fedora® software, with or without add-ons, that can be created by any community member at any time to produce interesting and compelling products."
+1. [CompJournoStick](http://znmeb.github.io/CompJournoStick) is a [Fedora Remix](http://fedoraproject.org/wiki/Remix): "a combination of Fedora® software, with or without add-ons, that can be created by any community member at any time to produce interesting and compelling products."
     * CompJournoStick is not provided or supported by the Fedora Project.
     * Official Fedora software is available through the [Fedora Project website](http://fedoraproject.org/).
 1. The Fedora project is ***very*** strict about the licensing of software, content and documentation that they package and distribute. So there are some things you won't find in CompJournoStick. The details can be found [here](http://fedoraproject.org/wiki/Packaging:Guidelines#Legal).
