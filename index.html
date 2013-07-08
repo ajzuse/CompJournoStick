@@ -1,51 +1,36 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="CompJournoStick : Computational Journalism on a Stick" />
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>CompJournoStick by znmeb</title>
+    <title>CompJournoStick</title>
   </head>
 
   <body>
-    <a id="forkme_banner" href="https://github.com/znmeb/CompJournoStick">View on GitHub</a>
-    <div class="shell">
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>CompJournoStick</h1>
-            <h2>Computational Journalism on a Stick</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/znmeb/CompJournoStick">View on GitHub</a>
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/znmeb/CompJournoStick/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/znmeb/CompJournoStick/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
+          <h1 id="project_title">CompJournoStick</h1>
+          <h2 id="project_tagline">Computational Journalism on a Stick</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/znmeb/CompJournoStick/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/znmeb/CompJournoStick/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a name="compjournostick" class="anchor" href="#compjournostick"><span class="octicon octicon-link"></span></a>CompJournoStick</h1>
 
@@ -54,97 +39,15 @@
 <blockquote>
 <p>“There are three kinds of men. The one that learns by reading. The few who learn by observation. The rest of them have to pee on the electric fence for themselves.” - Will Rogers</p>
 </blockquote>
-
-<h2>
-<a name="road-map---2013-05-25" class="anchor" href="#road-map---2013-05-25"><span class="octicon octicon-link"></span></a>Road Map - 2013-05-25</h2>
-
-<p>I've just come back to this project after a fairly long absence. Here's what's going on:</p>
-
-<ol>
-<li>The next release will be based on Fedora 19. They're going to release a beta on 2013-05-28, but I'm testing with the alpha and things are in pretty good shape.</li>
-<li>The desktop will be MATE with Compiz, based on the kickstart file from Fedora.</li>
-<li>R will come from the Fedora repository and RStudio will probably come from the RStudio project binaries. I need to check the 'boost' and 'Qt' dependencies; I had some problems with those.</li>
-<li>No R packages will ship with the project, but there will be scripts you can download to install them.</li>
-<li>As near as I can tell now, everything in the current branch of Computational Journalism Publishers Workbench from Fedora will be there. I'm running my machines on Fedora 19 and testing continuously now.</li>
-<li>I am planning to boot test USB sticks on a Windows 8 Pro and a Macintosh machine to verify that they boot.</li>
-</ol><h2>
-<a name="what-you-need-to-tell-your-lawyer" class="anchor" href="#what-you-need-to-tell-your-lawyer"><span class="octicon octicon-link"></span></a>What you need to tell your lawyer</h2>
-
-<ol>
-<li>CompJournoStick is a <a href="http://fedoraproject.org/wiki/Remix">Fedora Remix</a>: "a combination of Fedora® software, with or without add-ons, that can be created by any community member at any time to produce interesting and compelling products."
-
-<ul>
-<li>CompJournoStick is not provided or supported by the Fedora Project.</li>
-<li>Official Fedora software is available through the <a href="http://fedoraproject.org/">Fedora Project website</a>.</li>
-</ul>
-</li>
-<li>The Fedora project is <strong><em>very</em></strong> strict about the licensing of software, content and documentation that they package and distribute. So there are some things you won't find in CompJournoStick. The details can be found <a href="http://fedoraproject.org/wiki/Packaging:Guidelines#Legal">here</a>.</li>
-<li>CompJournoStick licenses: the code is licensed under the <a href="http://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License</a>. The documentation is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)</a> license.</li>
-<li>Fedora software contains some components that are regulated by the Federal government of the United States of America. You may not export CompJournoStick to some places of interest to some journalists - Cuba, North Korea, Iran, Syria and Sudan. I am not a lawyer, which is why you should talk to yours. See <a href="https://fedoraproject.org/wiki/Legal:Export?rd=Distribution/Download/ExportRegulations">Fedora Export Control Product Matrix </a> for the details.</li>
-</ol><h2>
-<a name="installing-fedora" class="anchor" href="#installing-fedora"><span class="octicon octicon-link"></span></a>Installing Fedora</h2>
-
-<ol>
-<li>Minimum system requirements: you'll need a 64-bit Intel or AMD PC with at least 4 GB of RAM and 32 GB of free disk space. If you're installing to a virtual machine, the virtual machine must have at least 2 GB of RAM and a 32 GB virtual disk drive. You'll need reliable wall power and a reliable Internet connection.</li>
-<li>Go to the <a href="https://fedoraproject.org/">Fedora Project home page</a> and <a href="http://download.fedoraproject.org/pub/fedora/linux/releases/18/Live/x86_64/Fedora-18-x86_64-Live-Desktop.iso">download Fedora 18</a>.</li>
-<li>Install Fedora 18 on a real or virtual machine. I run Fedora 18 on real machines as my primary operating system, but it works fine in virtual machines under VMware Player, VMware Workstation, VirtualBox, Windows 8 Pro Client Hyper-V or Fedora Virtual Machine Manager.</li>
-<li>You now have a Fedora desktop. Included are
-
-<ul>
-<li>The Linux kernel, device drivers, etc.,</li>
-<li>
-<a href="http://www.gnu.org/">GNU</a> utilities, tools, libraries, etc.,</li>
-<li>The <a href="http://www.gnome.org/gnome-3/">GNOME 3</a> desktop,</li>
-<li>The <a href="http://www.mozilla.org/en-US/">Mozilla</a> <a href="http://www.mozilla.org/en-US/firefox">Firefox</a> browser,</li>
-<li>The <a href="http://projects.gnome.org/evolution/">Evolution</a> integrated email, addressbook and calendaring tools,</li>
-<li>The <a href="http://projects.gnome.org/rhythmbox/">Rhythmbox</a> music management application,</li>
-<li>The <a href="http://yorba.org/shotwell/">Shotwell</a> photo organizer, and</li>
-<li>The <a href="http://www.libreoffice.org/">LibreOffice</a> personal productivity suite.</li>
-</ul>
-</li>
-</ol><h2>
-<a name="getting-used-to-gnome-3" class="anchor" href="#getting-used-to-gnome-3"><span class="octicon octicon-link"></span></a>Getting used to GNOME 3</h2>
-
-<p>If you've never used the GNOME 3 desktop before, here are some tips.</p>
-
-<ol>
-<li>To start an application, move the mouse to the upper left hand corner. You should see a 'Favorites' bar on the left, which is pre-loaded with Firefox, Rhythmbox, Evolution, Shotwell, File Manager, and some of the LibreOffice tools. If that's what you want, just click the icon. If it isn't ...</li>
-<li>There's a 'grid' at the bottom of the favorites bar. Click on that and you'll get a list of all the applications installed. Or ...</li>
-<li>If you know part of the name of the application, just start typing it. You'll get a search bar and the icons of partial matches. When you see the one you want, right-click on it and either add it to 'Favorites' or open a new window.</li>
-<li>Like most Linux systems, you will be doing quite a bit in the terminal. So ... move your mouse to the upper left, type 'term' and add the Terminal to the 'Favorites' bar.</li>
-<li>
-<p>The terminal uses a shell called 'Bourne Again Shell (bash)'. This has a convenient feature called 'tab completion'. In the terminal, you type the first part of a command or file name and press 'TAB'. If the shell can complete the command / file name, it will. Otherwise it will list the possibilities. You can then enter the next few characters and press 'TAB' again to finish it.
-For example, suppose you want to run the script './install-all.bash'. Type</p>
-
-<pre><code>./ins
-</code></pre>
-
-<p>and press 'TAB'. If the script is present, 'bash' will complete the command and all you have to do is press 'ENTER'. In the following, I'll use the code <code>&lt;TAB&gt;</code> for 'TAB' and <code>&lt;ENT&gt;</code> for 'ENTER'.</p>
-</li>
-</ol><h2>
-<a name="getting-the-scripts" class="anchor" href="#getting-the-scripts"><span class="octicon octicon-link"></span></a>Getting the scripts</h2>
-
-<ol>
-<li>Boot up Fedora 18 and log in. You'll be in the GNOME 3 desktop.</li>
-<li>Download the CompJournoStick scripts. Start Firefox; it's in the 'Favorites' bar. Download the most recent 'Source code (zip)' archive file from the <a href="https://github.com/znmeb/CompJournoStick/tags">Github tags page</a>. </li>
-<li>Open the archive with the Archive Manager and press the 'Extract' button on the upper right. In the file selection dialog, pick your home directory and press the 'Extract' button on the lower right.</li>
-</ol><h2>
-<a name="next-step-installing-packages-from-fedora" class="anchor" href="#next-step-installing-packages-from-fedora"><span class="octicon octicon-link"></span></a><a href="https://github.com/znmeb/CompJournoStick/blob/master/FedoraWorkstationInstall/README.md">Next step: installing packages from Fedora</a>
-</h2>
       </section>
+    </div>
 
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/znmeb">znmeb</a> can be found on <a href="https://github.com/znmeb/CompJournoStick">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">CompJournoStick maintained by <a href="https://github.com/znmeb">znmeb</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
-
     </div>
 
               <script type="text/javascript">
@@ -157,6 +60,7 @@ For example, suppose you want to run the script './install-all.bash'. Type</p>
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
