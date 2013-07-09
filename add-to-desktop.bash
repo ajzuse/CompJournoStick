@@ -66,6 +66,10 @@ sudo yum install -y \
   FlightCrew \
   qtwebkit
 
+# Guest tools - harmless on host!
+sudo yum install -y \
+  open-vm-tools-desktop
+
 # Anonymous Internet tools
 sudo yum install -y \
   bitlbee \
