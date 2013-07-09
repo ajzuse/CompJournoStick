@@ -117,5 +117,5 @@ sudo yum install -y \
   xorg-x11-server-Xspice
 
 # RStudio (Desktop)
-sudo yum install -y \
+sudo yum install -y --nogpgcheck \
   rstudio
