@@ -27,6 +27,8 @@ update.views(
 # install packages from CRAN
 install.packages(
   c(
+    'googleVis',
+    'ggmap',
     'rggobi',
     'ggplot2',
     'reshapeGUI',
