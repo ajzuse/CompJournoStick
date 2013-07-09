@@ -15,5 +15,12 @@ cat bashrc >> ~/.bashrc
 # R profile
 cp Rprofile ~/.Rprofile
 
-# R packages
-R --no-save --no-restore < load-packages.R 2>&1 | tee packages.log
+# Start RStudio to install packages in local library
+echo "Starting RStudio to install library packages in your personal library:"
+echo "1. In the 'File' menu, 'Open File' and select 'load-packages.R'."
+echo "   You should see a tab with the contents of 'load-packages.R'."
+echo "2. In the 'Code' menu, select 'Source with Echo'."
+echo "   This will start the package installation."
+echo "3. 'Quit RStudio' in the 'File' menu when installs are finished."
+sleep 10
+rstudio
