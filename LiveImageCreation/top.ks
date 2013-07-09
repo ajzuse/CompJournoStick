@@ -22,7 +22,6 @@ repo --name=RStudioPackages --baseurl=file:///opt/RStudioPackages
 %packages
 @firefox
 @gnome-desktop
-@libreoffice
 
 # FIXME; apparently the glibc maintainers dislike this, but it got put into the
 # desktop image at some point.  We won't touch this one for now.
