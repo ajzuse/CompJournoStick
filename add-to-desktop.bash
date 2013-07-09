@@ -38,6 +38,8 @@ sudo yum install -y \
   libcurl-devel \
   libxml2-devel \
   unixODBC-devel \
+  freeglut-devel \
+  libXt-devel \
   mock
 
 # install new R2spec repository configuration file
@@ -65,7 +67,9 @@ sudo yum install -y \
   lyx \
   bluefish \
   FlightCrew \
-  qtwebkit
+  qtwebkit \
+  pandoc \
+  pandoc-pdf
 
 # Guest tools - harmless on host!
 sudo yum install -y \
