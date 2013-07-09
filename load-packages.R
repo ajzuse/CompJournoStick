@@ -17,11 +17,20 @@ install.packages(
     'knitrBootstrap',
     'Rcpp',
     'roxygen2',
-    'testthat'
+    'testthat',
+    'lubridate'
   )
 )
 warnings()
+devtools::install_github('devtools')
+warnings()
 require(devtools)
-install_github("slidify", "ramnathv")
-install_github("slidifyLibraries", "ramnathv")
-install_github("rCharts", "ramnathv")
+install_github(
+  repo=c(
+    'slidify',
+    'slidifyLibraries',
+    'rCharts'
+  ),
+  username='ramnathv'
+)
+warnings()
