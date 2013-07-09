@@ -8,6 +8,12 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
+# log output to a file
+zz <- file("packages.log", open = "wt")
+sink(zz, split=FALSE)
+sink(zz, type="message", split=FALSE)
+
+# install packages from CRAN
 install.packages(
   c(
     'streamR',
@@ -21,10 +27,13 @@ install.packages(
     'roxygen2',
     'testthat',
     'lubridate'
-  )
+  ),
+  quiet=TRUE
 )
 warnings()
-devtools::install_github('devtools')
+
+# install packages from Github
+devtools::install_github('devtools', quiet=TRUE)
 warnings()
 require(devtools)
 install_github(
@@ -33,6 +42,11 @@ install_github(
     'slidifyLibraries',
     'rCharts'
   ),
-  username='ramnathv'
+  username='ramnathv',
+  quiet=TRUE
 )
 warnings()
+
+# send output back to the console
+sink(type="message")
+sink()
