@@ -14,7 +14,7 @@ sink(zz, split=FALSE)
 sink(zz, type="message", split=FALSE)
 
 # install Reproducible Research and Graphics task views
-install.packages('ctv')
+install.packages('ctv', quiet=TRUE)
 require(ctv)
 update.views(
   c(
