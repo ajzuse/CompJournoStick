@@ -10,6 +10,8 @@
 
 install.packages(
   c(
+    'streamR',
+    'twitteR',
     'shiny',
     'devtools',
     'knitcitations',
