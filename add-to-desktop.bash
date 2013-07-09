@@ -34,6 +34,7 @@ sudo yum install -y \
   fedora-review \
   R2spec \
   R-java-devel \
+  ggobi-devel \
   libcurl-devel \
   libxml2-devel \
   unixODBC-devel \
