@@ -13,9 +13,23 @@ zz <- file("packages.log", open = "wt")
 sink(zz, split=FALSE)
 sink(zz, type="message", split=FALSE)
 
+# install Reproducible Research and Graphics task views
+install.packages('ctv')
+require(ctv)
+update.views(
+  c(
+    'ReproducibleResearch',
+    'Graphics'
+  ),
+  quiet=TRUE
+)
+
 # install packages from CRAN
 install.packages(
   c(
+    'rggobi',
+    'ggplot2',
+    'reshapeGUI',
     'streamR',
     'twitteR',
     'shiny',
