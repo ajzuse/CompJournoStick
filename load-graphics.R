@@ -9,16 +9,14 @@
 #
 
 # log output to a file
-zz <- file("packages.log", open = "wt")
+zz <- file("graphics", open = "wt")
 sink(zz, split=FALSE)
 sink(zz, type="message", split=FALSE)
 
-# install Reproducible Research and Graphics task views
-install.packages('ctv', quiet=TRUE)
+# install Graphics task view
 require(ctv)
 update.views(
   c(
-    'ReproducibleResearch',
     'Graphics'
   ),
   quiet=TRUE
