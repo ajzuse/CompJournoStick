@@ -16,6 +16,12 @@ sink(zz, type="message", split=FALSE)
 # install packages from CRAN
 install.packages(
   c(
+    'animation',
+    'pander',
+    'markdown',
+    'vioplot',
+    'yaml',
+    'whisker',
     'googleVis',
     'gooJSON',
     'ggmap',
