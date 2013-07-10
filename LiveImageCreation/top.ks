@@ -20,7 +20,22 @@ part / --size 16384 --fstype ext4
 repo --name=RStudioPackages --baseurl=file:///opt/RStudioPackages
 
 %packages
-@cinnamon-desktop
+@mate
+compiz
+compiz-plugins-main
+compiz-plugins-extra
+compiz-manager
+compizconfig-python
+compiz-plugins-unsupported
+compiz-bcop
+compiz-mate
+libcompizconfig
+compiz-plugins-main
+ccsm
+emerald-themes
+emerald
+fusion-icon
+fusion-icon-gtk
 
 # FIXME; apparently the glibc maintainers dislike this, but it got put into the
 # desktop image at some point.  We won't touch this one for now.
