@@ -20,9 +20,7 @@ part / --size 16384 --fstype ext4
 repo --name=RStudioPackages --baseurl=file:///opt/RStudioPackages
 
 %packages
--realmd                     # only seems to be used in GNOME
--PackageKit*                # we switched to yumex, so we don't need this
-@mate-desktop-environment
+@cinnamon-desktop
 
 # FIXME; apparently the glibc maintainers dislike this, but it got put into the
 # desktop image at some point.  We won't touch this one for now.
