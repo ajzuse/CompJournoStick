@@ -9,7 +9,7 @@
 #
 
 # log output to a file
-zz <- file("graphics", open = "wt")
+zz <- file("graphics.log", open = "wt")
 sink(zz, split=FALSE)
 sink(zz, type="message", split=FALSE)
 
