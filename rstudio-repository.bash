@@ -15,8 +15,14 @@ sudo mkdir -p /opt/RStudioPackages
 
 # Get the RStudio Desktop RPMs
 pushd /opt/RStudioPackages
+
+# stable
 sudo wget http://download1.rstudio.org/rstudio-0.97.551-x86_64.rpm
 sudo wget http://download1.rstudio.org/rstudio-0.97.551-i686.rpm
+
+# preview
+sudo wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.191-i686.rpm
+sudo wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.191-x86_64.rpm
 popd
 
 # Make repository and enable it with yum
