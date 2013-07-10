@@ -28,6 +28,7 @@ update.views(
 install.packages(
   c(
     'googleVis',
+    'gooJSON',
     'ggmap',
     'rggobi',
     'ggplot2',
