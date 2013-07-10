@@ -13,42 +13,14 @@ zz <- file("packages.log", open = "wt")
 sink(zz, split=FALSE)
 sink(zz, type="message", split=FALSE)
 
-# install packages from CRAN
-install.packages(
+# install Reproducible Research and Graphics task views
+install.packages('ctv', quiet=TRUE)
+require(ctv)
+update.views(
   c(
-    'googleVis',
-    'gooJSON',
-    'ggmap',
-    'rggobi',
-    'ggplot2',
-    'reshapeGUI',
-    'streamR',
-    'twitteR',
-    'shiny',
-    'devtools',
-    'knitcitations',
-    'knitr',
-    'knitrBootstrap',
-    'Rcpp',
-    'roxygen2',
-    'testthat',
-    'lubridate'
+    'ReproducibleResearch',
+    'Graphics'
   ),
-  quiet=TRUE
-)
-warnings()
-
-# install packages from Github
-devtools::install_github('devtools', quiet=TRUE)
-warnings()
-require(devtools)
-install_github(
-  repo=c(
-    'slidify',
-    'slidifyLibraries',
-    'rCharts'
-  ),
-  username='ramnathv',
   quiet=TRUE
 )
 warnings()
