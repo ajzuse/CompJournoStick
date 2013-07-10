@@ -19,7 +19,10 @@ sudo yum update -y
 
 # R, development, live CD/DVD and USB tools
 sudo yum install -y \
-  @development-tools \
+  gcc \
+  gcc-c++ \
+  gcc-gfortran \
+  git-all \
   fedora-packager \
   yum-utils \
   livecd-tools \
@@ -56,7 +59,6 @@ sudo yum install -y \
   firefox \
   vim-X11 \
   vim-enhanced \
-  git-all \
   ntp \
   ntpdate
 
