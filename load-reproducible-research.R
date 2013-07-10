@@ -9,7 +9,7 @@
 #
 
 # log output to a file
-zz <- file("reproducible-research", open = "wt")
+zz <- file("reproducible-research.log", open = "wt")
 sink(zz, split=FALSE)
 sink(zz, type="message", split=FALSE)
 
