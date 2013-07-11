@@ -62,6 +62,20 @@ sudo yum install -y \
   ntp \
   ntpdate
 
+# Perl Twitter tools
+sudo yum install -y \
+  perl-Net-Twitter \
+  perl-YAML \
+  perl-YAML-Parser-Syck \
+  perl-YAML-LibYAML \
+  perl-YAML-Syck \
+  perl-YAML-Tiny \
+  perl-JSON \
+  perl-JSON-XS \
+  perl-JSON-Any \
+  perl-JSON-PP \
+  perl-Hash-Flatten
+
 # Editing tools
 sudo yum install -y \
   sigil \
