@@ -4,8 +4,6 @@
 # computational journalists
 #
 # Derived from /usr/share/spin-kickstarts/fedora-live-desktop.ks
-# I've removed all the minimizations and space saving tricks since we're 
-# targeting USB sticks.
 #
 # Maintainer(s): M. Edward (Ed) Borasky <znmeb@znmeb.net>
 # 
