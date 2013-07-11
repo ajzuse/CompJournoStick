@@ -80,7 +80,6 @@ sudo yum install -y \
 sudo yum install -y \
   blender \
   bluefish \
-  cinepaint \
   cmyktool \
   darktable \
   dia \
