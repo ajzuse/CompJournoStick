@@ -23,8 +23,6 @@ install.packages(
     'vioplot',
     'yaml',
     'whisker',
-    'googleVis',
-    'gooJSON',
     'ggmap',
     'rggobi',
     'ggplot2',
@@ -35,27 +33,12 @@ install.packages(
     'devtools',
     'knitcitations',
     'knitr',
-    'knitrBootstrap',
-    'Rcpp',
     'roxygen2',
     'testthat',
+    'plyr',
+    'stringr',
     'lubridate'
   ),
-  quiet=TRUE
-)
-warnings()
-
-# install packages from Github
-devtools::install_github('devtools', quiet=TRUE)
-warnings()
-require(devtools)
-install_github(
-  repo=c(
-    'slidify',
-    'slidifyLibraries',
-    'rCharts'
-  ),
-  username='ramnathv',
   quiet=TRUE
 )
 warnings()
