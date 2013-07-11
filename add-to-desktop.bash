@@ -155,8 +155,7 @@ sudo yum install -y \
   xorg-x11-drv-v4l \
   xorg-x11-drv-vesa \
   xorg-x11-drv-vmware \
-  xorg-x11-drv-voodoo \
-  xorg-x11-server-Xspice
+  xorg-x11-drv-voodoo
 
 # RStudio (Desktop)
 sudo yum install -y --nogpgcheck \
