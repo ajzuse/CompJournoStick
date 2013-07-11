@@ -14,9 +14,5 @@
 # and start a new session
 #
 options(repos=c(
-  CRAN='http://cran.rstudio.com/',
-  BioCsoft='http://www.bioconductor.org/packages/2.12/bioc',
-  Omegahat='http://www.omegahat.org/R' ,
-  Census='http://lakshmi.calit2.uci.edu/census2000/R',
-  'R-Forge'='http://R-Forge.R-project.org' 
+  CRAN='http://cran.rstudio.com/'
 ))
