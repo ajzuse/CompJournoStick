@@ -85,7 +85,12 @@ sudo yum install -y \
   FlightCrew \
   qtwebkit \
   pandoc \
-  pandoc-pdf
+  pandoc-pdf \
+  pitivi \
+  audacity \
+  gimp \
+  inkscape \
+  scribus
 
 # Guest tools - harmless on host!
 sudo yum install -y \
