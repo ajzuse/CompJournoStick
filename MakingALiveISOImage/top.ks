@@ -3,7 +3,8 @@
 # Description: Computational Journalism on a Stick - a Fedora Remix for
 # computational journalists
 #
-# Derived from /usr/share/spin-kickstarts/fedora-live-desktop.ks
+# Derived from /usr/share/spin-kickstarts/fedora-live-desktop.ks and 
+# fedora-live-design-suite.ks
 #
 # Maintainer(s): M. Edward (Ed) Borasky <znmeb@znmeb.net>
 # 
@@ -16,8 +17,6 @@
 part / --size 16384 --fstype ext4
 
 repo --name=RStudioPackages --baseurl=file:///opt/RStudioPackages
-repo --name=updates
-repo --name=updates-testing
 
 %packages
 @firefox
