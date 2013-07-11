@@ -77,19 +77,6 @@ sudo yum install -y \
 sudo yum install -y \
   open-vm-tools-desktop
 
-# Anonymous Internet tools
-sudo yum install -y \
-  bitlbee \
-  bitlbee-otr \
-  xchat \
-  xchat-otr \
-  irssi \
-  irssi-otr \
-  pidgin \
-  pidgin-otr \
-  tor \
-  vidalia
-
 # Video drivers - needed for some VM hosts
 sudo yum install -y \
   xorg-x11-drv-apm \
