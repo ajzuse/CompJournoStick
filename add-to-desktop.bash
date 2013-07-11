@@ -76,21 +76,50 @@ sudo yum install -y \
   perl-JSON-PP \
   perl-Hash-Flatten
 
+# Design suite
+sudo yum install -y \
+  blender \
+  bluefish \
+  cinepaint \
+  cmyktool \
+  darktable \
+  dia \
+  entangle \
+  fontforge \
+  font-manager \
+  gimp \
+  gimp-*-plugin \
+  gpick \
+  GREYCstoration-gimp  \
+  hugin \
+  inkscape \
+  mypaint \
+  nautilus-image-converter \
+  optipng \
+  scribus \
+  colord-extra-profiles  \
+  synfigstudio \
+  xournal \
+  gnote \
+  pdfshuffler \
+  filezilla \
+  audacity \
+  pitivi \
+  gtk-recordmydesktop \
+  aajohan-comfortaa-fonts \
+  adobe-source-sans-pro-fonts \
+  lato-fonts \
+  overpass-fonts \
+  
 # Editing tools
 sudo yum install -y \
   sigil \
   calibre \
   lyx \
-  bluefish \
   FlightCrew \
   qtwebkit \
   pandoc \
-  pandoc-pdf \
-  pitivi \
-  audacity \
-  gimp \
-  inkscape \
-  scribus
+  pandoc-pdf
 
 # Guest tools - harmless on host!
 sudo yum install -y \
