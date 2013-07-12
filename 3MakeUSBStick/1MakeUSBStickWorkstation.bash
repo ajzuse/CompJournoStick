@@ -9,7 +9,6 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-source ~/.bash_profile
 sudo livecd-iso-to-disk --format --reset-mbr --efi \
   --overlay-size-mb 2047 \
   --home-size-mb 2047 \
