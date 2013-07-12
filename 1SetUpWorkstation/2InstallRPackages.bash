@@ -9,9 +9,6 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# append conveniences to .bashrc
-cat bashrc >> ~/.bashrc
-
 # R profile
 cp Rprofile ~/.Rprofile
 
