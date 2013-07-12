@@ -44,6 +44,25 @@ install.packages(
 )
 warnings()
 
+# install Graphics task view
+require(ctv)
+update.views(
+  c(
+    'Graphics'
+  ),
+  quiet=TRUE
+)
+warnings()
+
+# install Reproducible Research task view
+update.views(
+  c(
+    'ReproducibleResearch'
+  ),
+  quiet=TRUE
+)
+warnings()
+
 # send output back to the console
 sink(type="message")
 sink()
