@@ -16,7 +16,7 @@ cp *.ks /opt/CompJournoStick/ # our over-rides
 
 pushd /opt/CompJournoStick
 setenforce 0
-/usr/bin/time setarch i686 livecd-creator \
+/usr/bin/time setarch x86_64 livecd-creator \
   --config=CompJournoStick.ks \
   --fslabel=CompJournoStick --cache=/var/cache/live
 checkisomd5 --verbose CompJournoStick.iso
