@@ -56,7 +56,8 @@ rpmdev-setuptree
 
 # Desktop basics that may not be there
 sudo yum install -y \
-  firefox \
+  @libreoffice \
+  @firefox \
   vim-X11 \
   vim-enhanced \
   ntp \
@@ -76,45 +77,12 @@ sudo yum install -y \
   perl-JSON-PP \
   perl-Hash-Flatten
 
-# Design suite
-sudo yum install -y \
-  blender \
-  bluefish \
-  cmyktool \
-  darktable \
-  dia \
-  entangle \
-  fontforge \
-  font-manager \
-  gimp \
-  gimp-*-plugin \
-  gpick \
-  GREYCstoration-gimp  \
-  hugin \
-  inkscape \
-  mypaint \
-  nautilus-image-converter \
-  optipng \
-  scribus \
-  colord-extra-profiles  \
-  synfigstudio \
-  xournal \
-  gnote \
-  pdfshuffler \
-  filezilla \
-  audacity \
-  pitivi \
-  gtk-recordmydesktop \
-  aajohan-comfortaa-fonts \
-  adobe-source-sans-pro-fonts \
-  lato-fonts \
-  overpass-fonts \
-  
 # Editing tools
 sudo yum install -y \
+  gtk-recordmydesktop \
+  bluefish \
   sigil \
   calibre \
-  lyx \
   FlightCrew \
   qtwebkit \
   pandoc \
