@@ -62,12 +62,59 @@ sudo yum install -y \
   ntp \
   ntpdate
 
+# Perl Twitter tools
+sudo yum install -y \
+  perl-Net-Twitter \
+  perl-YAML \
+  perl-YAML-Parser-Syck \
+  perl-YAML-LibYAML \
+  perl-YAML-Syck \
+  perl-YAML-Tiny \
+  perl-JSON \
+  perl-JSON-XS \
+  perl-JSON-Any \
+  perl-JSON-PP \
+  perl-Hash-Flatten
+
+# Design suite
+sudo yum install -y \
+  blender \
+  bluefish \
+  cmyktool \
+  darktable \
+  dia \
+  entangle \
+  fontforge \
+  font-manager \
+  gimp \
+  gimp-*-plugin \
+  gpick \
+  GREYCstoration-gimp  \
+  hugin \
+  inkscape \
+  mypaint \
+  nautilus-image-converter \
+  optipng \
+  scribus \
+  colord-extra-profiles  \
+  synfigstudio \
+  xournal \
+  gnote \
+  pdfshuffler \
+  filezilla \
+  audacity \
+  pitivi \
+  gtk-recordmydesktop \
+  aajohan-comfortaa-fonts \
+  adobe-source-sans-pro-fonts \
+  lato-fonts \
+  overpass-fonts \
+  
 # Editing tools
 sudo yum install -y \
   sigil \
   calibre \
   lyx \
-  bluefish \
   FlightCrew \
   qtwebkit \
   pandoc \
@@ -107,8 +154,7 @@ sudo yum install -y \
   xorg-x11-drv-v4l \
   xorg-x11-drv-vesa \
   xorg-x11-drv-vmware \
-  xorg-x11-drv-voodoo \
-  xorg-x11-server-Xspice
+  xorg-x11-drv-voodoo
 
 # RStudio (Desktop)
 sudo yum install -y --nogpgcheck \
