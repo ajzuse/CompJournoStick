@@ -16,8 +16,6 @@
 part / --size 16384 --fstype ext4
 
 repo --name=RStudioPackages --baseurl=file:///opt/RStudioPackages
-repo --name=updates
-repo --name=updates-testing
 
 %packages
 @firefox
