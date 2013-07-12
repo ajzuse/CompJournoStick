@@ -16,6 +16,7 @@ sink(zz, type="message", split=FALSE)
 # install packages from CRAN
 install.packages(
   c(
+    'mosaic',
     'ctv',
     'animation',
     'pander',
