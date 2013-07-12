@@ -9,7 +9,7 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-&listPackages('../add-to-desktop.bash');
+&listPackages('../1SetupWorkstation/1AddToDesktop.bash');
 exit;
 
 sub listPackages {
