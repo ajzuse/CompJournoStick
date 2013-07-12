@@ -1,1 +1,0 @@
-make-8g-usb.bash
