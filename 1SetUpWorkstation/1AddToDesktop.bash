@@ -61,7 +61,8 @@ sudo yum install -y \
   vim-X11 \
   vim-enhanced \
   ntp \
-  ntpdate
+  ntpdate \
+  yumex
 
 # Perl Twitter tools
 sudo yum install -y \
