@@ -19,3 +19,4 @@ sudo rm -fr /opt/Target; sudo mkdir -p /opt/Target
 sudo cp -a Scripts /opt/Target/Scripts
 sudo cp -a Doc /opt/Target/Doc
 sudo cp -a ~/R /opt/Target/R
+sudo chown -R 1000.1000 /opt/Target
