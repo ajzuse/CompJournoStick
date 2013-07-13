@@ -12,7 +12,7 @@ generic-release-notes
 
 # copy scripts to target!
 %post --nochroot
-cp -a /opt/Scripts $INSTALL_ROOT/home/liveuser
+cp -a /opt/Scripts $INSTALL_ROOT/home/liveuser/Scripts
 %end
 
 %post
