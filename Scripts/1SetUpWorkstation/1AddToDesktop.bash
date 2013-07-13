@@ -82,6 +82,7 @@ sudo yum install -y \
 # Editing tools
 sudo yum install -y \
   gtk-recordmydesktop \
+  lyx \
   bluefish \
   sigil \
   calibre \
