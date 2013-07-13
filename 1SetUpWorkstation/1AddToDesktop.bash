@@ -58,6 +58,7 @@ rpmdev-setuptree
 sudo yum install -y \
   @libreoffice \
   @firefox \
+  gnome-classic-session \
   vim-X11 \
   vim-enhanced \
   ntp \
