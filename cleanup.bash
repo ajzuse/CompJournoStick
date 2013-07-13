@@ -20,3 +20,11 @@ do
   popd
 done
 git status
+
+# save the scripts
+pushd ..
+sudo rm -fr /opt/Scripts
+sudo cp -a CompJournoStick /opt/Scripts
+sudo rm -fr /opt/Scripts/.git*
+sudo chown -R 1000.1000 /opt/Scripts
+popd
