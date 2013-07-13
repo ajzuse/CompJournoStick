@@ -10,14 +10,6 @@ generic-release-notes
 # end znmeb added packages
 %end
 
-# copy scripts to target!
-%post --nochroot
-cp -a /opt/Target/Scripts $INSTALL_ROOT/home/liveuser/Scripts
-cp -a /opt/Target/Docs $INSTALL_ROOT/home/liveuser/Docs
-cp -a /opt/Target/R $INSTALL_ROOT/home/liveuser/R
-cp -a /opt/Target/Scripts/1SetUpWorkstation/Rprofile $INSTALL_ROOT/home/liveuser/.Rprofile
-%end
-
 %post
 cat >> /etc/rc.d/init.d/livesys << EOF
 
@@ -73,4 +65,12 @@ restorecon -R /home/liveuser/
 
 EOF
 
+%end
+
+# copy scripts to target!
+%post --nochroot
+cp -a /opt/Target/Scripts $INSTALL_ROOT/home/liveuser/Scripts
+cp -a /opt/Target/Docs $INSTALL_ROOT/home/liveuser/Docs
+cp -a /opt/Target/R $INSTALL_ROOT/home/liveuser/R
+cp -a /opt/Target/Scripts/1SetUpWorkstation/Rprofile $INSTALL_ROOT/home/liveuser/.Rprofile
 %end
