@@ -12,7 +12,10 @@ generic-release-notes
 
 # copy scripts to target!
 %post --nochroot
-cp -a /opt/Scripts $INSTALL_ROOT/home/liveuser/Scripts
+cp -a /opt/Target/Scripts $INSTALL_ROOT/home/liveuser/Scripts
+cp -a /opt/Target/Docs $INSTALL_ROOT/home/liveuser/Docs
+cp -a /opt/Target/R $INSTALL_ROOT/home/liveuser/R
+cp -a /opt/Target/Scripts/1SetUpWorkstation/Rprofile $INSTALL_ROOT/home/liveuser/.Rprofile
 %end
 
 %post
