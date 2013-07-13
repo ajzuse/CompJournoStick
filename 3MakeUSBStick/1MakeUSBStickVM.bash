@@ -10,7 +10,6 @@
 #
 
 sudo livecd-iso-to-disk --format --reset-mbr --efi \
-  --overlay-size-mb 2047 \
   --home-size-mb 2047 \
   /dev/sr0 \
   $1
