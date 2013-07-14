@@ -11,6 +11,8 @@
 # make a clean personal library
 system('rm -fr ~/R')
 system(paste('mkdir -p', Sys.getenv('R_LIBS_USER')))
+.libPaths(Sys.getenv('R_LIBS_USER'))
+print(.libPaths())
 
 # install task views
 install.packages('ctv')
