@@ -9,7 +9,7 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-&listPackages('../1SetUpWorkstation/1AddToDesktop.bash');
+&listPackages('../1SetUpWorkstation/1SudoAddToDesktop.bash');
 exit;
 
 sub listPackages {
