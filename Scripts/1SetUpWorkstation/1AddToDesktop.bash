@@ -27,6 +27,10 @@ sudo yum install -y \
   ntpdate \
   yumex
 
+# clock sync
+sudo service ntpd enable
+sudo service ntpd start
+
 # Git, createrepo, R, GGobi and RStudio
 sudo yum install -y \
   git-all \
