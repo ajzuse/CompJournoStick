@@ -31,7 +31,7 @@ pushd /opt/CompJournoStick
 setenforce 0 # disable SELinux
 
 # make the ISO
-/usr/bin/time setarch i686 livecd-creator \
+/usr/bin/time livecd-creator \
   --config=CompJournoStick.ks \
   --fslabel=CompJournoStick --cache=/var/cache/live
 
