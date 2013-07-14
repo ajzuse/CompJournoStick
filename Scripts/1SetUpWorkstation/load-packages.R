@@ -8,61 +8,36 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# log output to a file
-zz <- file("packages.log", open = "wt")
-sink(zz, split=FALSE)
-sink(zz, type="message", split=FALSE)
+# make a clean personal library
+system('rm -fr ~/R')
+system(paste('mkdir -p', Sys.getenv('R_LIBS_USER')))
 
-# install packages from CRAN
+# install task views
+install.packages('ctv')
+require(ctv)
+update.views(
+  c(
+    'Graphics',
+    'ReproducibleResearch'
+  )
+)
+warnings()
+
+# install packages
 install.packages(
   c(
     'mosaic',
-    'ctv',
-    'animation',
-    'pander',
-    'markdown',
-    'vioplot',
-    'yaml',
     'whisker',
     'ggmap',
-    'rggobi',
-    'ggplot2',
     'reshapeGUI',
     'streamR',
     'twitteR',
     'shiny',
     'devtools',
-    'knitcitations',
-    'knitr',
     'roxygen2',
     'testthat',
-    'plyr',
-    'stringr',
-    'lubridate'
-  ),
-  quiet=TRUE
+    'lubridate',
+    'knitcitations'
+  )
 )
 warnings()
-
-# install Graphics task view
-require(ctv)
-update.views(
-  c(
-    'Graphics'
-  ),
-  quiet=TRUE
-)
-warnings()
-
-# install Reproducible Research task view
-update.views(
-  c(
-    'ReproducibleResearch'
-  ),
-  quiet=TRUE
-)
-warnings()
-
-# send output back to the console
-sink(type="message")
-sink()
