@@ -15,6 +15,7 @@
 # make kickstart file
 cat top.ks package-list.txt bottom.ks > CompJournoStick.ks
 
+# save scripts and docs for live image
 pushd ../../Scripts
 rm -fr /opt/Target; mkdir -p /opt/Target
 cd Scripts; ./cleanup.bash; cd ..
@@ -22,16 +23,20 @@ cp -a Scripts /opt/Target/Scripts
 cp -a Docs /opt/Target/Docs
 popd
 
-# since we run as root, use global directories
+# set up place where we'll build the ISO
 rm -fr /opt/CompJournoStick; mkdir -p /opt/CompJournoStick
 cp /usr/share/spin-kickstarts/*.ks /opt/CompJournoStick # base kickstart files
 cp *.ks /opt/CompJournoStick/ # our over-rides
 
 pushd /opt/CompJournoStick
-setenforce 0
+setenforce 0 # disable SELinux
+
+# make the ISO
 /usr/bin/time livecd-creator \
   --config=CompJournoStick.ks \
   --fslabel=CompJournoStick --cache=/var/cache/live
+
+# check the ISO
 checkisomd5 --verbose CompJournoStick.iso
-setenforce 1
+setenforce 1 # enable SELinux
 popd
