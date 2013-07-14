@@ -13,6 +13,5 @@ pushd ../../Scripts
 sudo rm -fr /opt/Target; sudo mkdir -p /opt/Target
 cd Scripts; ./cleanup.bash; cd ..
 sudo cp -a Scripts /opt/Target/Scripts
-cd Docs; ./cleanup.bash; cd ..
 sudo cp -a Docs /opt/Target/Docs
 popd
