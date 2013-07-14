@@ -17,6 +17,16 @@ sudo yum install -y \
 sudo yum clean all
 sudo yum update -y
 
+# Desktop basics that may not be there
+sudo yum install -y \
+  @mate-desktop \
+  @firefox \
+  vim-X11 \
+  vim-enhanced \
+  ntp \
+  ntpdate \
+  yumex
+
 # Git, createrepo, R, GGobi and RStudio
 sudo yum install -y \
   git-all \
@@ -30,14 +40,6 @@ sudo yum install -y \
 # install RStudio (Desktop)
 sudo yum install -y --nogpgcheck \
   rstudio
-
-# Desktop basics that may not be there
-sudo yum install -y \
-  vim-X11 \
-  vim-enhanced \
-  ntp \
-  ntpdate \
-  yumex
 
 # Dependencies for packages and task views
 sudo yum install -y \
