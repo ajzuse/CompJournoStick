@@ -10,6 +10,7 @@
 #
 
 yum install -y \
+  @virtualization \
   livecd-tools \
   spin-kickstarts \
   isomd5sum
