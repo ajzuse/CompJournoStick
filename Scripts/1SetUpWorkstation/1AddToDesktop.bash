@@ -31,19 +31,11 @@ sudo yum install -y \
 sudo service ntpd enable
 sudo service ntpd start
 
-# Git, createrepo, R, GGobi and RStudio
+# Git, R, and GGobi
 sudo yum install -y \
   git-all \
-  createrepo \
   R-java-devel \
   ggobi-devel
-
-# create RStudio repository
-./rstudio-repository.bash
-
-# install RStudio (Desktop)
-sudo yum install -y --nogpgcheck \
-  rstudio
 
 # Dependencies for packages and task views
 sudo yum install -y \
