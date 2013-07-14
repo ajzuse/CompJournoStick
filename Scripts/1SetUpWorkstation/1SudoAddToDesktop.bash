@@ -44,6 +44,7 @@ yum install -y \
   libxml2-devel \
   freeglut-devel \
   libXt-devel \
+  bwidget \
   pandoc \
   pandoc-pdf
 
