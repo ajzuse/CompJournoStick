@@ -15,8 +15,6 @@
 
 part / --size 16384 --fstype ext4
 
-repo --name=RStudioPackages --baseurl=file:///opt/RStudioPackages
-
 %packages
 
 # FIXME; apparently the glibc maintainers dislike this, but it got put into the

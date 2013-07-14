@@ -10,7 +10,7 @@ generic-release-notes
 # end znmeb added packages
 %end
 
-# copy scripts to target!
+# copy scripts to target
 %post --nochroot
 mkdir -p $INSTALL_ROOT/home/liveuser
 cp -a /opt/Target/Scripts $INSTALL_ROOT/home/liveuser/Scripts
