@@ -10,35 +10,34 @@
 #
 
 # make sure 'fastestmirror' plugin is installed
-sudo yum install -y \
+yum install -y \
   yum-plugin-fastestmirror
 
 # cleanup and update
-sudo yum clean all
-sudo yum update -y
+yum clean all
+yum update -y
 
 # Desktop basics that may not be there
-sudo yum install -y \
+yum install -y \
   @mate-desktop \
   @firefox \
   vim-X11 \
   vim-enhanced \
   ntp \
-  ntpdate \
   yumex
 
 # clock sync
-sudo service ntpd enable
-sudo service ntpd start
+service ntpd enable
+service ntpd start
 
 # Git, R, and GGobi
-sudo yum install -y \
+yum install -y \
   git-all \
   R-java-devel \
   ggobi-devel
 
 # Dependencies for packages and task views
-sudo yum install -y \
+yum install -y \
   libcurl-devel \
   libxml2-devel \
   freeglut-devel \
@@ -47,7 +46,7 @@ sudo yum install -y \
   pandoc-pdf
 
 # Video drivers - needed for some VM hosts
-sudo yum install -y \
+yum install -y \
   xorg-x11-drv-apm \
   xorg-x11-drv-ati \
   xorg-x11-drv-cirrus \
