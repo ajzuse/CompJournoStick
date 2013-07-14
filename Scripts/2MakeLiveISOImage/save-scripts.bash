@@ -9,6 +9,10 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-./make-kickstart-file.bash
-./save-scripts.bash
-sudo nice ./run-livecd-creator.bash 2>&1 | tee livecd-creator.log
+pushd ../../Scripts
+sudo rm -fr /opt/Target; sudo mkdir -p /opt/Target
+cd Scripts; ./cleanup.bash; cd ..
+sudo cp -a Scripts /opt/Target/Scripts
+cd Docs; ./cleanup.bash; cd ..
+sudo cp -a Docs /opt/Target/Docs
+popd
