@@ -10,14 +10,4 @@
 #
 
 cp Rprofile ~/.Rprofile # set R profile
-rm -fr ~/R # erase old library
-
-# Start RStudio to install packages in local library
-echo "Starting RStudio to install library packages in your personal library:"
-echo "1. In the 'File' menu, 'Open File' and select 'load-packages.R'."
-echo "   You should see a tab with the contents of 'load-packages.R'."
-echo "2. In the 'Code' menu, select 'Source'."
-echo "   This will start the package installation."
-echo "3. 'Quit RStudio' in the 'File' menu when installs are finished."
-sleep 10
-rstudio
+R --no-save --no-restore < load-packages.R
