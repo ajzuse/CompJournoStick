@@ -9,7 +9,7 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-livecd-iso-to-disk --format --reset-mbr --efi \
+livecd-iso-to-disk --format --reset-mbr \
   --home-size-mb 2047 \
   /dev/sr0 \
   $1
