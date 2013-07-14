@@ -16,9 +16,8 @@
 cat top.ks package-list.txt bottom.ks > CompJournoStick.ks
 
 # save scripts and docs for live image
-pushd ../../Scripts
+pushd ../..
 rm -fr /opt/Target; mkdir -p /opt/Target
-cd Scripts; ./cleanup.bash; cd ..
 cp -a Scripts /opt/Target/Scripts
 cp -a Docs /opt/Target/Docs
 popd
