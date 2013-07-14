@@ -24,7 +24,9 @@ yum install -y \
   vim-X11 \
   vim-enhanced \
   ntp \
-  yumex
+  yumex \
+  xmonad-mate \
+  xmonad-log-applet-mate
 
 # clock sync
 service ntpd enable
