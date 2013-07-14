@@ -23,6 +23,11 @@ pushd /usr/local/src
 
   pushd rstudio-*
 
+    # add mate-terminal to list of Linux terminals
+    pushd src/cpp/session/modules
+      patch -b ./SessionWorkbench.cpp ${HERE}/SessionWorkbench.patch
+    popd
+
     pushd dependencies/common
       for i in gwt dictionaries mathjax boost
       do
