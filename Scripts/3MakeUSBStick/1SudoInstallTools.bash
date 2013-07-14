@@ -9,7 +9,5 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-sudo livecd-iso-to-disk --format --reset-mbr --efi \
-  --home-size-mb 2047 \
-  /opt/CompJournoStick/CompJournoStick.iso \
-  $1
+yum install -y \
+  liveusb-creator
