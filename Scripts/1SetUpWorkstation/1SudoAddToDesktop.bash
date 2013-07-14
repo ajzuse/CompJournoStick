@@ -46,7 +46,13 @@ yum install -y \
   libXt-devel \
   bwidget \
   pandoc \
-  pandoc-pdf
+  pandoc-pdf \
+  gdal \
+  gdal-devel \
+  gdal-doc \
+  proj \
+  proj-devel \
+  proj-epsg
 
 # Video drivers - needed for some VM hosts
 yum install -y \
