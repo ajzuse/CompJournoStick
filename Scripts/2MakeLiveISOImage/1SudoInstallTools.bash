@@ -9,7 +9,7 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-sudo yum install -y \
+yum install -y \
   livecd-tools \
   spin-kickstarts \
   isomd5sum
