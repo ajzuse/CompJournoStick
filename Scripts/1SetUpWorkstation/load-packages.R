@@ -21,13 +21,24 @@ update.views(
   c(
     'Graphics',
     'ReproducibleResearch'
-  )
+  ),
+  coreOnly=FALSE,
+  dependencies=TRUE
 )
 warnings()
 
 # install packages
 install.packages(
   c(
+    'RcmdrPlugin.temis',
+    'tm.plugin.dc',
+    'tm.plugin.mail',
+    'tm.plugin.webmining',
+    'tm.plugin.sentiment',
+    'RWeather',
+    'googlePublicData',
+    'googleVis',
+    'gooJSON',
     'mosaic',
     'whisker',
     'ggmap',
@@ -40,6 +51,7 @@ install.packages(
     'testthat',
     'lubridate',
     'knitcitations'
-  )
+  ),
+  dependencies=TRUE
 )
 warnings()
