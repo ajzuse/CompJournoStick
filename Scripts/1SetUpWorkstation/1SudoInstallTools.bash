@@ -85,3 +85,17 @@ yum install -y \
   xorg-x11-drv-vesa \
   xorg-x11-drv-vmware \
   xorg-x11-drv-voodoo
+
+# RStudio source
+yum install -y \
+  patch
+
+# RStudio Desktop and Server
+yum install -y \
+  libuuid-devel \
+  qt-devel \
+  qtwebkit-devel \
+  ant \
+  cmake \
+  openssl-devel \
+  pam-devel
