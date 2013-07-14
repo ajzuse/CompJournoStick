@@ -77,12 +77,3 @@ sudo yum install -y \
   xorg-x11-drv-vesa \
   xorg-x11-drv-vmware \
   xorg-x11-drv-voodoo
-
-# Anonymous Internet tools 
-sudo yum install -y \
-  tor \
-  vidalia \
-  bitlbee-otr \
-  pidgin-otr \
-  xchat-otr \
-  irssi-otr \
