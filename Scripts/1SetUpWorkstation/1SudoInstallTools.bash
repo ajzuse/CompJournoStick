@@ -47,12 +47,23 @@ yum install -y \
   bwidget \
   pandoc \
   pandoc-pdf \
-  gdal \
   gdal-devel \
   gdal-doc \
-  proj \
+  geos-devel \
   proj-devel \
-  proj-epsg
+  proj-epsg \
+  armadillo-devel \
+  poppler-devel \
+  freexl-devel \
+  libwebp-devel \
+  expat-devel \
+  xerces-c-devel \
+  libjpeg-turbo-devel \
+  jasper-devel \
+  netcdf-devel \
+  hdf5-devel \
+  libgeotiff-devel \
+  cfitsio-devel
 
 # Video drivers - needed for some VM hosts
 yum install -y \
