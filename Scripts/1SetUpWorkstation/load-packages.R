@@ -30,6 +30,7 @@ warnings()
 # install packages
 install.packages(
   c(
+    'Rcmdr',
     'RcmdrPlugin.temis',
     'tm.plugin.dc',
     'tm.plugin.mail',
