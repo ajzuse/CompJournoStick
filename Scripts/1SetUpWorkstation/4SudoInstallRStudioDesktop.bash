@@ -16,3 +16,6 @@ pushd /usr/local/src/rstudio-*/build
   export NUMCPUS=`grep -c '^processor' /proc/cpuinfo`
   /usr/bin/time make -j$NUMCPUS --load-average=$NUMCPUS install
 popd
+
+# make it callable from a terminal
+ln -sf /usr/local/lib/rstudio/bin/rstudio /usr/local/bin/rstudio
