@@ -63,7 +63,8 @@ yum install -y \
   netcdf-devel \
   hdf5-devel \
   libgeotiff-devel \
-  cfitsio-devel
+  cfitsio-devel \
+  unixODBC-devel
 
 # Video drivers - needed for some VM hosts
 yum install -y \
