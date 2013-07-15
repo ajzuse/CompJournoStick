@@ -32,6 +32,10 @@ cp -a /usr/local/* $INSTALL_ROOT/usr/local/
 # and all of /usr/share/R/library
 mkdir -p $INSTALL_ROOT/usr/share/R/library/
 cp -a /usr/share/R/library/* $INSTALL_ROOT/usr/share/R/library/
+
+# RStudio tools
+mkdir -p $INSTALL_ROOT/opt/
+cp -a /opt/rstudio-tools/ $INSTALL_ROOT/opt/rstudio-tools
 %end
 
 %post
