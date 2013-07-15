@@ -1,5 +1,4 @@
-# end CompJournoStick packages
-
+# end CompJournoStick packages 
 # De-branding
 -fedora-logos
 -fedora-release
@@ -10,12 +9,23 @@ generic-release-notes
 # end znmeb added packages
 %end
 
-# local stuff
+# copy files to the ISO
 %post --nochroot
+
+# conveniences for the 'liveuser' home
 mkdir -p $INSTALL_ROOT/home/liveuser
-cp -a /usr/local/share/CompJournoStick/Scripts/1SetUpWorkstation/Rprofile $INSTALL_ROOT/home/liveuser/.Rprofile
+cp -a /usr/local/share/CompJournoStick/Scripts/common/bashrc \
+  $INSTALL_ROOT/home/liveuser/.bashrc
+cp -a /usr/local/share/CompJournoStick/Scripts/common/bash_profile \
+  $INSTALL_ROOT/home/liveuser/.bash_profile
+cp -a /usr/local/share/CompJournoStick/Scripts/common/Rprofile \
+  $INSTALL_ROOT/home/liveuser/.Rprofile
+
+# all of /usr/local goes to the ISO file!
 mkdir -p $INSTALL_ROOT/usr/local/
 cp -a /usr/local/* $INSTALL_ROOT/usr/local/
+
+# and all of /usr/share/R/library
 mkdir -p $INSTALL_ROOT/usr/share/R/library/
 cp -a /usr/share/R/library/* $INSTALL_ROOT/usr/share/R/library/
 %end
