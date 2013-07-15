@@ -10,13 +10,6 @@ generic-release-notes
 # end znmeb added packages
 %end
 
-# copy scripts to target
-%post --nochroot
-mkdir -p $INSTALL_ROOT/home/liveuser
-cp -a /opt/Target/Scripts $INSTALL_ROOT/home/liveuser/Scripts
-cp -a /opt/Target/Docs $INSTALL_ROOT/home/liveuser/Docs
-%end
-
 %post
 cat >> /etc/rc.d/init.d/livesys << EOF
 

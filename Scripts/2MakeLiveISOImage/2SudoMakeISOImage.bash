@@ -17,9 +17,9 @@ cat top.ks package-list.txt bottom.ks > CompJournoStick.ks
 
 # save scripts and docs for live image
 pushd ../..
-rm -fr /opt/Target; mkdir -p /opt/Target
-cp -a Scripts /opt/Target/Scripts
-cp -a Docs /opt/Target/Docs
+rm -fr /usr/local/share/CompJournoStick; mkdir -p /usr/local/share/CompJournoStick
+cp -a Scripts /usr/local/share/CompJournoStick
+cp -a Docs /usr/local/share/CompJournoStick
 popd
 
 # set up place where we'll build the ISO
