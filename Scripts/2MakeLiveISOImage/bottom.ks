@@ -10,10 +10,14 @@ generic-release-notes
 # end znmeb added packages
 %end
 
-# R profile
+# local stuff
 %post --nochroot
 mkdir -p $INSTALL_ROOT/home/liveuser
-cp /usr/local/share/CompJournoStick/Scripts/1SetUpWorkstation/Rprofile $INSTALL_ROOT/home/liveuser/.Rprofile
+cp -a /usr/local/share/CompJournoStick/Scripts/1SetUpWorkstation/Rprofile $INSTALL_ROOT/home/liveuser/.Rprofile
+mkdir -p $INSTALL_ROOT/usr/local/
+cp -a /usr/local/* $INSTALL_ROOT/usr/local/
+mkdir -p $INSTALL_ROOT/usr/share/R/library/
+cp -a /usr/share/R/library/* $INSTALL_ROOT/usr/share/R/library/
 %end
 
 %post
