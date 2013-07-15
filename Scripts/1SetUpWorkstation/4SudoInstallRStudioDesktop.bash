@@ -21,4 +21,5 @@ popd
 ln -sf /usr/local/lib/rstudio/bin/rstudio /usr/local/bin/rstudio
 
 # make desktop file visible to auto menus
-
+cp /usr/local/src/rstudio-*/build/src/cpp/desktop/resources/freedesktop/rstudio.desktop \
+  /usr/local/share/applications/
