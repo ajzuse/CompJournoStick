@@ -20,6 +20,10 @@ cp -a /usr/local/share/CompJournoStick/Scripts/common/bash_profile \
   $INSTALL_ROOT/home/liveuser/.bash_profile
 cp -a /usr/local/share/CompJournoStick/Scripts/common/Rprofile \
   $INSTALL_ROOT/home/liveuser/.Rprofile
+cp -a /usr/local/share/CompJournoStick/Scripts \
+  $INSTALL_ROOT/home/liveuser/Scripts
+cp -a /usr/local/share/CompJournoStick/Docs \
+  $INSTALL_ROOT/home/liveuser/Docs
 
 # all of /usr/local goes to the ISO file!
 mkdir -p $INSTALL_ROOT/usr/local/
