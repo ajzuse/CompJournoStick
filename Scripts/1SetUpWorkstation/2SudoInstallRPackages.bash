@@ -9,5 +9,5 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-cp Rprofile ~/.Rprofile # set R profile
+cp Rprofile /root/.Rprofile # set R profile
 R --no-save --no-restore < load-packages.R
