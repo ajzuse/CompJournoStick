@@ -10,6 +10,12 @@ generic-release-notes
 # end znmeb added packages
 %end
 
+# R profile
+%post --nochroot
+mkdir -p $INSTALL_ROOT/home/liveuser
+cp /usr/local/share/CompJournoStick/Scripts/1SetUpWorkstation/Rprofile $INSTALL_ROOT/home/liveuser/.Rprofile
+%end
+
 %post
 cat >> /etc/rc.d/init.d/livesys << EOF
 
