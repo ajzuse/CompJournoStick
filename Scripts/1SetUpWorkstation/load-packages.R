@@ -8,7 +8,7 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# install task views
+# install ctv and Rcmdr first
 install.packages(
   c(
     'ctv',
@@ -17,6 +17,8 @@ install.packages(
   lib='/usr/share/R/library',
   dependencies=TRUE
 )
+
+# install task views
 require(ctv)
 update.views(
   c(
@@ -55,7 +57,7 @@ install.packages(
     'lubridate',
     'knitcitations'
   ),
-  dependencies=NA,
-  lib='/usr/share/R/library'
+  lib='/usr/share/R/library',
+  dependencies=NA
 )
 warnings()
