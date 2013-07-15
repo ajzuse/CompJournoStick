@@ -19,3 +19,6 @@ popd
 
 # make it callable from a terminal
 ln -sf /usr/local/lib/rstudio/bin/rstudio /usr/local/bin/rstudio
+
+# make desktop file visible to auto menus
+
