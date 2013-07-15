@@ -9,7 +9,14 @@
 #
 
 # install task views
-install.packages('ctv', lib='/usr/share/R/library')
+install.packages(
+  c(
+    'ctv',
+    'Rcmdr'
+  ),
+  lib='/usr/share/R/library',
+  dependencies=TRUE
+)
 require(ctv)
 update.views(
   c(
@@ -17,15 +24,15 @@ update.views(
     'ReproducibleResearch',
     'Spatial'
   ),
+  lib='/usr/share/R/library',
   coreOnly=FALSE,
-  dependencies=TRUE
+  dependencies=NA
 )
 warnings()
 
 # install packages
 install.packages(
   c(
-    'Rcmdr',
     'RcmdrPlugin.temis',
     'tm.plugin.dc',
     'tm.plugin.mail',
@@ -48,7 +55,7 @@ install.packages(
     'lubridate',
     'knitcitations'
   ),
-  dependencies=TRUE,
+  dependencies=NA,
   lib='/usr/share/R/library'
 )
 warnings()
