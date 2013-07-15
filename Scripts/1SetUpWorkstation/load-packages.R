@@ -8,14 +8,8 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# make a clean personal library
-system('rm -fr ~/R')
-system(paste('mkdir -p', Sys.getenv('R_LIBS_USER')))
-.libPaths(Sys.getenv('R_LIBS_USER'))
-print(.libPaths())
-
 # install task views
-install.packages('ctv')
+install.packages('ctv', lib='/usr/share/R/library')
 require(ctv)
 update.views(
   c(
@@ -53,6 +47,7 @@ install.packages(
     'lubridate',
     'knitcitations'
   ),
-  dependencies=TRUE
+  dependencies=TRUE,
+  lib='/usr/share/R/library'
 )
 warnings()
