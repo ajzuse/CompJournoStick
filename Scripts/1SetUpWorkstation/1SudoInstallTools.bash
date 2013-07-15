@@ -19,14 +19,11 @@ yum update -y
 
 # Desktop basics that may not be there
 yum install -y \
-  @mate-desktop \
   @firefox \
   vim-X11 \
   vim-enhanced \
   ntp \
-  yumex \
-  xmonad-mate \
-  xmonad-log-applet-mate
+  yumex
 
 # clock sync
 service ntpd enable
@@ -38,6 +35,18 @@ yum install -y \
   R-java-devel \
   ggobi-devel
 
+# RStudio from source
+yum install -y \
+  patch \
+  libuuid-devel \
+  qt-devel \
+  qtwebkit-devel \
+  ant \
+  cmake \
+  openssl-devel \
+  pam-devel
+
+exit
 # Dependencies for packages and task views
 yum install -y \
   libcurl-devel \
@@ -98,20 +107,6 @@ yum install -y \
   xorg-x11-drv-vesa \
   xorg-x11-drv-vmware \
   xorg-x11-drv-voodoo
-
-# RStudio source
-yum install -y \
-  patch
-
-# RStudio Desktop and Server
-yum install -y \
-  libuuid-devel \
-  qt-devel \
-  qtwebkit-devel \
-  ant \
-  cmake \
-  openssl-devel \
-  pam-devel
 
 # Editing
 yum install -y \
