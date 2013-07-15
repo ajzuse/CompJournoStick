@@ -14,7 +14,8 @@ require(ctv)
 update.views(
   c(
     'Graphics',
-    'ReproducibleResearch'
+    'ReproducibleResearch',
+    'Spatial'
   ),
   coreOnly=FALSE,
   dependencies=TRUE
