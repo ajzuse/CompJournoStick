@@ -110,3 +110,11 @@ yum install -y \
   cmake \
   openssl-devel \
   pam-devel
+
+# Editing
+yum install -y \
+  calibre \
+  sigil \
+  bluefish \
+  lyx \
+  FlightCrew
