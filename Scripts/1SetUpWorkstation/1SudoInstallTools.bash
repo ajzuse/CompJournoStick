@@ -64,7 +64,8 @@ yum install -y \
   hdf5-devel \
   libgeotiff-devel \
   cfitsio-devel \
-  unixODBC-devel
+  unixODBC-devel \
+  gsl-devel
 
 # Video drivers - needed for some VM hosts
 yum install -y \
