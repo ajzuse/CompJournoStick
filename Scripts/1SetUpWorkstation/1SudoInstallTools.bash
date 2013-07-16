@@ -50,7 +50,9 @@ yum install -y \
   sigil \
   bluefish \
   lyx \
-  FlightCrew
+  FlightCrew \
+  pandoc \
+  pandoc-pdf
 
 # Virtual hosting and Live ISO/USB tools
 yum install -y \
@@ -60,18 +62,9 @@ yum install -y \
   isomd5sum \
   liveusb-creator
 
-exit
-# RStudio from source
+# packages
 yum install -y \
-  patch \
-  libuuid-devel \
-  qt-devel \
-  qtwebkit-devel \
-  ant \
-  cmake \
-  openssl-devel \
-  pam-devel
-
-# knitr
-yum install -y \
-  libcurl-devel
+  libcurl-devel \
+  bwidget \
+  freeglut-devel \
+  libXt-devel
