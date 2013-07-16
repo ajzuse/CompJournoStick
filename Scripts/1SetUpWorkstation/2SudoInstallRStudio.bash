@@ -75,7 +75,8 @@ cp /usr/local/lib/rstudio-server/extras/init.d/redhat/rstudio-server /etc/init.d
 chmod +x /etc/init.d/rstudio-server
 /sbin/chkconfig --add rstudio-server
 ln -f -s /usr/local/lib/rstudio-server/bin/rstudio-server /usr/sbin/rstudio-server
-rstudio-server start
+chkconfig rstudio-server on
+/etc/init.d/rstudio-server start
 
 echo "Opening TCP port 8787 for local and remote access!"
 firewall-cmd --permanent --add-port 8787/tcp
