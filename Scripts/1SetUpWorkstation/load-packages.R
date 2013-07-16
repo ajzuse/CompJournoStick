@@ -8,56 +8,16 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# install ctv and Rcmdr first
 install.packages(
   c(
-    'ctv',
-    'Rcmdr'
-  ),
-  lib='/usr/share/R/library',
-  dependencies=TRUE
-)
-
-# install task views
-require(ctv)
-update.views(
-  c(
-    'Graphics',
-    'ReproducibleResearch',
-    'Spatial'
-  ),
-  lib='/usr/share/R/library',
-  coreOnly=FALSE,
-  dependencies=NA
-)
-warnings()
-
-# install packages
-install.packages(
-  c(
-    'RcmdrPlugin.temis',
-    'tm.plugin.dc',
-    'tm.plugin.mail',
-    'tm.plugin.webmining',
-    'tm.plugin.sentiment',
-    'RWeather',
-    'googlePublicData',
-    'googleVis',
-    'gooJSON',
-    'mosaic',
-    'whisker',
-    'ggmap',
     'reshapeGUI',
-    'streamR',
-    'twitteR',
     'shiny',
     'devtools',
-    'roxygen2',
-    'testthat',
     'lubridate',
+    'knitr',
     'knitcitations'
   ),
   lib='/usr/share/R/library',
-  dependencies=NA
+  dependencies=TRUE
 )
 warnings()
