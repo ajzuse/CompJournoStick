@@ -12,6 +12,9 @@
 # start with MATE desktop
 cp /usr/share/spin-kickstarts/fedora-live-mate-compiz.ks CompJournoStick.ks
 
+# make the root partition bigger
+echo 'part / --size 16384 --fstype ext4' >> CompJournoStick.ks
+
 # add package list
 ./list-packages.pl | sort -u > package-list.txt
 echo '%packages' >> CompJournoStick.ks
