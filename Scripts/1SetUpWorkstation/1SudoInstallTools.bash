@@ -25,7 +25,7 @@ yum install -y \
   ntp \
   yumex \
   createrepo \
-  gnome-terminal
+  gnome-terminal \
   evince
 
 # clock sync
@@ -38,20 +38,10 @@ yum install -y \
   R-java-devel \
   ggobi-devel
 
-# RStudio from source
-yum install -y \
-  patch \
-  libuuid-devel \
-  qt-devel \
-  qtwebkit-devel \
-  ant \
-  cmake \
-  openssl-devel \
-  pam-devel
-
-# knitr
-yum install -y \
-  libcurl-devel
+# RStudio
+./SudoBuildRStudioRepo.bash
+yum install -y --nogpgcheck \
+  rstudio
 
 # Editing
 yum install -y \
@@ -68,3 +58,19 @@ yum install -y \
   spin-kickstarts \
   isomd5sum \
   liveusb-creator
+
+exit
+# RStudio from source
+yum install -y \
+  patch \
+  libuuid-devel \
+  qt-devel \
+  qtwebkit-devel \
+  ant \
+  cmake \
+  openssl-devel \
+  pam-devel
+
+# knitr
+yum install -y \
+  libcurl-devel
