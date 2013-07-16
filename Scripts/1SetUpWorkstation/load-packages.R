@@ -8,16 +8,21 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
+# set up environment
+system('cp ../common/Rprofile ~/.Rprofile')
+source('~/.Rprofile')
+
 install.packages(
   c(
+    'ggplot2',
     'reshapeGUI',
     'shiny',
     'devtools',
     'lubridate',
     'knitr',
-    'knitcitations'
+    'knitcitations',
+    'pander'
   ),
-  lib='/usr/share/R/library',
   dependencies=TRUE
 )
 warnings()
