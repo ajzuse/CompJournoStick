@@ -26,7 +26,8 @@ yum install -y \
   yumex \
   createrepo \
   gnome-terminal \
-  evince
+  evince \
+  wget
 
 # clock sync
 service ntpd enable
