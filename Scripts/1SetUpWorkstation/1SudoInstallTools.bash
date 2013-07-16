@@ -57,3 +57,11 @@ yum install -y \
   bluefish \
   lyx \
   FlightCrew
+
+# Virtual hosting and Live ISO/USB tools
+yum install -y \
+  @virtualization \
+  livecd-tools \
+  spin-kickstarts \
+  isomd5sum \
+  liveusb-creator
