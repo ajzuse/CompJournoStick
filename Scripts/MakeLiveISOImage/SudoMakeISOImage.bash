@@ -9,8 +9,8 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# start with MATE desktop
-cp /usr/share/spin-kickstarts/fedora-live-mate-compiz.ks CompJournoStick.ks
+# start with default live desktop
+cp /usr/share/spin-kickstarts/fedora-live-desktop.ks CompJournoStick.ks
 
 # make the root partition bigger
 echo ' ' >> CompJournoStick.ks
