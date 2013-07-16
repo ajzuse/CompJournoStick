@@ -11,6 +11,8 @@
 
 # start with default live desktop
 cp /usr/share/spin-kickstarts/fedora-live-desktop.ks CompJournoStick.ks
+echo ' ' >> CompJournoStick.ks
+echo '# Begin CompJournoStick additions' >> CompJournoStick.ks
 
 # make the root partition bigger
 echo ' ' >> CompJournoStick.ks
@@ -36,6 +38,10 @@ echo '%end' >> CompJournoStick.ks
 
 # '%post' to copy files to image
 cat post.ks >> CompJournoStick.ks
+
+# close out the additions
+echo ' ' >> CompJournoStick.ks
+echo '# End CompJournoStick additions' >> CompJournoStick.ks
 
 # save scripts and docs for live image
 pushd ../..
