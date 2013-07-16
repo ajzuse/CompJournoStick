@@ -16,6 +16,10 @@ cp /usr/share/spin-kickstarts/fedora-live-desktop.ks CompJournoStick.ks
 echo ' ' >> CompJournoStick.ks
 echo 'part / --size 16384 --fstype ext4' >> CompJournoStick.ks
 
+# add the RStudio repo
+echo ' ' >> CompJournoStick.ks
+echo 'repo --name=RStudioRepo --baseurl=file:///opt/RStudioRepo' >> CompJournoStick.ks
+
 # add package list
 ./list-packages.pl | sort -u > package-list.txt
 echo '%packages' >> CompJournoStick.ks
