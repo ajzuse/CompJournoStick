@@ -39,11 +39,6 @@ yum install -y \
   R-java-devel \
   ggobi-devel
 
-# RStudio
-./SudoBuildRStudioRepo.bash
-yum install -y --nogpgcheck \
-  rstudio
-
 # Editing
 yum install -y \
   calibre \
@@ -62,9 +57,14 @@ yum install -y \
   isomd5sum \
   liveusb-creator
 
-# packages
+# R package dependencies
 yum install -y \
   libcurl-devel \
   bwidget \
   freeglut-devel \
   libXt-devel
+
+# RStudio
+./SudoBuildRStudioRepo.bash
+yum install -y --nogpgcheck \
+  rstudio
