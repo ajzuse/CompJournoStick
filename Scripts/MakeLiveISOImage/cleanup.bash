@@ -9,7 +9,6 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-rm -fr Computational-Journalism-Publishers-Workbench*
 rm -f package-list.txt
 rm -f CompJournoStick.ks
 ../common/cleanup.bash
