@@ -23,7 +23,10 @@ yum install -y \
   vim-X11 \
   vim-enhanced \
   ntp \
-  yumex
+  yumex \
+  createrepo \
+  gnome-terminal
+  evince
 
 # clock sync
 service ntpd enable
