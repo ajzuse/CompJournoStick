@@ -9,17 +9,22 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 
-# start with default live desktop
-cp /usr/share/spin-kickstarts/fedora-live-desktop.ks CompJournoStick.ks
-echo ' ' >> CompJournoStick.ks
+# save project for live image
+pushd ../../..
+rm -fr /opt/Project
+cp -a CompJournoStick /opt/Project
+rm -fr /opt/Project/.git*
+rm -fr /opt/Project/.R*
+popd
+
+# build the kickstart file, starting from live desktop
+cp top.ks CompJournoStick.ks
 echo '# Begin CompJournoStick additions' >> CompJournoStick.ks
 
 # make the root partition bigger
-echo ' ' >> CompJournoStick.ks
 echo 'part / --size 16384 --fstype ext4' >> CompJournoStick.ks
 
 # add the RStudio repo
-echo ' ' >> CompJournoStick.ks
 echo 'repo --name=RStudioRepo --baseurl=file:///opt/RStudioRepo' >> CompJournoStick.ks
 
 # add package list
@@ -27,6 +32,9 @@ echo 'repo --name=RStudioRepo --baseurl=file:///opt/RStudioRepo' >> CompJournoSt
 echo ' ' >> CompJournoStick.ks
 echo '%packages' >> CompJournoStick.ks
 cat package-list.txt >> CompJournoStick.ks
+
+# cinepaint is broken - remove it
+echo '-cinepaint*' >> CompJournoStick.ks
 
 # De-branding
 echo '-fedora-logos' >> CompJournoStick.ks
@@ -36,22 +44,15 @@ echo 'generic-logos' >> CompJournoStick.ks
 echo 'generic-release' >> CompJournoStick.ks
 echo 'generic-release-notes' >> CompJournoStick.ks
 echo '%end' >> CompJournoStick.ks
-echo ' ' >> CompJournoStick.ks
 
 # '%post' to copy files to image
 cat post.ks >> CompJournoStick.ks
 
 # close out the additions
-echo ' ' >> CompJournoStick.ks
 echo '# End CompJournoStick additions' >> CompJournoStick.ks
 
-# save scripts and docs for live image
-pushd ../..
-rm -fr /opt/Scripts/; mkdir -p /opt/Scripts/
-cp -a Scripts/* /opt/Scripts/
-rm -fr /opt/Docs/; mkdir -p /opt/Docs/
-cp -a Docs/* /opt/Docs/
-popd
+# and finish it off
+cat bottom.ks >> CompJournoStick.ks
 
 # set up place where we'll build the ISO
 rm -fr /opt/CompJournoStick/; mkdir -p /opt/CompJournoStick/
