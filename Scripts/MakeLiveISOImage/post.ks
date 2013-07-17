@@ -15,6 +15,5 @@ cp -a $INSTALL_ROOT/opt/Scripts/common/bash_profile \
   $INSTALL_ROOT/home/liveuser/.bash_profile
 cp -a $INSTALL_ROOT/opt/Scripts/common/Rprofile \
   $INSTALL_ROOT/home/liveuser/.Rprofile
-chown -R liveuser:liveuser $INSTALL_ROOT/home/liveuser
 
 %end
