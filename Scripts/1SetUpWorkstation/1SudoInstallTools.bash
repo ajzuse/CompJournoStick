@@ -66,6 +66,14 @@ yum install -y \
   freeglut-devel \
   libXt-devel
 
+# Perl Twitter utilities
+yum install -y \
+  perl-YAML \
+  perl-JSON \
+  perl-Hash-Flatten \
+  perl-Browser-Open \
+  perl-Net-Twitter
+
 # RStudio
 ./SudoBuildRStudioRepo.bash
 yum install -y --nogpgcheck \
