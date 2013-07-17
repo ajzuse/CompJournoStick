@@ -20,6 +20,7 @@ install.packages(
     'knitcitations',
     'pander'
   ),
-  dependencies=TRUE
+  dependencies=TRUE,
+  quiet=TRUE
 )
 warnings()
