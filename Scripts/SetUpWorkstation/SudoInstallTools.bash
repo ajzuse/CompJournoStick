@@ -43,15 +43,21 @@ yum install -y \
   R-java-devel \
   ggobi-devel
 
-# Editing
+# Editing and design
 yum install -y \
+  @design-suite \
   calibre \
   sigil \
   bluefish \
   lyx \
   FlightCrew \
   pandoc \
-  pandoc-pdf
+  pandoc-pdf \
+  pitivi \
+  audacity
+
+# Cinepaint is broken - remove it
+yum erase -y cinepaint cinepaint-libs
 
 # Virtual hosting and Live ISO/USB tools
 yum install -y \
