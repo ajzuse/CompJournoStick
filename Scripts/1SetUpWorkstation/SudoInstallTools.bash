@@ -75,6 +75,6 @@ yum install -y \
   perl-Net-Twitter
 
 # RStudio
-./SudoBuildRStudioRepo.bash
+./sudo-build-rstudio-repo.bash
 yum install -y --nogpgcheck \
   rstudio
