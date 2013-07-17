@@ -29,7 +29,9 @@ yum install -y \
   evince \
   wget \
   aria2 \
-  lynx
+  lynx \
+  kernel-tools \
+  powertop
 
 # clock sync
 service ntpd enable
