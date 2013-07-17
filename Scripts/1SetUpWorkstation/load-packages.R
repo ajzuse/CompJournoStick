@@ -15,6 +15,7 @@ source('~/.Rprofile')
 install.packages(
   c(
     'ggplot2',
+    'sm',
     'reshapeGUI',
     'shiny',
     'devtools',
