@@ -10,6 +10,6 @@
 #
 
 livecd-iso-to-disk --format --reset-mbr \
-  --home-size-mb 2047 \
+  --home-size-mb 4095 \
   /dev/sr0 \
   $1
