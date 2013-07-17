@@ -27,7 +27,9 @@ yum install -y \
   createrepo \
   gnome-terminal \
   evince \
-  wget
+  wget \
+  aria2 \
+  lynx
 
 # clock sync
 service ntpd enable
