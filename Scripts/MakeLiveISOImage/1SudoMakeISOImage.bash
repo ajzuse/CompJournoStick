@@ -24,6 +24,7 @@ echo 'repo --name=RStudioRepo --baseurl=file:///opt/RStudioRepo' >> CompJournoSt
 
 # add package list
 ./list-packages.pl | sort -u > package-list.txt
+echo ' ' >> CompJournoStick.ks
 echo '%packages' >> CompJournoStick.ks
 cat package-list.txt >> CompJournoStick.ks
 
@@ -35,6 +36,7 @@ echo 'generic-logos' >> CompJournoStick.ks
 echo 'generic-release' >> CompJournoStick.ks
 echo 'generic-release-notes' >> CompJournoStick.ks
 echo '%end' >> CompJournoStick.ks
+echo ' ' >> CompJournoStick.ks
 
 # '%post' to copy files to image
 cat post.ks >> CompJournoStick.ks
@@ -45,14 +47,15 @@ echo '# End CompJournoStick additions' >> CompJournoStick.ks
 
 # save scripts and docs for live image
 pushd ../..
-rm -fr /usr/local/src/CompJournoStick; mkdir -p /usr/local/src/CompJournoStick/
-cp -a Scripts /usr/local/src/CompJournoStick/
-cp -a Docs /usr/local/src/CompJournoStick/
+rm -fr /opt/Scripts/; mkdir -p /opt/Scripts/
+cp -a Scripts/* /opt/Scripts/
+rm -fr /opt/Docs/; mkdir -p /opt/Docs/
+cp -a Docs/* /opt/Docs/
 popd
 
 # set up place where we'll build the ISO
-rm -fr /opt/CompJournoStick; mkdir -p /opt/CompJournoStick/
-cp /usr/share/spin-kickstarts/*.ks /opt/CompJournoStick # base kickstart files
+rm -fr /opt/CompJournoStick/; mkdir -p /opt/CompJournoStick/
+cp /usr/share/spin-kickstarts/*.ks /opt/CompJournoStick/ # base kickstart files
 cp CompJournoStick.ks /opt/CompJournoStick/ # our over-rides
 
 pushd /opt/CompJournoStick/
